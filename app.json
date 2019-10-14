@@ -1,0 +1,29 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/user/user"
+  ],
+"window": {
+  "navigationBarBackgroundColor": "#FC9D99",
+  "navigationBarTextStyle": "black",
+  "navigationBarTitleText": "湖师跳蚤平台",
+  "backgroundColor": "#FC9D99",
+  "backgroundTextStyle": "light"
+},
+"tabBar": {
+  "color": "#333",
+  "selectedColor": "#f30",
+  "list": [
+    {
+      "pagePath": "pages/index/index",
+      "text": "首页"
+    },
+    {
+      "pagePath": "pages/user/user",
+      "text": "用户"
+    }
+  ]
+},
+  "sitemapLocation": "sitemap.json"
+}

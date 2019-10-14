@@ -1,0 +1,70 @@
+#Lake_division_flea_platform{
+  background: #FC9D99;
+}
+.index_header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.index_header_right{
+  position: relative;
+  left: -13rpx;
+}
+
+.search{
+  width: 529rpx;
+  margin-left: -30rpx;
+  /* border: 1px solid saddlebrown; */
+  position: relative;
+}
+
+
+.search>text{
+  position: absolute;
+  top:10rpx;
+  left:20rpx;
+  font-size:36rpx;
+  color: #999;
+}
+.search input{
+  border-radius: 40rpx;
+  font-size: 21rpx;
+  padding-left: 60rpx;
+  background: #fff;
+  line-height: 60rpx;
+  height: 60rpx;
+}
+
+.index_sort{
+   padding: 20rpx 35rpx;
+}
+.index_sort>.main_sort{
+  padding: 32rpx 5rpx 25rpx;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 36rpx;
+  background: #fff;
+}
+.index_sort>.main_sort>.index_sort_item{
+  width: 106rpx;
+  /* border: 1px solid red; */
+  margin-left: 25rpx;
+  text-align: center;
+  overflow: hidden;
+  margin-top: 11rpx;
+}
+.index_sort>.main_sort>.index_sort_item>image{
+  width: 100%;
+  /* border: 1px solid saddlebrown; */
+  height: 90rpx;
+}
+.index_sort>.main_sort>.index_sort_item>text{
+  font-size: 18rpx;
+  text-align: center;
+  display: inline-block;
+  margin-top: -10rpx;
+  /* border: 1px solid salmon; */
+  position: relative;
+  top: -10rpx;
+}
