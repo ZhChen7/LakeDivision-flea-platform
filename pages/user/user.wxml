@@ -1,2 +1,81 @@
-<!--pages/user/user.wxml-->
-<text>pages/user/user.wxml</text>
+<!--index.wxml-->
+<view class = "top">
+  <view class = "nav">
+    <view class = "nav-right">
+      <view class = "headPic">
+        <image class = "headPic1"></image>
+      </view>
+      <view class = "name">
+        <view class = "name1">哇哈哈哈拜金</view>
+        <view class = "name2">昵称</view>
+        <view class = "name3">个人主页</view>
+      </view>
+    </view>
+    <view class = "nav-left"></view>
+  </view>
+</view>
+  <view class = "fans">
+    <view class = "agree">超赞</view>
+    <view class = "like">关注</view>
+    <view class = "myFans">粉丝</view>
+  </view>
+
+  <view class = "shop">
+    <view class = "shop-nav">卖在咸鱼</view>
+    <view class = "shop-bottom">
+      <view class = "shop-bottom1">
+        <view class = "pic"></view>
+        <view class = "text">我发布的</view>
+      </view>
+      <view class = "shop-bottom2">
+        <view class = "pic"></view>
+        <view class = "text">我卖出的</view>
+      </view>
+    </view>
+  </view>
+
+
+  <view class = "type">
+    <view class = "type-nav">在玩咸鱼</view>
+
+    <view class = "things1">
+      <view class = "thing1">
+        <view class = "pic1"></view>
+        <view class = "text1">我的鱼塘</view>
+      </view>
+      <view class = "thing2">
+        <view class = "pic1"></view>
+        <view class = "text1">我的贴子</view>
+      </view>
+      <view class = "thing3">
+        <view class = "pic1"></view>
+        <view class = "text1">3小时公益</view>
+      </view>
+      <view class = "thing4">
+        <view class = "pic1"></view>
+        <view class = "text1">百币夺宝</view>
+      </view>
+    </view>
+    <view class = "things2">
+      <view class = "thing1">
+        <view class = "pic1"></view>
+        <view class = "text1">咸鱼币</view>
+      </view>
+      <view class = "thing2">
+        <view class = "pic1"></view>
+        <view class = "text1">天天赚钱</view>
+      </view>
+      <view class = "thing3">
+        <view class = "pic1"></view>
+        <view class = "text1">助卖宝卡</view>
+      </view>
+      <view class = "thing4">
+        <view class = "pic1"></view>
+        <view class = "text1">边逛边赚钱</view>
+      </view>
+    </view>
+    <view class = "things3">
+      <view class = "pic1"></view>
+      <view class = "text1">******************************</view>
+    </view>
+  </view>

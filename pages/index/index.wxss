@@ -1,6 +1,12 @@
 #Lake_division_flea_platform{
-  background: #FC9D99;
+  background: #ddd;
 }
+.header_sort{
+  /* border: 1px solid black; */
+  background: linear-gradient(180deg,#F5F50F 10%,red,#eee);
+  border-radius: 0 0 30rpx 30rpx;
+}
+
 .index_header{
     display: flex;
     justify-content: space-around;
@@ -10,7 +16,10 @@
   position: relative;
   left: -13rpx;
 }
-
+.index_header_left{
+  font-size: 27rpx;
+  color: #F4606C;
+}
 .search{
   width: 529rpx;
   margin-left: -30rpx;
@@ -21,9 +30,9 @@
 
 .search>text{
   position: absolute;
-  top:10rpx;
+  top:6rpx;
   left:20rpx;
-  font-size:36rpx;
+  font-size:34rpx;
   color: #999;
 }
 .search input{
@@ -31,12 +40,15 @@
   font-size: 21rpx;
   padding-left: 60rpx;
   background: #fff;
-  line-height: 60rpx;
-  height: 60rpx;
+  line-height: 50rpx;
+  height: 50rpx;
 }
-
+    input::-webkit-input-placeholder {
+       font-size: 22rpx;
+    }
 .index_sort{
    padding: 20rpx 35rpx;
+   /* border: 1px solid black; */
 }
 .index_sort>.main_sort{
   padding: 32rpx 5rpx 25rpx;
@@ -45,6 +57,7 @@
   flex-wrap: wrap;
   border-radius: 36rpx;
   background: #fff;
+  /* border: 1px solid #f30; */
 }
 .index_sort>.main_sort>.index_sort_item{
   width: 106rpx;
@@ -67,4 +80,80 @@
   /* border: 1px solid salmon; */
   position: relative;
   top: -10rpx;
+}
+
+.index_nav{
+  background: #ddd;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 5rpx 3rpx;
+}
+.my_scroll{
+  height:70rpx;
+  white-space: nowrap;
+  line-height: 70rpx;
+  padding-left: 15rpx;
+}
+
+.index_nav_tab{
+  display: inline-block;
+  margin-right: 15rpx;
+}
+.index_nav_tab>text{
+  font-size: 30rpx;
+  padding: 0 7rpx;
+  border-radius: 10rpx;
+  color: #999;
+}
+
+
+.index_show_list{
+  /* border: 1px solid red; */
+  padding: 20rpx 20rpx;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background: #F1F3F0;
+}
+/* .index_show_list::after{
+  content: '';
+  display: block;
+  clear: both;
+} */
+
+.index_show_list_item{
+  border: 1px solid #ddd;
+  width: 340rpx;
+  border-radius: 15rpx;
+  margin-top: 15rpx;
+}
+
+
+.index_show_list_item >.index_show_list_img{
+  width: 100%;
+  height: 410rpx;
+}
+.index_show_list_item >.index_show_list_img>image{
+  width: 100%;
+}
+.index_show_list_footer{
+  padding: 5rpx 8rpx;
+}
+.index_show_list_footer>.index_show_list_footer_intro{
+  font-weight: bold;
+  font-size: 22rpx;
+}
+
+.index_show_list_footer view{
+  padding: 10rpx 3rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.index_show_list_footer .price{
+  color: red;
+  font-size: 25rpx;
+}
+.index_show_list_footer .WantPeople{
+  font-size: 22rpx;
+  color: #aaa;
 }

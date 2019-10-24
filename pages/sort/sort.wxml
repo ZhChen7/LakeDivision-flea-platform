@@ -1,0 +1,11 @@
+<!--pages/sort/sort.wxml-->
+  <view class='box'>
+  <swiper indicator-dots='{{true}}' autoplay='{{true}}' interval='2500' duration='400' circular='{{true}}'>
+    <swiper-item>
+      <image src='https://image2.suning.cn/uimg/cms/img/155833856375642739.png' mode='aspectFill' style='width:100%'></image>
+    </swiper-item>
+    <swiper-item>
+      <image src='https://image1.suning.cn/uimg/cms/img/155831644624742511.jpg' mode='aspectFill' style='width:100%'></image>
+    </swiper-item>
+  </swiper>
+  </view>

@@ -1,6 +1,8 @@
 <!--湖师跳蚤平台-->
 <view id='Lake_division_flea_platform'>
-  <view class='index_header'>
+
+<view class='header_sort'>
+ <view class='index_header'>
     <text class='index_header_left'>湖师</text>
     <!-- 输入框 -->
     <view class='search'>
@@ -12,48 +14,189 @@
     </view>
   </view>
 
+
   <view class="index_sort">
     <view class='main_sort'>
       <view class="index_sort_item">
         <image mode='aspectFit' src='https://m.360buyimg.com/mobilecms/s120x120_jfs/t1/20983/16/10753/6124/5c8a16aaE5d6b15d7/01e0e818a7505267.png'></image>
-        <text>二手手机</text>
+        <text>衣服</text>
       </view>
       <view class="index_sort_item">
         <image mode='aspectFit' src='https://m.360buyimg.com/mobilecms/s120x120_jfs/t1/20983/16/10753/6124/5c8a16aaE5d6b15d7/01e0e818a7505267.png'></image>
-        <text>二手手机</text>
+        <text>数码</text>
       </view>
             <view class="index_sort_item">
         <image mode='aspectFit' src='https://m.360buyimg.com/mobilecms/s120x120_jfs/t1/20983/16/10753/6124/5c8a16aaE5d6b15d7/01e0e818a7505267.png'></image>
-        <text>二手手机</text>
+        <text>二手图书</text>
       </view>
             <view class="index_sort_item">
         <image mode='aspectFit' src='https://m.360buyimg.com/mobilecms/s120x120_jfs/t1/20983/16/10753/6124/5c8a16aaE5d6b15d7/01e0e818a7505267.png'></image>
-        <text>二手手机</text>
+        <text>游戏交易</text>
       </view>
             <view class="index_sort_item">
         <image mode='aspectFit' src='https://m.360buyimg.com/mobilecms/s120x120_jfs/t1/20983/16/10753/6124/5c8a16aaE5d6b15d7/01e0e818a7505267.png'></image>
-        <text>二手手机</text>
+        <text>家居家电</text>
       </view>
             <view class="index_sort_item">
         <image mode='aspectFit' src='https://m.360buyimg.com/mobilecms/s120x120_jfs/t1/20983/16/10753/6124/5c8a16aaE5d6b15d7/01e0e818a7505267.png'></image>
-        <text>二手手机</text>
+        <text>服饰鞋包</text>
       </view>
             <view class="index_sort_item">
         <image mode='aspectFit' src='https://m.360buyimg.com/mobilecms/s120x120_jfs/t1/20983/16/10753/6124/5c8a16aaE5d6b15d7/01e0e818a7505267.png'></image>
-        <text>二手手机</text>
+        <text>奢品珠宝</text>
       </view>
             <view class="index_sort_item">
         <image mode='aspectFit' src='https://m.360buyimg.com/mobilecms/s120x120_jfs/t1/20983/16/10753/6124/5c8a16aaE5d6b15d7/01e0e818a7505267.png'></image>
-        <text>二手手机</text>
+        <text>二手车</text>
       </view>
             <view class="index_sort_item">
         <image mode='aspectFit' src='https://m.360buyimg.com/mobilecms/s120x120_jfs/t1/20983/16/10753/6124/5c8a16aaE5d6b15d7/01e0e818a7505267.png'></image>
-        <text>二手手机</text>
+        <text>超值租</text>
       </view>
             <view class="index_sort_item">
         <image mode='aspectFit' src='https://m.360buyimg.com/mobilecms/s120x120_jfs/t1/20983/16/10753/6124/5c8a16aaE5d6b15d7/01e0e818a7505267.png'></image>
-        <text>二手手机</text>
+        <text>全部分类</text>
       </view>
     </view>
   </view>
+</view>
+
+
+ 
+
+
+  <view class='index_nav'>
+   <scroll-view scroll-x="true" class="my_scroll">
+      <view class='index_nav_tab'><text>关注</text></view>
+      <view class='index_nav_tab'><text>新鲜</text></view>
+      <view class='index_nav_tab'><text>附近</text></view>
+      <view class='index_nav_tab'><text>手机</text></view>
+      <view class='index_nav_tab'><text>数码</text></view>
+      <view class='index_nav_tab'><text>租房</text></view>
+      <view class='index_nav_tab'><text>服装</text></view>
+      <view class='index_nav_tab'><text>居家</text></view>
+      <view class='index_nav_tab'><text>美妆</text></view>
+      <view class='index_nav_tab'><text>运动</text></view>
+      <view class='index_nav_tab'><text>家电</text></view>
+      <view class='index_nav_tab'><text>玩具乐器</text></view>
+      <view class='index_nav_tab'><text>短租</text></view>
+      </scroll-view>
+  </view>
+
+  <view class='index_show_list'>
+    <view class='index_show_list_item'>
+        <view class='index_show_list_img'>
+            <image src='https://g-search3.alicdn.com/img/bao/uploaded/i4/i4/359295234/O1CN01TTVzaP1oXDZOTd5xo_!!359295234.jpg_580x580Q90.jpg' mode='aspectFit'></image>
+        </view>
+        <view class='index_show_list_footer'>
+            <text class='index_show_list_footer_intro'>华为 p20pro6 + 128 珠光贝母全原在保99新</text>
+            <view>
+                <text class='price'>￥1680</text>
+                <text class='WantPeople'>2人想要</text>
+            </view>
+        </view>
+    </view>
+
+    <view class='index_show_list_item'>
+
+        <view class='index_show_list_img'>
+            <image src='https://g-search3.alicdn.com/img/bao/uploaded/i4/i4/359295234/O1CN01TTVzaP1oXDZOTd5xo_!!359295234.jpg_580x580Q90.jpg' mode='aspectFit'></image>
+        </view>
+        <view class='index_show_list_footer'>
+            <text class='index_show_list_footer_intro'>华为 p20pro6 + 128 珠光贝母全原在保99新</text>
+            <view>
+                <text class='price'>￥1680</text>
+                <text class='WantPeople'>2人想要</text>
+            </view>
+        </view>
+    </view>
+
+    <view class='index_show_list_item'>
+        <view class='index_show_list_img'>
+            <image src='https://g-search3.alicdn.com/img/bao/uploaded/i4/i4/359295234/O1CN01TTVzaP1oXDZOTd5xo_!!359295234.jpg_580x580Q90.jpg' mode='aspectFit'></image>
+        </view>
+        <view class='index_show_list_footer'>
+            <text class='index_show_list_footer_intro'>华为 p20pro6 + 128 珠光贝母全原在保99新</text>
+            <view>
+                <text class='price'>￥1680</text>
+                <text class='WantPeople'>2人想要</text>
+            </view>
+        </view>
+    </view>
+
+       <view class='index_show_list_item'>
+        <view class='index_show_list_img'>
+            <image src='https://g-search3.alicdn.com/img/bao/uploaded/i4/i4/359295234/O1CN01TTVzaP1oXDZOTd5xo_!!359295234.jpg_580x580Q90.jpg' mode='aspectFit'></image>
+        </view>
+        <view class='index_show_list_footer'>
+            <text class='index_show_list_footer_intro'>华为 p20pro6 + 128 珠光贝母全原在保99新</text>
+            <view>
+                <text class='price'>￥1680</text>
+                <text class='WantPeople'>2人想要</text>
+            </view>
+        </view>
+    </view>
+
+       <view class='index_show_list_item'>
+        <view class='index_show_list_img'>
+            <image src='https://g-search3.alicdn.com/img/bao/uploaded/i4/i4/359295234/O1CN01TTVzaP1oXDZOTd5xo_!!359295234.jpg_580x580Q90.jpg' mode='aspectFit'></image>
+        </view>
+        <view class='index_show_list_footer'>
+            <text class='index_show_list_footer_intro'>华为 p20pro6 + 128 珠光贝母全原在保99新</text>
+            <view>
+                <text class='price'>￥1680</text>
+                <text class='WantPeople'>2人想要</text>
+            </view>
+        </view>
+    </view>
+       <view class='index_show_list_item'>
+        <view class='index_show_list_img'>
+            <image src='https://g-search3.alicdn.com/img/bao/uploaded/i4/i4/359295234/O1CN01TTVzaP1oXDZOTd5xo_!!359295234.jpg_580x580Q90.jpg' mode='aspectFit'></image>
+        </view>
+        <view class='index_show_list_footer'>
+            <text class='index_show_list_footer_intro'>华为 p20pro6 + 128 珠光贝母全原在保99新</text>
+            <view>
+                <text class='price'>￥1680</text>
+                <text class='WantPeople'>2人想要</text>
+            </view>
+        </view>
+    </view>
+       <view class='index_show_list_item'>
+        <view class='index_show_list_img'>
+            <image src='https://g-search3.alicdn.com/img/bao/uploaded/i4/i4/359295234/O1CN01TTVzaP1oXDZOTd5xo_!!359295234.jpg_580x580Q90.jpg' mode='aspectFit'></image>
+        </view>
+        <view class='index_show_list_footer'>
+            <text class='index_show_list_footer_intro'>华为 p20pro6 + 128 珠光贝母全原在保99新</text>
+            <view>
+                <text class='price'>￥1680</text>
+                <text class='WantPeople'>2人想要</text>
+            </view>
+        </view>
+    </view>
+       <view class='index_show_list_item'>
+        <view class='index_show_list_img'>
+            <image src='https://g-search3.alicdn.com/img/bao/uploaded/i4/i4/359295234/O1CN01TTVzaP1oXDZOTd5xo_!!359295234.jpg_580x580Q90.jpg' mode='aspectFit'></image>
+        </view>
+        <view class='index_show_list_footer'>
+            <text class='index_show_list_footer_intro'>华为 p20pro6 + 128 珠光贝母全原在保99新</text>
+            <view>
+                <text class='price'>￥1680</text>
+                <text class='WantPeople'>2人想要</text>
+            </view>
+        </view>
+    </view>
+       <view class='index_show_list_item'>
+        <view class='index_show_list_img'>
+            <image src='https://g-search3.alicdn.com/img/bao/uploaded/i4/i4/359295234/O1CN01TTVzaP1oXDZOTd5xo_!!359295234.jpg_580x580Q90.jpg' mode='aspectFit'></image>
+        </view>
+        <view class='index_show_list_footer'>
+            <text class='index_show_list_footer_intro'>华为 p20pro6 + 128 珠光贝母全原在保99新</text>
+            <view>
+                <text class='price'>￥1680</text>
+                <text class='WantPeople'>2人想要</text>
+            </view>
+        </view>
+    </view>
+  </view>
+
 </view>
