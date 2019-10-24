@@ -2,7 +2,10 @@
   "pages": [
     "pages/index/index",
     "pages/logs/logs",
-    "pages/user/user"
+    "pages/user/user",
+    "pages/information/information",
+    "pages/publish/publish",
+    "pages/recommend/recommend"
   ],
 "window": {
   "navigationBarBackgroundColor": "#FC9D99",
@@ -17,11 +20,33 @@
   "list": [
     {
       "pagePath": "pages/index/index",
-      "text": "首页"
+      "text": "首页",
+      "iconPath":"images/shouye.png",
+      "selectedIconPath":"images/selected_shouye.png"
+    },
+    {
+      "pagePath": "pages/recommend/recommend",
+      "text": "推荐",
+      "iconPath": "images/recommend.png",
+      "selectedIconPath": "images/selected_recommend.png"
+    },
+    {
+      "pagePath": "pages/publish/publish",
+      "text": "发布",
+      "iconPath": "images/publish.png",
+      "selectedIconPath": "images/selected_publish.png"
+    },
+    {
+      "pagePath": "pages/information/information",
+      "text": "信息",
+      "iconPath": "images/information.png",
+      "selectedIconPath": "images/selected_information.png"
     },
     {
       "pagePath": "pages/user/user",
-      "text": "用户"
+      "text": "我的",
+      "iconPath": "images/user.png",
+      "selectedIconPath": "images/selected_user.png"
     }
   ]
 },
