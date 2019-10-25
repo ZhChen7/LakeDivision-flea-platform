@@ -14,8 +14,26 @@
     </view>
   </view>
 
+  <view class='HotSearch'>
+      <view>热搜</view>
+      <view>小米手机</view>
+      <view>华为</view>
+      <view>苹果</view>
+      <view>apple</view>
+  </view>
+</view>
 
-  <view class="index_sort">
+<view class='BannerBox'>
+  <swiper indicator-dots='{{true}}' autoplay='{{true}}' interval='2500' duration='400' circular='{{true}}'>
+    <swiper-item>
+      <image src='https://image2.suning.cn/uimg/cms/img/155833856375642739.png' mode='aspectFill' style='width:100%'></image>
+    </swiper-item>
+    <swiper-item>
+      <image src='https://image1.suning.cn/uimg/cms/img/155831644624742511.jpg' mode='aspectFill' style='width:100%'></image>
+    </swiper-item>
+  </swiper>
+  </view>
+ <view class="index_sort">
     <view class='main_sort'>
       <view class="index_sort_item">
         <image mode='aspectFit' src='https://m.360buyimg.com/mobilecms/s120x120_jfs/t1/20983/16/10753/6124/5c8a16aaE5d6b15d7/01e0e818a7505267.png'></image>
@@ -59,8 +77,6 @@
       </view>
     </view>
   </view>
-</view>
-
 
  
 

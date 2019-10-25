@@ -1,10 +1,13 @@
 #Lake_division_flea_platform{
-  background: #ddd;
+  /* background: #eee; */
 }
 .header_sort{
   /* border: 1px solid black; */
-  background: linear-gradient(180deg,#F5F50F 10%,red,#eee);
-  border-radius: 0 0 30rpx 30rpx;
+  /* background: linear-gradient(180deg,#F5F50F 10%,red,#eee); */
+  /* border-radius: 0 0 30rpx 30rpx; */
+  padding: 15rpx 0 150rpx;
+  background: #03A8DD;
+  /* border-radius: 0 0 70rpx 70rpx; */
 }
 
 .index_header{
@@ -18,13 +21,14 @@
 }
 .index_header_left{
   font-size: 27rpx;
-  color: #F4606C;
+  color: #fff;
 }
 .search{
   width: 529rpx;
   margin-left: -30rpx;
   /* border: 1px solid saddlebrown; */
   position: relative;
+  /* border: 1px solid black; */
 }
 
 
@@ -36,16 +40,51 @@
   color: #999;
 }
 .search input{
-  border-radius: 40rpx;
+  border-radius: 0 0 0 11rpx;
   font-size: 21rpx;
   padding-left: 60rpx;
   background: #fff;
   line-height: 50rpx;
   height: 50rpx;
+  border-bottom: 1rpx solid #ccc;
+
 }
-    input::-webkit-input-placeholder {
-       font-size: 22rpx;
-    }
+input::-webkit-input-placeholder {
+      font-size: 22rpx;
+ }
+
+.HotSearch{
+  margin-top: 24rpx;
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: space-around;
+  font-size: 21rpx;
+}
+ .HotSearch>view{
+    border: 1px solid #eee;
+    padding: 3rpx 24rpx;
+    border-radius: 25rpx;
+    position: relative;
+    left: -29rpx;
+    color: #fff;
+ }
+
+ .HotSearch>view:nth-of-type(1){
+   border: none;
+   font-size: 23rpx;
+   left: 0;
+ }
+
+.BannerBox{
+  margin-top: -165rpx;
+  padding: 35rpx 30rpx 0;
+  /* background: red; */
+  
+}
+.BannerBox >swiper swiper-item{
+  border-radius: 15rpx;
+}
+
 .index_sort{
    padding: 20rpx 35rpx;
    /* border: 1px solid black; */
