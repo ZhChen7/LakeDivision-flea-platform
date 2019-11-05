@@ -6,3 +6,10 @@
   height: 0;
   color: transparent
 }
+
+image {
+width:320px;
+height:170px;
+display:inline-block;
+overflow:hidden;
+}

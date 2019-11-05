@@ -1,14 +1,14 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/recommend/recommend",
     "pages/logs/logs",
     "pages/user/user",
     "pages/information/information",
-    "pages/publish/publish",
-    "pages/recommend/recommend"
+    "pages/publish/publish"
   ],
   "window": {
-    "navigationBarBackgroundColor": "#F5F50F",
+    "navigationBarBackgroundColor": "#fff",
     "navigationBarTextStyle": "black",
     "navigationBarTitleText": "湖师跳蚤平台",
     "backgroundColor": "#FC9D99",
@@ -26,7 +26,7 @@
       },
       {
         "pagePath": "pages/recommend/recommend",
-        "text": "推荐",
+        "text": "分类",
         "iconPath": "images/recommend.png",
         "selectedIconPath": "images/selected_recommend.png"
       },

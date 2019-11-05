@@ -1,1 +1,24 @@
-/* pages/recommend/recommend.wxss */
+.index_nav{
+  background: #fff;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 5rpx 3rpx;
+}
+.my_scroll{
+  height:70rpx;
+  white-space: nowrap;
+  line-height: 70rpx;
+  padding-left: 15rpx;
+}
+
+.index_nav_tab{
+  display: inline-block;
+  margin-right: 15rpx;
+}
+.index_nav_tab>text{
+  font-size: 27rpx;
+  padding: 0 7rpx;
+  border-radius: 10rpx;
+  color: #999;
+}
+

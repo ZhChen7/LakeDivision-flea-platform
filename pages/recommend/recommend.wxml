@@ -1,2 +1,17 @@
-<!--pages/recommend/recommend.wxml-->
-<text>pages/recommend/recommend.wxml</text>
+  <view class='index_nav'>
+   <scroll-view scroll-x="true" class="my_scroll">
+      <view class='index_nav_tab'><text>关注</text></view>
+      <view class='index_nav_tab'><text>新鲜</text></view>
+      <view class='index_nav_tab'><text>附近</text></view>
+      <view class='index_nav_tab'><text>手机</text></view>
+      <view class='index_nav_tab'><text>数码</text></view>
+      <view class='index_nav_tab'><text>租房</text></view>
+      <view class='index_nav_tab'><text>服装</text></view>
+      <view class='index_nav_tab'><text>居家</text></view>
+      <view class='index_nav_tab'><text>美妆</text></view>
+      <view class='index_nav_tab'><text>运动</text></view>
+      <view class='index_nav_tab'><text>家电</text></view>
+      <view class='index_nav_tab'><text>玩具乐器</text></view>
+      <view class='index_nav_tab'><text>短租</text></view>
+      </scroll-view>
+  </view>

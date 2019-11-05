@@ -1,12 +1,13 @@
 #Lake_division_flea_platform{
-  /* background: #eee; */
+  background:#fff;
 }
 .header_sort{
   /* border: 1px solid black; */
   /* background: linear-gradient(180deg,#F5F50F 10%,red,#eee); */
   /* border-radius: 0 0 30rpx 30rpx; */
-  padding: 15rpx 0 150rpx;
-  background: #03A8DD;
+  padding: 15rpx 0 30rpx;
+  /* background:url("http://q0hfh28wl.bkt.clouddn.com/mmexport1572933320227.jpg") no-repeat center; */
+  background-size: contain;
   /* border-radius: 0 0 70rpx 70rpx; */
 }
 
@@ -14,6 +15,24 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+}
+.SchoolLogo{
+  width: 100rpx;
+  height: 90rpx;
+}
+
+.SchoolLogo > image{
+  width: 100%;
+  height: 100%;
+}
+
+.Imglogo{
+  text-align: center;
+  /* border: 1px solid black; */
+}
+
+.Imglogo >image{
+  height: 150rpx;
 }
 .index_header_right{
   position: relative;
@@ -66,7 +85,7 @@ input::-webkit-input-placeholder {
     border-radius: 25rpx;
     position: relative;
     left: -29rpx;
-    color: #fff;
+    color: #000;
  }
 
  .HotSearch>view:nth-of-type(1){
@@ -76,11 +95,15 @@ input::-webkit-input-placeholder {
  }
 
 .BannerBox{
-  margin-top: -165rpx;
-  padding: 35rpx 30rpx 0;
+  /* margin-top: -165rpx; */
+  padding: 0rpx 30rpx 0;
   /* background: red; */
   
 }
+.BannerBox >swiper{
+  height: 351rpx;
+}
+
 .BannerBox >swiper swiper-item{
   border-radius: 15rpx;
 }
@@ -112,7 +135,7 @@ input::-webkit-input-placeholder {
   height: 90rpx;
 }
 .index_sort>.main_sort>.index_sort_item>text{
-  font-size: 18rpx;
+  font-size: 21rpx;
   text-align: center;
   display: inline-block;
   margin-top: -10rpx;
@@ -121,38 +144,27 @@ input::-webkit-input-placeholder {
   top: -10rpx;
 }
 
-.index_nav{
-  background: #ddd;
-  width: 100%;
-  box-sizing: border-box;
-  padding: 5rpx 3rpx;
-}
-.my_scroll{
-  height:70rpx;
-  white-space: nowrap;
-  line-height: 70rpx;
-  padding-left: 15rpx;
-}
 
-.index_nav_tab{
+.list_intro{
+  /* padding: 0 0 0 35rpx; */
+  margin-left: 35rpx;
+  font-size: 32rpx;
+  color:#999;
+
+}
+.list_intr>text{
   display: inline-block;
-  margin-right: 15rpx;
+  border: 1px solid black;
+  border-radius: 35rpx;
 }
-.index_nav_tab>text{
-  font-size: 30rpx;
-  padding: 0 7rpx;
-  border-radius: 10rpx;
-  color: #999;
-}
-
 
 .index_show_list{
   /* border: 1px solid red; */
   padding: 20rpx 20rpx;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  background: #F1F3F0;
+  justify-content: space-evenly;
+  /* background: #F1F3F0; */
 }
 /* .index_show_list::after{
   content: '';
@@ -170,7 +182,7 @@ input::-webkit-input-placeholder {
 
 .index_show_list_item >.index_show_list_img{
   width: 100%;
-  height: 410rpx;
+  height: 352rpx;
 }
 .index_show_list_item >.index_show_list_img>image{
   width: 100%;
