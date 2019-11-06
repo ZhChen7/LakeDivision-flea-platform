@@ -1,4 +1,43 @@
-<!--pages/publish/publish.wxml-->
-<view class='InputContent'>
-  <textarea bindblur="bindTextAreaBlur" auto-height placeholder="自动变高" placeholder-style="color:red;" />
+<view class="section">
+  <form bindsubmit="bindFormSubmit">
+    <textarea class='textarea' placeholder="添加商品描述..." name="textarea" placeholder-style="color:#aaa;" auto-focus />
+    <view class='AddImg'>
+        <text class='iconfont icon-tianjia'></text>
+    </view>
+
+   <view class='input1'>
+        <text>想卖</text>   
+        <input type='text' placeholder='￥ 0.00'  placeholder-style="color:#ccc;" id='wangtomai'></input>
+
+    </view>
+
+     <view class='input1 input2'>
+        <text>原价</text>
+      <input type='text' placeholder='￥ 0.00' placeholder-style="color:#ccc;"></input>
+    </view>
+
+    <!-- <button form-type="submit"> 提交 </button> -->
+
+
+
+  <checkbox-group bindchange="checkboxChange" class='Pinkage'>
+    <label class="checkbox" wx:for="{{Pinkageitems}}">
+      <checkbox value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}
+    </label>
+  </checkbox-group>
+
+
+    <checkbox-group bindchange="checkboxChange" class='category'>
+    <view class='category_header'>类别</view>
+    <view class='category_content'>
+       <label class="checkbox checkbox2" wx:for="{{category}}">
+         <checkbox value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}
+     </label>
+    </view>
+
+  </checkbox-group>
+
+  </form>
 </view>
+
+ 

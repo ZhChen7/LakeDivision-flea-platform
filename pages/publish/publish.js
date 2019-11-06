@@ -1,11 +1,21 @@
 // pages/publish/publish.js
 Page({
 
-  /**
-   * 页面的初始数据
-   */
   data: {
-
+    Pinkageitems: [
+      { name: 'kexiaodao', value: '可小刀', checked: 'true' },
+      { name: 'Pinkage', value: '包邮' }
+    ],
+    category: [
+      { name: 'book', value: '书籍' },
+      { name: 'Pinkage', value: '生活用品', checked: 'true' },
+      { name: 'Pinkage', value: '3C数码' },
+      { name: 'Pinkage', value: '鞋服美妆' },
+      { name: 'Pinkage', value: '其它' }
+    ]
+  },
+  checkboxChange: function (e) {
+    console.log('checkbox发生change事件，携带value值为：', e.detail.value)
   },
 
   /**

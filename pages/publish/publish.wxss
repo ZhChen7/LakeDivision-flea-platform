@@ -1,1 +1,78 @@
-/* pages/publish/publish.wxss */
+
+.AddImg{
+  width: 170rpx;
+  height: 170rpx;
+  background: #eee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 64rpx;
+
+}
+.AddImg > text{
+  font-size: 64rpx;
+  color: #8B8B8B;
+}
+
+.input1{
+  margin-top: 18rpx;
+  color: #111;
+  background: #F4F4F4;
+  display: flex;
+  font-size: 28rpx;
+  justify-content: space-between;
+  padding: 9rpx 30rpx;
+}
+.input1 > input{
+  /* border: 1px solid black; */
+  width: 100rpx;
+  padding: 10rpx 20rpx;
+}
+
+.input1 >input::-webkit-input-placeholder{
+  color: red;
+}
+
+.input1 > text{
+  font-size: 32rpx;
+  line-height: 66rpx;
+}
+
+.Pinkage{
+  /* border: 1px solid black; */
+  padding: 30rpx 15rpx;
+  display: flex;
+  justify-content: space-between;
+   width: 350rpx;
+}
+
+.category{
+  padding: 30rpx 15rpx; 
+  /* border: 1px solid saddlebrown;  */
+  width: 400rpx;
+}
+
+
+
+.category_content{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  /* border: 1px solid salmon; */
+}
+
+.category>label{
+  /* margin-left: 135rpx; */
+  width: 200rpx;
+  /* border: 1px solid rgb(9, 9, 61); */
+}
+
+.checkbox2{
+  margin-top: 30rpx;
+}
+
+.category_header{
+  font-size: 33rpx;
+  font-weight: bold;
+}
+
