@@ -1,2 +1,34 @@
 <!--pages/information/information.wxml-->
-<text>pages/information/information.wxml</text>
+<!-- <text>pages/information/information.wxml</text>‘ -->
+
+<view class = "whole">
+  <!-- 顶部的文字标题 -->
+  <view class = "topName">My news</view>
+
+  <!-- 标题底下导航栏，我的消息，我的好友，新的好友 -->
+  <view class = "midNav">
+    <view class = "myNews">
+      <view class = "myNews-pic">1</view>
+      <view class = "myNews-txt">我的消息</view>
+    </view>
+    <view class = "myFriends">
+      <view class = "myFriends-pic">1</view>
+      <view class = "myFriends-txt">我的好友</view>
+    </view>
+    <view class = "newFriends">
+      <view class = "newFriends-pic">1</view>
+      <view class = "newFriends-txt">新的好友</view>
+    </view>
+  </view>
+
+  <!-- 信息列表 -->
+  <view class = "list">
+    <view class = "list1">
+      <view class = "list1-pic"></view>
+      <view class = "list1-pic"></view>
+    </view>
+    <view class = "list2"></view>
+    <view class = "list3"></view>
+  </view>
+  
+</view>
