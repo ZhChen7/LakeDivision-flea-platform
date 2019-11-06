@@ -1,2 +1,4 @@
 <!--pages/publish/publish.wxml-->
-<text>pages/publish/publish.wxml</text>
+<view class='InputContent'>
+  <textarea bindblur="bindTextAreaBlur" auto-height placeholder="自动变高" placeholder-style="color:red;" />
+</view>

@@ -1,11 +1,11 @@
 {
   "pages": [
+    "pages/publish/publish",
     "pages/index/index",
     "pages/recommend/recommend",
     "pages/logs/logs",
     "pages/user/user",
-    "pages/information/information",
-    "pages/publish/publish"
+    "pages/information/information"
   ],
   "window": {
     "navigationBarBackgroundColor": "#fff",
