@@ -1,4 +1,5 @@
 <!--index.wxml-->
+
 <view class = "whole">
   <view class = "nav">
     <view class = "nav-left">
@@ -29,14 +30,29 @@
         
       </view>
       <view class = "shop-bottom3">
-        <view class = "left"><text class = "iconfont icon-mairu"></text>我发布的</view>
-        <view class = "right"><text class = "iconfont icon-changyongtubiao-xianxingdaochu-zhuanqu-"></text></view>
-        
+        <view class="wx-cell" data-route="../about/about" bindtap="navToPage">
+          <view class = "left"><text class = "iconfont icon-maichu"></text>关于我们</view>
+          <view class = "right"><text class = "iconfont icon-changyongtubiao-xianxingdaochu-zhuanqu-"></text></view>
+        </view>
       </view>
-      <view class = "shop-bottom4">
-        <view class = "left"><text class = "iconfont icon-maichu"></text>我卖出的</view>
-        <view class = "right"><text class = "iconfont icon-changyongtubiao-xianxingdaochu-zhuanqu-"></text></view>
-        
-      </view>
+      
   </view>
+  <view class="wx-cells">
+    <!-- <view class="wx-cell" data-route="../about/about" bindtap="navToPage"> -->
+     <view class="wx-cell" url="../about/about" open-type="navigate">
+      <image class="wx-cell-icon" src="../../images/about.png"></image>
+      <text class="wx-cell-text">关于我们</text>
+      <view class = "right"><text class = "iconfont icon-changyongtubiao-xianxingdaochu-zhuanqu-"></text></view>
+      <!-- <image class="wx-cell-arrow" src=""></image> -->
+    </view>
+  </view>
+
+ 
+  <navigator url="../about/about" open-type="navigate"> 关于我们 点击跳转</navigator>
 </view>
+
+ <van-cell
+  is-link
+  title="单元格"
+  link-type="navigateTo" 
+  url="../about/about"/>

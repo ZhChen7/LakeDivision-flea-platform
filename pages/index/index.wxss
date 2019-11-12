@@ -1,5 +1,5 @@
 #Lake_division_flea_platform{
-  background:#fff;
+  /* background:#fff; */
 }
 .header_sort{
   /* border: 1px solid black; */
@@ -160,10 +160,10 @@ input::-webkit-input-placeholder {
 
 .index_show_list{
   /* border: 1px solid red; */
-  padding: 20rpx 20rpx;
+  padding: 20rpx 24rpx;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: space-between;
   /* background: #F1F3F0; */
 }
 /* .index_show_list::after{

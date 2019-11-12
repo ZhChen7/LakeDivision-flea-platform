@@ -1,24 +1,50 @@
-.index_nav{
-  background: #fff;
+.index_show_list{
+  /* border: 1px solid red; */
+  padding: 20rpx 24rpx;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  /* background: #F1F3F0; */
+}
+/* .index_show_list::after{
+  content: '';
+  display: block;
+  clear: both;
+} */
+
+.index_show_list_item{
+  border: 1px solid #ddd;
+  width: 340rpx;
+  border-radius: 15rpx;
+  margin-top: 15rpx;
+}
+
+
+.index_show_list_item >.index_show_list_img{
   width: 100%;
-  box-sizing: border-box;
-  padding: 5rpx 3rpx;
+  height: 352rpx;
 }
-.my_scroll{
-  height:70rpx;
-  white-space: nowrap;
-  line-height: 70rpx;
-  padding-left: 15rpx;
+.index_show_list_item >.index_show_list_img>image{
+  width: 100%;
 }
-
-.index_nav_tab{
-  display: inline-block;
-  margin-right: 15rpx;
+.index_show_list_footer{
+  padding: 5rpx 8rpx;
 }
-.index_nav_tab>text{
-  font-size: 27rpx;
-  padding: 0 7rpx;
-  border-radius: 10rpx;
-  color: #999;
+.index_show_list_footer>.index_show_list_footer_intro{
+  font-weight: bold;
+  font-size: 22rpx;
 }
 
+.index_show_list_footer view{
+  padding: 10rpx 3rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.index_show_list_footer .price{
+  color: red;
+  font-size: 25rpx;
+}
+.index_show_list_footer .WantPeople{
+  font-size: 22rpx;
+  color: #aaa;
+}

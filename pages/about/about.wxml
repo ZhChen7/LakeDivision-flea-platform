@@ -1,0 +1,18 @@
+<view class="container flex-column">
+  <view class="top-container flex-rest-height">
+    <view class="logo">
+      <image  src='http://q0hfh28wl.bkt.clouddn.com/shool.png' class="logo-image"></image>
+    </view>
+    <view class="name">
+      <text>湖师学生交易平台</text>
+    </view>
+    <view class="about">
+      <!-- <text class="about-text">GitHub: BelinChung/wxapp-hiapp</text> -->
+      <text class="about-text">Email: 2535991893@qq.com</text>
+      <text class="about-text">Tel:17362771662</text>
+    </view>
+  </view>
+  <view class="bottom-container">
+    <text>  2019 湖北黄石 </text>
+  </view>
+</view>

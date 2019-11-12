@@ -1,0 +1,8 @@
+{
+  "name": "",
+  "description": "> 自己的一个**科研立项** 的小项目",
+  "version": "",
+  "dependencies": {
+    "vant-weapp": "^0.5.23"
+  }
+}

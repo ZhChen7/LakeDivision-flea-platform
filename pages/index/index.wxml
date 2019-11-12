@@ -1,6 +1,5 @@
 <!--湖师跳蚤平台-->
 <view id='Lake_division_flea_platform'>
-
 <view class='header_sort'>
  <view class='index_header'>
     <view class='SchoolLogo'>
@@ -102,7 +101,10 @@
 <view class='list_intro'>
 <text> 推荐：</text>
 </view>
+
+
   <view class='index_show_list'>
+
     <view class='index_show_list_item'>
         <view class='index_show_list_img'>
             <image src='https://g-search3.alicdn.com/img/bao/uploaded/i4/i4/359295234/O1CN01TTVzaP1oXDZOTd5xo_!!359295234.jpg_580x580Q90.jpg' mode='aspectFit'></image>

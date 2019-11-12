@@ -21,7 +21,7 @@
 
 
   <checkbox-group bindchange="checkboxChange" class='Pinkage'>
-    <label class="checkbox" wx:for="{{Pinkageitems}}">
+    <label class="checkbox" wx:for="{{Pinkageitems}}" wx:key="item.name">
       <checkbox value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}
     </label>
   </checkbox-group>
@@ -30,7 +30,7 @@
     <checkbox-group bindchange="checkboxChange" class='category'>
     <view class='category_header'>类别</view>
     <view class='category_content'>
-       <label class="checkbox checkbox2" wx:for="{{category}}">
+       <label class="checkbox checkbox2" wx:for="{{category}}" wx:key="item.name">
          <checkbox value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}
      </label>
     </view>
