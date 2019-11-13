@@ -1,1 +1,15 @@
-/* pages/index/indexlistshow/indexlistshow.wxss */
+.box{
+  border: 1px solid beige;
+  height: 750rpx;
+}
+.box >swiper{
+  width:100%;
+}
+
+.box >swiper>swiper-item{
+  height: 750rpx;
+  border: 1px solid red;
+}
+.box >swiper>swiper-item>image{
+    height: 750rpx;
+}

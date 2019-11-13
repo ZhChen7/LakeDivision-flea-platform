@@ -5,8 +5,21 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    show: false
   },
+
+  onClickLeft() {
+    wx.navigateBack({
+      delta: 1, // 回退前 delta(默认为1) 页面
+    })
+  },
+  onClickRight() {
+    this.setData({ show: true });
+  },
+  onClose() {
+    this.setData({ show: false });
+  },
+
 
   /**
    * 生命周期函数--监听页面加载

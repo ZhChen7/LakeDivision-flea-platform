@@ -1,12 +1,12 @@
 {
   "pages": [
+    "pages/index/indexlistshow/indexlistshow",
     "pages/index/index",
     "pages/recommend/recommend",
     "pages/publish/publish",
     "pages/logs/logs",
     "pages/user/user",
-    "pages/information/information",
-    "pages/index/indexlistshow/indexlistshow"
+    "pages/information/information"
   ],
   "window": {
     "navigationBarBackgroundColor": "#fff",

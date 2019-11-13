@@ -6,6 +6,11 @@ Page({
   data: {
     show: false
   },
+  listclick(){
+    wx.navigateTo({
+      url: './indexlistshow/indexlistshow',
+    })
+  },
   showPopup() {
     this.setData({ show: true });
   },

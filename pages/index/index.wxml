@@ -3,7 +3,7 @@
 <view class='header_sort'>
  <view class='index_header'>
     <view class='SchoolLogo'>
-
+    <image src='http://q0hfh28wl.bkt.clouddn.com/92230112EA6A15EFC01E1D9728C96552.jpg'></image>
     </view>
     <!-- 输入框 -->
     <view class='search'>
@@ -24,11 +24,38 @@
   </view>
 </view>
 
-<view class='Imglogo'>
-  <image src='http://q0hfh28wl.bkt.clouddn.com/mmexport1572933320227.jpg' mode='aspectFit'></image>
-</view>
+<view class='box'>
+  <swiper indicator-dots='{{false}}' autoplay='{{true}}' interval='2500' duration='400' circular='{{true}}'>
+    <!-- <swiper-item>
+      <image src='http://q0hfh28wl.bkt.clouddn.com/mmexport1572933320227.jpg' mode='aspectFit' style='width:100%'></image>
+    </swiper-item> -->
 
+    <swiper-item>
+      <image src='http://q0hfh28wl.bkt.clouddn.com/mmexport1572933342587.jpg' mode='aspectFill' style='width:100%'></image>
+    </swiper-item>
 
+ <swiper-item>
+      <image src='http://q0hfh28wl.bkt.clouddn.com/timg.jpg' mode='aspectFill' style='width:100%'></image>
+    </swiper-item>
+
+    <swiper-item>
+      <image src='http://q0hfh28wl.bkt.clouddn.com/mmexport1572933388916.webp' mode='aspectFill' style='width:100%'></image>
+    </swiper-item>
+
+   
+
+   <swiper-item>
+      <image src='http://q0hfh28wl.bkt.clouddn.com/CEEA0838C309EFBC5B0A016FC9CC21B9.jpg' mode='aspectFill' style='width:100%'></image>
+    </swiper-item>
+
+    
+  </swiper>
+  </view>
+
+<van-notice-bar
+  mode="closeable" backgroundColor="#fff"
+  text="湖师跳蚤平台，正式营业啦！湖师跳蚤平台，正式营业啦！湖师跳蚤平台，正式营业啦！"
+/>
 
  <view class="index_sort">
     <view class='main_sort'>
@@ -80,7 +107,7 @@
 
   <view class='index_show_list'>
 
-    <view class='index_show_list_item'>
+    <view class='index_show_list_item' bindtap='listclick'>
         <view class='index_show_list_img'>
             <image src='https://g-search3.alicdn.com/img/bao/uploaded/i4/i4/359295234/O1CN01TTVzaP1oXDZOTd5xo_!!359295234.jpg_580x580Q90.jpg' mode='aspectFit'></image>
         </view>

@@ -1,2 +1,35 @@
 <!--pages/index/indexlistshow/indexlistshow.wxml-->
-<text>pages/index/indexlistshow/indexlistshow.wxml</text>
+
+
+<van-sticky>
+ <van-nav-bar title="商品描述" left-text="返回" left-arrow   bind:click-left="onClickLeft"
+  bind:click-right="onClickRight">
+  <van-icon name="ellipsis" slot="right" />  
+</van-nav-bar>
+</van-sticky>
+
+<view class='box'>
+  <swiper indicator-dots='{{false}}' autoplay='{{true}}' interval='2500' duration='400' circular='{{true}}'>
+    <swiper-item>
+      <image src='https://m.360buyimg.com/mobilecms/s750x750_jfs/t1/54936/17/15684/205671/5dc999dfE2a1ad898/085cc5c03b5af5d6.jpg!q80.dpg.webp' mode='aspectFill' style='width:100%'></image>
+    </swiper-item>
+
+
+    
+  </swiper>
+  </view>
+
+
+
+<van-popup  show="{{ show }}"
+  closeable
+  round
+  position="bottom"
+  custom-style="height: 20%"
+  bind:close="onClose">内容</van-popup>
+
+
+<van-panel title="标题" desc="描述信息" status="状态">
+  <view>内容</view>
+</van-panel>
+

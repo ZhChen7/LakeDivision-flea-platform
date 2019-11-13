@@ -1,5 +1,5 @@
 #Lake_division_flea_platform{
-  /* background:#fff; */
+  background:#fff;
 }
 .header_sort{
   /* border: 1px solid black; */
@@ -19,7 +19,7 @@
 }
 .SchoolLogo{
   width: 100rpx;
-  height: 90rpx;
+  height: 100rpx;
 }
 
 .SchoolLogo > image{
@@ -110,11 +110,11 @@ input::-webkit-input-placeholder {
 }
 
 .index_sort{
-   padding: 20rpx 35rpx;
+   padding: 12rpx 35rpx;
    /* border: 1px solid black; */
 }
 .index_sort>.main_sort{
-  padding: 32rpx 5rpx 25rpx;
+  padding: 0rpx 5rpx 25rpx;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
