@@ -3,7 +3,7 @@
 <view class='header_sort'>
  <view class='index_header'>
     <view class='SchoolLogo'>
-      <image src='http://q0hfh28wl.bkt.clouddn.com/shool.png' mode='aspectFill'></image>
+
     </view>
     <!-- 输入框 -->
     <view class='search'>
@@ -75,33 +75,8 @@
     </view>
   </view>
 
- <!-- <view class='BannerBox'>
-  <swiper indicator-dots='{{false}}' autoplay='{{true}}' interval='2500' duration='400' circular='{{true}}'>
-    <swiper-item>
-      <image src='https://img14.360buyimg.com/mobilecms/s280x280_jfs/t1/88847/38/1013/116521/5db806caEaadc1dd7/e7cb24301b3f9ae5.jpg.webp' mode='aspectFit' style='width:100%'></image>
-    </swiper-item>
-    <swiper-item>
-      <image src='https://img14.360buyimg.com/mobilecms/s280x280_jfs/t1/57822/6/6544/80380/5d42b3efEb6b919be/02a83d32707cb3da.jpg.webp' mode='aspectFit' style='width:100%'></image>
-    </swiper-item>
 
-      <swiper-item>
-      <image src='https://img11.360buyimg.com/n7/jfs/t2296/30/1114503806/863408/efee4906/567a44c2Nd5efa718.jpg' mode='aspectFit' style='width:100%'></image>
-    </swiper-item>
-
-      <swiper-item>
-      <image src='https://img14.360buyimg.com/mobilecms/s280x280_jfs/t1/57822/6/6544/80380/5d42b3efEb6b919be/02a83d32707cb3da.jpg.webp' mode='aspectFit' style='width:100%'></image>
-    </swiper-item>
-  </swiper>
-  </view> -->
-
-
-
-
-
-<view class='list_intro'>
-<text> 推荐：</text>
-</view>
-
+ <van-divider contentPosition="left">推荐</van-divider>
 
   <view class='index_show_list'>
 
@@ -221,3 +196,8 @@
   </view>
 
 </view>
+
+
+<van-popup show="{{ show }}" bind:close="onClose">内容</van-popup>
+
+  

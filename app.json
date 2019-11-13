@@ -1,8 +1,8 @@
 {
   "pages": [
+    "pages/index/index",
     "pages/recommend/recommend",
     "pages/publish/publish",
-    "pages/index/index",
     "pages/logs/logs",
     "pages/user/user",
     "pages/information/information",
@@ -11,7 +11,7 @@
   "window": {
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTextStyle": "black",
-    "navigationBarTitleText": "湖师跳蚤平台",
+    "navigationBarTitleText": "HSsell",
     "backgroundColor": "#FC9D99",
     "backgroundTextStyle": "light"
   },

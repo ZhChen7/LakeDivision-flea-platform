@@ -15,6 +15,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+    
 }
 .SchoolLogo{
   width: 100rpx;
@@ -159,8 +160,9 @@ input::-webkit-input-placeholder {
 }
 
 .index_show_list{
+  margin-top: -32rpx;
   /* border: 1px solid red; */
-  padding: 20rpx 24rpx;
+  padding: 0rpx 24rpx;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -179,6 +181,9 @@ input::-webkit-input-placeholder {
   margin-top: 15rpx;
 }
 
+/* .index_show_list_item:nth-of-type(1){
+  margin-top: 30rpx;
+} */
 
 .index_show_list_item >.index_show_list_img{
   width: 100%;

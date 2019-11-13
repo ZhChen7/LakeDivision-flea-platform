@@ -4,20 +4,20 @@ const app = getApp()
 
 Page({
   data: {
-    motto: 'Hello World',
-    userInfo: {},
-    hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    show: false
   },
-  //事件处理函数
-  bindViewTap: function() {
-    wx.navigateTo({
-      url: '../logs/logs'
-    })
+  showPopup() {
+    this.setData({ show: true });
   },
+
+  onClose() {
+    this.setData({ show: false });
+  },
+
   onLoad: function () {
     
   },
+
   //页面相关事件处理函数---监听用户下拉动作
   onPullDownRefresh: function () {
     console.log('下拉！')

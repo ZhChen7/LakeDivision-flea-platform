@@ -1,6 +1,8 @@
 {
  "usingComponents": {
   "van-button": "vant-weapp/button/index",
-  "van-popup": "vant-weapp/popup/index"
+  "van-popup": "vant-weapp/popup/index",
+  "van-divider": "vant-weapp/divider/index",
+  "van-datetime-picker": "vant-weapp/datetime-picker/index"
   }
 }
