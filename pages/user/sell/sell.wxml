@@ -1,0 +1,21 @@
+<!--pages/user/sell/sell.wxml-->
+<!-- <text>pages/user/sell/sell.wxml</text> -->
+
+<view class='header_sort'>
+ <view class='index_header'>
+    <!-- 输入框 -->
+    <view class='search'>
+      <text class='iconfont icon-sousuo'></text>
+      <input type='text' placeholder='卖出去的物品'></input>
+    </view>
+  </view>
+</view>
+<view class = "content">
+  <view class = "nav">
+    <button class = "all">全部</button>
+    <button class = "pay"></button>
+    <button class = "deliver"></button>
+    <button class = "gain"></button>
+    <button class = "assess"></button>
+  </view>
+</view>
