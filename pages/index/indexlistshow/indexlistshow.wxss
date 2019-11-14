@@ -1,15 +1,73 @@
 .box{
   border: 1px solid beige;
-  height: 750rpx;
 }
 .box >swiper{
   width:100%;
 }
 
 .box >swiper>swiper-item{
-  height: 750rpx;
-  border: 1px solid red;
+  border: 10px solid red;
 }
 .box >swiper>swiper-item>image{
-    height: 750rpx;
+    height: 750rpx !important;
+}
+
+
+.commodityBox{
+  padding: 30rpx 15rpx;
+}
+
+.commodity_price_show{
+    /* border:1px solid black; */
+    display: flex;
+    font-size: 32rpx;
+}
+
+.commodity_price_show >.commodity_price{
+    color: #e4393c;
+    font-weight: 700;
+    line-height: 1.3;
+    display: inline-block;
+}
+
+.commodity_price_show >.commodity_price>text{
+  font-size: 48rpx;
+}
+.original_price{
+  /* border: 1px solid bisque; */
+  font-size: 26rpx;
+  text-decoration: line-through;
+  margin-left: 12rpx;
+}
+
+.original_price>text{
+  position: relative;
+  top: 28rpx;
+  left: 8rpx;
+  opacity: 0.6;
+}
+
+.commodity_title{
+    /* border: 1px solid  #000; */
+    display: flex;
+    margin-top: 30rpx;
+}
+.commodity_title >view{
+    font-size: 21rpx;
+    height: 25rpx;
+    padding: 3rpx 8rpx;
+    background: red;
+    color: #ccc;
+}
+.commodity_title >text{
+  display: inline-block;
+  margin-left: 15rpx;
+}
+
+.commodity_intro{
+    font: 700 32rpx Arial,"microsoft yahei";
+    color: #666;
+    padding-top: 10px;
+    line-height: 28px;
+    margin-bottom: 5px;
 }

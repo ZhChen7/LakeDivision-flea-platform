@@ -5,6 +5,9 @@
     "van-sticky": "vant-weapp/sticky/index",
     "van-nav-bar": "vant-weapp/nav-bar/index",
     "van-icon": "vant-weapp/icon/index",
-    "van-popup": "vant-weapp/popup/index"
+    "van-popup": "vant-weapp/popup/index",
+    "van-goods-action": "vant-weapp/goods-action/index",
+    "van-goods-action-icon": "vant-weapp/goods-action-icon/index",
+    "van-goods-action-button": "vant-weapp/goods-action-button/index"
   }
 }

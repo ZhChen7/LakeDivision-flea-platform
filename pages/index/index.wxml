@@ -105,25 +105,17 @@
 
  <van-divider contentPosition="left">推荐</van-divider>
 
-  <view class='index_show_list'>
 
-    <view class='index_show_list_item' bindtap='listclick'>
-        <view class='index_show_list_img'>
-            <image src='https://g-search3.alicdn.com/img/bao/uploaded/i4/i4/359295234/O1CN01TTVzaP1oXDZOTd5xo_!!359295234.jpg_580x580Q90.jpg' mode='aspectFit'></image>
-        </view>
-        <view class='index_show_list_footer'>
-            <text class='index_show_list_footer_intro'>华为 p20pro6 + 128 珠光贝母全原在保99新</text>
-            <view>
-                <text class='price'>￥1680</text>
-                <text class='WantPeople'>2人想要</text>
-            </view>
-        </view>
-    </view>
 
-    <view class='index_show_list_item'>
+
+  <view class='index_show_list' >
+
+    <view class='index_show_list_item' bindtap='listclick' vx-for="index_show_list_data" wx-key="item.numeration">
+
+
 
         <view class='index_show_list_img'>
-            <image src='https://img14.360buyimg.com/n7/jfs/t1/38722/13/1825/290419/5cbea1d6Eae62aeb8/82bd2ce75e8bc579.jpg' mode='aspectFit'></image>
+            <image src='{{item.img}}' mode='aspectFit'></image>
         </view>
         <view class='index_show_list_footer'>
             <text class='index_show_list_footer_intro'>华为 p20pro6 + 128 珠光贝母全原在保99新</text>
@@ -134,92 +126,6 @@
         </view>
     </view>
 
-    <view class='index_show_list_item'>
-        <view class='index_show_list_img'>
-            <image src='https://img10.360buyimg.com/n7/jfs/t1/75771/27/8360/75667/5d6338f6E88f2db21/101d3ec8ac1c5c73.jpg' mode='aspectFit'></image>
-        </view>
-        <view class='index_show_list_footer'>
-            <text class='index_show_list_footer_intro'>华为 p20pro6 + 128 珠光贝母全原在保99新</text>
-            <view>
-                <text class='price'>￥1680</text>
-                <text class='WantPeople'>2人想要</text>
-            </view>
-        </view>
-    </view>
-
-       <view class='index_show_list_item'>
-        <view class='index_show_list_img'>
-            <image src='https://img13.360buyimg.com/n7/jfs/t1/81728/21/14338/172644/5dbc6a5eE2a9011f9/da3d1b757c9eef70.jpg' mode='aspectFit'></image>
-        </view>
-        <view class='index_show_list_footer'>
-            <text class='index_show_list_footer_intro'>华为 p20pro6 + 128 珠光贝母全原在保99新</text>
-            <view>
-                <text class='price'>￥1680</text>
-                <text class='WantPeople'>2人想要</text>
-            </view>
-        </view>
-    </view>
-
-       <view class='index_show_list_item'>
-        <view class='index_show_list_img'>
-            <image src='https://img12.360buyimg.com/n7/jfs/t1/73382/6/14437/198500/5dbd3cb8E7bc59a2a/d9d201b322514a14.jpg' mode='aspectFit'></image>
-        </view>
-        <view class='index_show_list_footer'>
-            <text class='index_show_list_footer_intro'>华为 p20pro6 + 128 珠光贝母全原在保99新</text>
-            <view>
-                <text class='price'>￥1680</text>
-                <text class='WantPeople'>2人想要</text>
-            </view>
-        </view>
-    </view>
-       <view class='index_show_list_item'>
-        <view class='index_show_list_img'>
-            <image src='https://img10.360buyimg.com/babel/s320x320_jfs/t1/64090/9/14609/115535/5dc04e72E061a0f93/e849d0fc6242af23.jpg' mode='aspectFit'></image>
-        </view>
-        <view class='index_show_list_footer'>
-            <text class='index_show_list_footer_intro'>华为 p20pro6 + 128 珠光贝母全原在保99新</text>
-            <view>
-                <text class='price'>￥1680</text>
-                <text class='WantPeople'>2人想要</text>
-            </view>
-        </view>
-    </view>
-       <view class='index_show_list_item'>
-        <view class='index_show_list_img'>
-            <image src='https://img14.360buyimg.com/babel/s320x320_jfs/t1/105185/32/1520/171583/5dc04e5dEaa7485d4/5be823be0c26bb82.jpg' mode='aspectFit'></image>
-        </view>
-        <view class='index_show_list_footer'>
-            <text class='index_show_list_footer_intro'>华为 p20pro6 + 128 珠光贝母全原在保99新</text>
-            <view>
-                <text class='price'>￥1680</text>
-                <text class='WantPeople'>2人想要</text>
-            </view>
-        </view>
-    </view>
-       <view class='index_show_list_item'>
-        <view class='index_show_list_img'>
-            <image src='https://img10.360buyimg.com/n2/jfs/t1/42661/20/178/143725/5cc12225E506b86e0/c7e2007b07b5c6b6.jpg!q80.webp' mode='aspectFit'></image>
-        </view>
-        <view class='index_show_list_footer'>
-            <text class='index_show_list_footer_intro'>华为 p20pro6 + 128 珠光贝母全原在保99新</text>
-            <view>
-                <text class='price'>￥1680</text>
-                <text class='WantPeople'>2人想要</text>
-            </view>
-        </view>
-    </view>
-       <view class='index_show_list_item'>
-        <view class='index_show_list_img'>
-            <image src='https://img11.360buyimg.com/n2/jfs/t1/35476/20/5941/102134/5cc17ec0E20c57316/eda414b167308e82.jpg!q80.webp' mode='aspectFit'></image>
-        </view>
-        <view class='index_show_list_footer'>
-            <text class='index_show_list_footer_intro'>华为 p20pro6 + 128 珠光贝母全原在保99新</text>
-            <view>
-                <text class='price'>￥1680</text>
-                <text class='WantPeople'>2人想要</text>
-            </view>
-        </view>
-    </view>
   </view>
 
 </view>

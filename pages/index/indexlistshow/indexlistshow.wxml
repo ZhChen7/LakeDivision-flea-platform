@@ -14,7 +14,9 @@
       <image src='https://m.360buyimg.com/mobilecms/s750x750_jfs/t1/54936/17/15684/205671/5dc999dfE2a1ad898/085cc5c03b5af5d6.jpg!q80.dpg.webp' mode='aspectFill' style='width:100%'></image>
     </swiper-item>
 
-
+ <swiper-item>
+      <image src='https://m.360buyimg.com/mobilecms/s750x750_jfs/t1/54936/17/15684/205671/5dc999dfE2a1ad898/085cc5c03b5af5d6.jpg!q80.dpg.webp' mode='aspectFill' style='width:100%'></image>
+    </swiper-item>
     
   </swiper>
   </view>
@@ -28,8 +30,53 @@
   custom-style="height: 20%"
   bind:close="onClose">内容</van-popup>
 
+<view class='commodityBox'>
+<view class='commodity_price_show'>
+    <view class='commodity_price'>￥ <text>25.00</text> </view>
+    <view class='original_price'> <text>￥60</text></view>
+</view>
 
-<van-panel title="标题" desc="描述信息" status="状态">
-  <view>内容</view>
-</van-panel>
+  <view class='commodity_title'>
+      <view>全新</view>
+      <text>JAVA学习2</text>
+  </view>
+
+<view class='commodity_intro'>
+闲鱼是阿里巴巴旗下闲置交易平台App客户端（iOS版和安卓版）。会员只要使用淘宝或支付宝账户登录，无需经过复杂的开店流程，即可达成包括一键转卖个人淘宝账号中“已买到宝贝”、自主手机拍照上传二手闲置物品、以及在线交易等诸多功能。下载并使用全新概念的“闲鱼”app，个人卖家能获得更大程度的曝光量、更高效的流通路径和更具优势的物流价格等三大优势，让闲置的宝贝以最快的速度奔赴天南海北的新主人手中物尽其用。此外，闲鱼平台后端已无缝接入淘宝信用支付体系，从而最大程度保障交易安全。
+</view>
+
+</view>
+
+<van-goods-action>
+  <van-goods-action-icon
+    dot 
+    icon="chat-o"
+    text="客服"
+    bind:click="onClickIcon"
+  />
+  <van-goods-action-icon
+    info="5"
+    icon="cart-o"
+    text="购物车"
+    bind:click="onClickIcon"
+  />
+   <van-goods-action-icon   icon="shop-o" text="店铺" />
+  <van-goods-action-button
+
+    text="加入购物车"
+    type="warning"
+    bind:click="onClickButton" 
+  />
+  <van-goods-action-button
+    text="立即购买"
+    bind:click="onClickButton"
+  />
+</van-goods-action>
+
+
+
+
+
+
+
 
