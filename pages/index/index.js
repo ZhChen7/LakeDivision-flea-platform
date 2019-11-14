@@ -5,9 +5,9 @@ const app = getApp()
 Page({
   data: {
     show: false,
-    index_show_list_data:[{
+    indexshowlistdata:[{
       numeration:'001',
-      img:'https://g-search3.alicdn.com/img/bao/uploaded/i4/i4/359295234/O1CN01TTVzaP1oXDZOTd5xo_!!359295234.jpg_580x580Q90.jpg',
+      img:'https://img11.360buyimg.com/jdcms/s150x150_jfs/t1/77198/3/15292/206296/5dcadc9fEbd06bb37/a74616e7b2006039.jpg.webp',
       intro:'华为 p20pro6 + 128 珠光贝母全原在保99新',
       price:'￥1680',
       WantPeople:2
@@ -32,6 +32,20 @@ Page({
         intro:'华为 p20pro6 + 128 珠光贝母全原在保99新',
         price:'￥1680',
         WantPeople:2
+      },
+      {
+        numeration: '005',
+        img: 'https://img10.360buyimg.com/n7/jfs/t1/75771/27/8360/75667/5d6338f6E88f2db21/101d3ec8ac1c5c73.jpg',
+        intro: '华为 p20pro6 + 128 珠光贝母全原在保99新',
+        price: '￥1680',
+        WantPeople: 2
+      },
+      {
+        numeration: '006',
+        img: 'https://img10.360buyimg.com/n7/jfs/t1/75771/27/8360/75667/5d6338f6E88f2db21/101d3ec8ac1c5c73.jpg',
+        intro: '华为 p20pro6 + 128 珠光贝母全原在保99新',
+        price: '￥1680',
+        WantPeople: 2
       }]
   },
   listclick(){

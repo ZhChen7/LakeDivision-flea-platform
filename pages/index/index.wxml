@@ -109,28 +109,21 @@
 
 
   <view class='index_show_list' >
-
-    <view class='index_show_list_item' bindtap='listclick' vx-for="index_show_list_data" wx-key="item.numeration">
-
-
-
+    <view class='index_show_list_item' bindtap='listclick' wx:for="{{indexshowlistdata}}" wx:key="{{item.numeration}}">
         <view class='index_show_list_img'>
             <image src='{{item.img}}' mode='aspectFit'></image>
         </view>
         <view class='index_show_list_footer'>
-            <text class='index_show_list_footer_intro'>华为 p20pro6 + 128 珠光贝母全原在保99新</text>
+            <text class='index_show_list_footer_intro'>{{item.intro}}</text>
             <view>
-                <text class='price'>￥1680</text>
-                <text class='WantPeople'>2人想要</text>
+                <text class='price'>{{item.price}}</text>
+                <text class='WantPeople'>{{item.WantPeople}}人想要</text>
             </view>
         </view>
     </view>
-
   </view>
-
 </view>
 
 
-<van-popup show="{{ show }}" bind:close="onClose">内容</van-popup>
 
   
