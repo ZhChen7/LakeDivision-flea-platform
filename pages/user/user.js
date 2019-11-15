@@ -15,10 +15,9 @@ Page({
 
   },
 
-  navToPage(event) {
-    let route = event.currentTarget.dataset.route
+  navigateTo() {
     wx.navigateTo({
-      url: route
+      url: "sell/sell"
     })
   },
 

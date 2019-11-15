@@ -5,7 +5,20 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    news:[
+      {
+        headPic: "",
+        name: "周杰伦",
+        time: "2019/10/10",
+        content: "哎呦，不错呦！"
+      },
+      {
+        headPic: "",
+        name: "周杰伦",
+        time: "2019/10/10",
+        content: "哎呦，不错呦！"
+      }
+    ]
   },
 
   /**

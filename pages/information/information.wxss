@@ -4,7 +4,7 @@
 }
 /* 顶部的文字标题 */
 .whole .topName{
-  border: 1rpx solid black;
+  /* border: 1rpx solid black; */
   font-size: 60rpx;
   text-align: center;
   padding: 20rpx 10rpx;
@@ -12,39 +12,62 @@
 
 /* 文字标题底下的三个选项 */
 .whole .midNav{
-  border: 1rpx solid black;
   display: flex;
   justify-content: space-around;
-  height: 130rpx;
-  padding: 10rpx 0 10rpx 0;
-  margin-bottom: 20rpx;
+  height: 100rpx;
+  padding: 10rpx 0;
+  margin: 0 20rpx 20rpx 20rpx;
+  background-color: rgba(240, 230, 230, 0.5);
+  border-radius: 30rpx;
 }
+
 .whole .midNav .myNews,
 .whole .midNav .myFriends,
 .whole .midNav .newFriends{
-  /* border: 1rpx solid black; */
-  /* width: 150rpx; */
-}
-.whole .midNav .myNews .myNews-pic,
-.whole .midNav .myNews .myNews-txt,
-.whole .midNav .myFriends .myFriends-pic,
-.whole .midNav .myFriends .myFriends-txt,
-.whole .midNav .newFriends .newFriends-pic,
-.whole .midNav .newFriends .newFriends-txt{
-  /* border: 1rpx solid black; */
   text-align: center;
 }
-.whole .midNav .myNews .myNews-pic,
-.whole .midNav .myFriends .myFriends-pic,
-.whole .midNav .newFriends .newFriends-pic{
-  /* border-bottom: 1rpx solid black; */
+
+.whole .midNav .myNews > text,
+.whole .midNav .myFriends > text,
+.whole .midNav .newFriends > text{
   font-size: 50rpx;
 }
 
-.whole .list .list1,
-.whole .list .list2,
-.whole .list .list3{
-  border-top: 1rpx solid black;
-  border-bottom: 1rpx solid black;
+.whole .list .listNews{
+  height: 120rpx;
+  display: flex;
+  margin: 10rpx 0;
+
+}
+.whole .list .listNews .left{
+  border: 1rpx solid black;
+  border-radius: 62rpx;
   height: 100rpx;
+  width: 100rpx;
+  margin: 10rpx;
+}
+.whole .list .listNews .right{
+  /* border: 1rpx solid black; */
+}
+.whole .list .listNews .right .topContent{
+  /* border: 1rpx solid black; */
+  height: 60rpx;
+  width: 610rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.whole .list .listNews .right .topContent .name,
+.whole .list .listNews .right .topContent .time{
+  height: 60rpx;
+  line-height: 60rpx;
+}
+.whole .list .listNews .right .bottomContent{
+  /* border: 1rpx solid black; */
+  height: 60rpx;
+  width: 620rpx;
+  white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+  font-size: 30rpx;
+  color: gray;
 }

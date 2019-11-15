@@ -18,7 +18,7 @@
   </view>
   
   <view class = "shop">
-      <view class = "shop-bottom1" data-route="sell/sell" bindtap="navToPage">
+      <view class = "shop-bottom1"  bindtap="navigateTo">
         <view class = "left"><text class = "iconfont icon-mairu"></text>我发布的</view>
         <view class = "right"><text class = "iconfont icon-changyongtubiao-xianxingdaochu-zhuanqu-"></text></view>
       </view>

@@ -5,8 +5,19 @@ Page({
    * 页面的初始数据
    */
   data: {
+      thingsPic: [
+        {
+          num: "1",
+          tag: "标签",
+          price: "10.00",
+          desc: "描述信息",
+          title: "商品标题",
+          img: "http://q0hfh28wl.bkt.clouddn.com/9C4D8F35E4E2E4F132A9EB2D401C6098.jpg"
+        } 
+    ],
 
   },
+
 
   navToPage(event) {
     let route = event.currentTarget.dataset.route
