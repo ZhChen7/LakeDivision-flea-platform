@@ -5,7 +5,18 @@ Page({
    * 页面的初始数据
    */
   data: {
-    show: false
+    imgUrls: ['http://q0hfh28wl.bkt.clouddn.com/mmexport1572933342587.jpg',
+      'http://q0hfh28wl.bkt.clouddn.com/timg.jpg',
+      'http://q0hfh28wl.bkt.clouddn.com/mmexport1572933388916.webp',
+      'http://q0hfh28wl.bkt.clouddn.com/CEEA0838C309EFBC5B0A016FC9CC21B9.jpg'],
+     swiperIndex: 0 //这里不写第一次启动展示的时候会有问题
+  },
+
+
+  bindchange(e) {
+    this.setData({
+      swiperIndex: e.detail.current
+    })
   },
 
   onClickLeft() {

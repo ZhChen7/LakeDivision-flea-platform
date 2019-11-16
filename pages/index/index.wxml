@@ -1,11 +1,13 @@
 <!--湖师跳蚤平台-->
 <view id='Lake_division_flea_platform'>
+
 <view class='header_sort'>
+<!-- 头部（搜索框...） -->
  <view class='index_header'>
     <view class='SchoolLogo'>
     <image src='http://q0hfh28wl.bkt.clouddn.com/92230112EA6A15EFC01E1D9728C96552.jpg'></image>
     </view>
-    <!-- 输入框 -->
+    <!-- 搜索框 -->
     <view class='search'>
       <text class='iconfont icon-sousuo'></text>
       <input type='text' placeholder='买点啥呢...'></input>
@@ -14,7 +16,7 @@
         <text class='iconfont icon-saoyisao'></text>
     </view>
   </view>
-
+  <!-- 热搜 -->
   <view class='HotSearch'>
       <view>热搜</view>
       <view>小米手机</view>
@@ -22,41 +24,34 @@
       <view>苹果</view>
       <view>apple</view>
   </view>
-</view>
+</view >
 
-<view class='box'>
-  <swiper indicator-dots='{{false}}' autoplay='{{true}}' interval='2500' duration='400' circular='{{true}}'>
-    <!-- <swiper-item>
-      <image src='http://q0hfh28wl.bkt.clouddn.com/mmexport1572933320227.jpg' mode='aspectFit' style='width:100%'></image>
-    </swiper-item> -->
 
-    <swiper-item>
-      <image src='http://q0hfh28wl.bkt.clouddn.com/mmexport1572933342587.jpg' mode='aspectFill' style='width:100%'></image>
+<!-- 轮播图 -->
+<!-- <view class='box' >
+  <swiper indicator-dots='{{false}}' autoplay='{{true}}' interval='2500' duration='400' circular='{{true}}' >
+    <swiper-item wx:for="{{swiperimg}}" wx:key="{{item}}">
+      <image src='{{item}}' mode='aspectFill' style='width:100%'></image>
     </swiper-item>
-
- <swiper-item>
-      <image src='http://q0hfh28wl.bkt.clouddn.com/timg.jpg' mode='aspectFill' style='width:100%'></image>
-    </swiper-item>
-
-    <swiper-item>
-      <image src='http://q0hfh28wl.bkt.clouddn.com/mmexport1572933388916.webp' mode='aspectFill' style='width:100%'></image>
-    </swiper-item>
-
-   
-
-   <swiper-item>
-      <image src='http://q0hfh28wl.bkt.clouddn.com/CEEA0838C309EFBC5B0A016FC9CC21B9.jpg' mode='aspectFill' style='width:100%'></image>
-    </swiper-item>
-
-    
   </swiper>
-  </view>
+  </view> -->
 
+   <swiper class='swiperClass' autoplay indicator-color="#a39f99" indicator-active-color="#f49641" indicator-dots  interval="2000" duration="1500" previous-margin="30px" next-margin="30px" circular bindchange="bindchange" style='height: {{swiperHeight}}px'>
+ <block wx:for="{{imgUrls}}" wx:key="{{index}}">
+ <swiper-item>
+ <image src="{{item}}" class="slide-image {{swiperIndex == index ? 'active' : 'quiet'}}" mode='aspectFill'>
+ </image>
+ </swiper-item>
+ </block>
+ </swiper>
+
+<!-- 通告栏 -->
 <van-notice-bar
   mode="closeable" backgroundColor="#fff"
   text="湖师跳蚤平台，正式营业啦！湖师跳蚤平台，正式营业啦！湖师跳蚤平台，正式营业啦！"
 />
 
+<!-- nav栏 -->
  <view class="index_sort">
     <view class='main_sort'>
       <view class="index_sort_item">

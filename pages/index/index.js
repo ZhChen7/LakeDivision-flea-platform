@@ -5,6 +5,11 @@ const app = getApp()
 Page({
   data: {
     show: false,
+    imgUrls:['http://q0hfh28wl.bkt.clouddn.com/mmexport1572933342587.jpg',
+   'http://q0hfh28wl.bkt.clouddn.com/timg.jpg',
+    'http://q0hfh28wl.bkt.clouddn.com/mmexport1572933388916.webp',
+    'http://q0hfh28wl.bkt.clouddn.com/CEEA0838C309EFBC5B0A016FC9CC21B9.jpg'],
+    swiperIndex: 0,//这里不写第一次启动展示的时候会有问题
     indexshowlistdata:[{
       numeration:'001',
       img:'https://img11.360buyimg.com/jdcms/s150x150_jfs/t1/77198/3/15292/206296/5dcadc9fEbd06bb37/a74616e7b2006039.jpg.webp',
@@ -47,6 +52,11 @@ Page({
         price: '￥1680',
         WantPeople: 2
       }]
+  },
+  bindchange(e) {
+    this.setData({
+      swiperIndex: e.detail.current
+    })
   },
   listclick(){
     wx.navigateTo({
