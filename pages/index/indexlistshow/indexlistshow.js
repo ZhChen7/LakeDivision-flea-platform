@@ -5,10 +5,10 @@ Page({
    * 页面的初始数据
    */
   data: {
-    imgUrls: ['http://q0hfh28wl.bkt.clouddn.com/mmexport1572933342587.jpg',
-      'http://q0hfh28wl.bkt.clouddn.com/timg.jpg',
-      'http://q0hfh28wl.bkt.clouddn.com/mmexport1572933388916.webp',
-      'http://q0hfh28wl.bkt.clouddn.com/CEEA0838C309EFBC5B0A016FC9CC21B9.jpg'],
+    imgUrls: ['https://img.alicdn.com/img/bao/uploaded/i4/i2/2200574208957/O1CN01CC00Dm2G2M4QSERsW_!!2200574208957.jpg_196x196Q50s50.jpg_.webp',
+      'https://img.alicdn.com/img/bao/uploaded/i4/i2/4078819345/O1CN01IHny6H2Iu3lcXpsCZ_!!2-item_pic.png_196x196Q50s50.jpg_.webp',
+      'https://img.alicdn.com/img/bao/uploaded/i4/i4/72694814/O1CN01VH38GI1lQrCY7RqHw_!!72694814.jpg_420x280Q50s50.jpg_.webp',
+      'https://img.alicdn.com/img/bao/uploaded/i4/i1/2138696260/O1CN019JACDc1CZ5mVuNxxC_!!94-0-lubanu.jpg_420x280Q50s50.jpg_.webp'],
      swiperIndex: 0 //这里不写第一次启动展示的时候会有问题
   },
 

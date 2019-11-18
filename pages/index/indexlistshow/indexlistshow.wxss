@@ -143,16 +143,73 @@ image.quiet {
 
 
 #seller{
-  border: 1px solid black;
   display: flex;
+    padding-left: 27rpx;
 }
 
 #seller>.seller_left{
-   border: 1px solid red;
 }
 
 #seller>.seller_left>image{
-   border: 1px solid salmon;
-   width: 40rpx;
-   height: 40rpx;
+   /*border: 1px solid salmon;*/
+   width: 70rpx;
+   height: 70rpx;
+}
+
+.seller_right{
+    /*border: 1px solid #000;*/
+    padding-left: 15rpx;
+}
+
+.seller_right>.seller_right_top{
+    display: flex;
+}
+
+.seller_right>.seller_right_top>.sellerName{
+    font-weight: bold;
+    font-size: 30rpx;
+    color: #222;
+}
+
+.seller_right>.seller_right_top>.goodcredit{
+    /*border: 1px solid pink;*/
+    color: #32CFCE;
+    font-size: 20rpx;
+    margin-left: 15rpx;
+    margin-top: 9rpx;
+
+}
+.seller_right>.seller_right_top>.goodcredit>.iconfont{
+    color: #32CFCE;
+    font-size: 22rpx;
+    margin-right: 5rpx;
+}
+
+.seller_right>.seller_right_top>.seller_logo{
+    color: #2E9571;
+    font-size: 22rpx;
+    margin-top: 8rpx;
+}
+
+.seller_right>.seller_right_bottom{
+    padding: 10rpx 0rpx 0 5rpx;
+    display:  flex;
+    font-size: 26rpx;
+    color: #aaa;
+}
+
+
+
+
+
+.van-swipe-cell__left,
+.van-swipe-cell__right {
+    display: inline-block;
+    width: 65px;
+    height: 44px;
+    font-size: 15px;
+    line-height: 44px;
+    color: #fff;
+    text-align: center;
+    background-color: #f44;
 }

@@ -9,16 +9,17 @@
 </van-sticky>
 
 
+
 <view id="seller">
       <view class="seller_left">
-            <image src=""></image>
+            <image src="http://q0hfh28wl.bkt.clouddn.com/QQ%E5%9B%BE%E7%89%8720191118170954.jpg"></image>
       </view> 
 
        <view class="seller_right">
           <view class="seller_right_top">
               <view class="sellerName">一楼红尘1213</view>
-              <view> <text></text>信用极好 </view>
-              <view class="seller_logo"></view> 
+              <view class="goodcredit"> <text class="iconfont icon-xinyong"></text>信用极好</view>
+              <view class="seller_logo iconfont icon-quanguomaijia"></view>
           </view>
 
           <view class="seller_right_bottom"> 
@@ -29,10 +30,10 @@
 </view>
 
 
- <swiper class='swiperClass' autoplay indicator-color="#a39f99" indicator-active-color="#f49641" indicator-dots  interval="2000" duration="1000" previous-margin="30px" next-margin="30px" circular bindchange="bindchange" style='height: {{swiperHeight}}px'>
+ <swiper class='swiperClass' easing-function="easeInOutCubic" autoplay indicator-color="#a39f99" indicator-active-color="#f49641"  indicator-dots="{{false}}"  interval="3000" duration="1000" previous-margin="30px" next-margin="30px" circular bindchange="bindchange" style='height: {{swiperHeight}}px'>
  <block wx:for="{{imgUrls}}" wx:key="{{index}}">
  <swiper-item>
- <image src="{{item}}" class="slide-image {{swiperIndex == index ? 'active' : 'quiet'}}" mode='aspectFill'>
+ <image src="{{item}}" class="slide-image {{swiperIndex == index ? 'active' : 'quiet'}}" mode='aspectFit'>
  </image>
  </swiper-item>
  </block>
