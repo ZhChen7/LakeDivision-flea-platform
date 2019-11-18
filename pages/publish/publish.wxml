@@ -1,9 +1,8 @@
 <view class="section">
   <form bindsubmit="bindFormSubmit">
     <textarea class='textarea' placeholder="添加商品描述..." name="textarea" placeholder-style="color:#aaa;" auto-focus />
-    <view class='AddImg'>
-        <text class='iconfont icon-tianjia'></text>
-    </view>
+
+   <van-uploader file-list="{{ fileList }}" bind:after-read="afterRead"  max-count="5" />
 
    <view class='input1'>
         <text>想卖</text>   

@@ -13,20 +13,16 @@
   </view>
   <view class = "fans">
     <view class = "agree">超赞</view>
-    <view class = "like">关注</view>
+    <view class = "like" bindtap="toLike">关注</view>
     <view class = "myFans">粉丝</view>
   </view>
   
   <view class = "shop">
       <view class = "shop-bottom1"  bindtap="navigateTo">
-        <view class = "left"><text class = "iconfont icon-mairu"></text>我发布的</view>
+        <view class = "left"><text class = "iconfont icon-mairu"></text>订单</view>
         <view class = "right"><text class = "iconfont icon-changyongtubiao-xianxingdaochu-zhuanqu-"></text></view>
       </view>
-        
-      <!-- <view class = "shop-bottom1">
-        
-        
-      </view> -->
+
       <view class = "shop-bottom2">
         <view class = "left"><text class = "iconfont icon-maichu"></text>我卖出的</view>
         <view class = "right"><text class = "iconfont icon-changyongtubiao-xianxingdaochu-zhuanqu-"></text></view>

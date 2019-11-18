@@ -8,6 +8,14 @@
 </van-nav-bar>
 </van-sticky>
 
+<van-popup  show="{{ show }}"
+            closeable
+            round
+            position="bottom"
+            custom-style="height: 20%"
+            bind:close="onClose">内容</van-popup>
+
+
 
 
 <view id="seller">
@@ -41,12 +49,7 @@
 
 
 
-<van-popup  show="{{ show }}"
-  closeable
-  round
-  position="bottom"
-  custom-style="height: 20%"
-  bind:close="onClose">内容</van-popup>
+
 
 <view class='commodityBox'>
 <view class='commodity_price_show'>

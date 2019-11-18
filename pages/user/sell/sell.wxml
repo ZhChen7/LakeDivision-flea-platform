@@ -11,13 +11,11 @@
   </view>
 </view>
 <view class = "content">
-  <van-tabs>
+  <van-tabs active="a">
     <van-tab title="全 部" class = "all"></van-tab>
     <van-tab title="待收钱" class = "pay"></van-tab>
     <van-tab title="待发货" class = "deliver"></van-tab>
   </van-tabs>
-
-  
   <view wx:for="{{thingsPic}}" wx:key = "{{item.num}}" class = "things"> 
     <van-card
       num="{{item.num}}"

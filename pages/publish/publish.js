@@ -12,11 +12,38 @@ Page({
       { name: 'Pinkage', value: '3C数码' },
       { name: 'Pinkage', value: '鞋服美妆' },
       { name: 'Pinkage', value: '其它' }
+    ],
+    fileList: [
+      { url: 'https://img.yzcdn.cn/vant/cat.jpeg', name: '图片1' },
+      { url: 'http://q0hfh28wl.bkt.clouddn.com/3AA05DD719CC259FD1FF0B6A882A4BB4.jpg', name: '图片1' }
+      // Uploader 根据文件后缀来判断是否为图片文件
+      // 如果图片 URL 中不包含类型信息，可以添加 isImage 标记来声明
     ]
   },
+
   checkboxChange: function (e) {
     console.log('checkbox发生change事件，携带value值为：', e.detail.value)
   },
+
+
+  afterRead(event) {
+    const { file } = event.detail;
+    // 当设置 mutiple 为 true 是 file 是一个数组，mutiple 默认为 false，file 是一个对象
+    wx.uploadFile({
+      url: 'https://example.weixin.qq.com/upload', //仅为示例，非真实的接口地址
+      filePath: file.path,
+      name: 'file',
+      formData: { 'user': 'test' },
+      success (res){
+        // 上传完成需要更新fileList
+        const { fileList = [] } = this.data;
+        fileList.push({ ...file, url: res.data });
+        this.setData({ fileList });
+      }
+    });
+  },
+
+
 
   /**
    * 生命周期函数--监听页面加载

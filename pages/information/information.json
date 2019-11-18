@@ -1,7 +1,11 @@
 {
   "usingComponents": {
     "van-search": "vant-weapp/search/index",
-    "van-skeleton": "vant-weapp/skeleton/index"
+    "van-skeleton": "vant-weapp/skeleton/index",
+    "van-tabbar": "vant-weapp/tabbar/index",
+    "van-tabbar-item": "vant-weapp/tabbar-item/index",
+    "van-tab": "vant-weapp/tab/index",
+    "van-tabs": "vant-weapp/tabs/index"
   },
   "navigationBarBackgroundColor": "#fff",
   "navigationBarTextStyle": "black",

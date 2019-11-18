@@ -6,37 +6,39 @@
   <view class = "topName">My news</view>
 
   <!-- 标题底下导航栏，我的消息，我的好友，新的好友 -->
-  <view class = "midNav">
-    <view class = "myNews">
-      <!-- <view class = "pic"></view> -->
-      <text class = "iconfont icon-shezhi"></text>
-      <view class = "txt">我的消息</view>
-    </view>
-    <view class = "myFriends">
-      <!-- <view class = "pic"></view> -->
-      <text class = "iconfont icon-shezhi"></text>
-      <view class = "txt">我的好友</view>
-    </view>
-    <view class = "newFriends">
-      <!-- <view class = "pic"></view> -->
-      <text class = "iconfont icon-shezhi"></text>
-      <view class = "txt">新的好友</view>
-    </view>
-  </view>
-
-  <!-- 信息列表 -->
-  <view class = "list">
-    <view class = "listNews" wx:for="{{news}}" wx:key="{{item.name}}">
-      <view class = "left">{{item.headPic}}</view>
-      <view class = "right">
-        <view class = "topContent">
-          <view class = "name">{{item.name}}</view>
-          <view class = "time">{{item.time}}</view>
+    <van-tabs animated = "true" swipeable = "true" sticky = "true">
+      <van-tab title="我的消息">
+        <view class = "list">
+          <view class = "listNews" wx:for="{{news}}" wx:key="{{item.name}}">
+            <view class = "left">
+              <image src="{{item.headPic}}"></image>
+            </view>
+            <view class = "right">
+              <view class = "topContent">
+                <view class = "name">{{item.name}}</view>
+                <view class = "time">{{item.time}}</view>
+              </view>
+              <view class = "bottomContent">{{item.content}}</view>
+            </view>
+          </view>
         </view>
-        <view class = "bottomContent">{{item.content}}</view>
-      </view>
-    </view>
-  </view>
+      </van-tab>
 
-  
+      <van-tab title="我的好友">
+        <view class = "myFriends">
+          <view class = "friend" wx:for = "{{friends}}" wx:key = "{{item.name}}">
+            <view class = "headPic">
+              <image src="{{item.headPic}}"></image>
+            </view>
+            <view class = "name">{{item.name}}</view>
+          </view>
+        </view>
+      </van-tab>
+      
+      <van-tab title="新的好友"></van-tab>
+    </van-tabs>
+
+
 </view>
+
+

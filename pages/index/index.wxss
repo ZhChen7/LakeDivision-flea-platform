@@ -237,3 +237,15 @@ image.quiet {
   transform: scale(0.8333333);
   transition: all 0.2s ease-in 0s;
 }
+
+
+#Publish{
+    position: fixed;
+    bottom:73rpx;
+    right: 65rpx;
+}
+
+#Publish>.iconfont{
+  font-size: 70rpx;
+  color: #FF7162;
+}

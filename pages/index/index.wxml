@@ -1,6 +1,11 @@
 <!--湖师跳蚤平台-->
 <view id='Lake_division_flea_platform'>
 
+    <view id="Publish" bindtap="ToPublish">
+        <view class="iconfont icon-tianjia2"></view>
+    </view>
+
+
 <view class='header_sort'>
 <!-- 头部（搜索框...） -->
  <view class='index_header'>

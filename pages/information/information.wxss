@@ -2,57 +2,48 @@
 .whole{
   padding: 0 1rpx;
 }
+
 /* 顶部的文字标题 */
 .whole .topName{
-  /* border: 1rpx solid black; */
   font-size: 60rpx;
   text-align: center;
   padding: 20rpx 10rpx;
 }
 
 /* 文字标题底下的三个选项 */
-.whole .midNav{
-  display: flex;
-  justify-content: space-around;
-  height: 100rpx;
-  padding: 10rpx 0;
-  margin: 0 20rpx 20rpx 20rpx;
-  background-color: rgba(240, 230, 230, 0.5);
+.whole .van-tabs .van-tabs__wrap{
+  background-color: rgba(240, 230, 230, 0.2);
   border-radius: 30rpx;
+  margin: 0 20rpx;
+  border-bottom: 0 solid black;
+  /* z-index: 0 !important; */
 }
 
-.whole .midNav .myNews,
-.whole .midNav .myFriends,
-.whole .midNav .newFriends{
-  text-align: center;
+.whole .van-tabs .van-tabs__wrap .van-tabs__line{
+  height: 0 !important;
+  width: 0 !important;
 }
 
-.whole .midNav .myNews > text,
-.whole .midNav .myFriends > text,
-.whole .midNav .newFriends > text{
-  font-size: 50rpx;
+.whole .van-tabs .van-tabs__wrap .van-ellipsis{
+  font-size: 30rpx;
 }
 
 .whole .list .listNews{
   height: 120rpx;
   display: flex;
   margin: 10rpx 0;
-
 }
-.whole .list .listNews .left{
-  border: 1rpx solid black;
+
+.whole .list .listNews .left > image{
   border-radius: 62rpx;
   height: 100rpx;
   width: 100rpx;
   margin: 10rpx;
 }
-.whole .list .listNews .right{
-  /* border: 1rpx solid black; */
-}
+
 .whole .list .listNews .right .topContent{
-  /* border: 1rpx solid black; */
   height: 60rpx;
-  width: 610rpx;
+  width: 600rpx;
   display: flex;
   justify-content: space-between;
 }
@@ -61,13 +52,38 @@
   height: 60rpx;
   line-height: 60rpx;
 }
+.whole .list .listNews .right .topContent .time{
+  font-size: 20rpx;
+}
+
 .whole .list .listNews .right .bottomContent{
-  /* border: 1rpx solid black; */
   height: 60rpx;
-  width: 620rpx;
+  width: 600rpx;
+  /* line-height: 60rpx; */
   white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
-  font-size: 30rpx;
+  font-size: 27rpx;
   color: gray;
+}
+
+.whole .myFriends .friend{
+  /* border: 1rpx solid black; */
+  height: 100rpx;
+  display: flex;
+  margin: 10rpx 30rpx;
+  
+}
+.whole .myFriends .friend .headPic > image{
+  border-radius: 62rpx;
+  height: 80rpx;
+  width: 80rpx;
+  margin: 10rpx;
+}
+.whole .myFriends .friend .name{
+  width: 500rpx;
+  line-height: 100rpx;
+  padding: 0 20rpx;
+  font-size: 35rpx;
+  border-bottom: 1rpx solid #ddd;
 }

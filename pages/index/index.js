@@ -71,6 +71,14 @@ Page({
     this.setData({ show: false });
   },
 
+
+  ToPublish(){
+    console.log('xxx')
+    wx.navigateTo({
+      url: '../publish/publish',
+    })
+  },
+
   onLoad: function () {
     
   },

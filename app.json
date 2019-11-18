@@ -1,9 +1,9 @@
 {
   "pages": [
-    "pages/index/indexlistshow/indexlistshow",
     "pages/index/index",
-    "pages/recommend/recommend",
     "pages/publish/publish",
+    "pages/index/indexlistshow/indexlistshow",
+    "pages/recommend/recommend",
     "pages/logs/logs",
     "pages/user/user",
     "pages/information/information"
@@ -30,12 +30,6 @@
         "text": "推荐",
         "iconPath": "images/recommend.png",
         "selectedIconPath": "images/selected_recommend.png"
-      },
-      {
-        "pagePath": "pages/publish/publish",
-        "text": "发布",
-        "iconPath": "images/publish.png",
-        "selectedIconPath": "images/selected_publish.png"
       },
       {
         "pagePath": "pages/information/information",

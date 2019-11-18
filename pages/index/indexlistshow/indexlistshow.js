@@ -9,10 +9,19 @@ Page({
       'https://img.alicdn.com/img/bao/uploaded/i4/i2/4078819345/O1CN01IHny6H2Iu3lcXpsCZ_!!2-item_pic.png_196x196Q50s50.jpg_.webp',
       'https://img.alicdn.com/img/bao/uploaded/i4/i4/72694814/O1CN01VH38GI1lQrCY7RqHw_!!72694814.jpg_420x280Q50s50.jpg_.webp',
       'https://img.alicdn.com/img/bao/uploaded/i4/i1/2138696260/O1CN019JACDc1CZ5mVuNxxC_!!94-0-lubanu.jpg_420x280Q50s50.jpg_.webp'],
-     swiperIndex: 0 //这里不写第一次启动展示的时候会有问题
+     swiperIndex: 0, //这里不写第一次启动展示的时候会有问题
+     show:false
   },
 
 
+  onClickShow(){
+    console.log('xxxxxxx')
+    this.setData({ showbannerimg: true });
+  },
+
+  onCloseimg(){
+    this.setData({ showbannerimg: false });
+  },
   bindchange(e) {
     this.setData({
       swiperIndex: e.detail.current
@@ -24,9 +33,11 @@ Page({
       delta: 1, // 回退前 delta(默认为1) 页面
     })
   },
+
   onClickRight() {
     this.setData({ show: true });
   },
+
   onClose() {
     this.setData({ show: false });
   },

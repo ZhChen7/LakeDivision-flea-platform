@@ -30,3 +30,7 @@
   height: 50rpx;
   border-bottom: 1rpx solid #ccc;
 }
+
+.content .nav{
+  padding-bottom: 15rpx;
+}

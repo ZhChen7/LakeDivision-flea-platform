@@ -1,17 +1,9 @@
 
-.AddImg{
-  width: 170rpx;
-  height: 170rpx;
-  background: #eee;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 64rpx;
-
+.section{
+  padding: 0 15rpx;
 }
-.AddImg > text{
-  font-size: 64rpx;
-  color: #8B8B8B;
+textarea{
+  height: 93px;
 }
 
 .input1{

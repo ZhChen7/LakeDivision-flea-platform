@@ -143,8 +143,9 @@ image.quiet {
 
 
 #seller{
-  display: flex;
+     display: flex;
     padding-left: 27rpx;
+    margin-top: 13rpx;
 }
 
 #seller>.seller_left{
