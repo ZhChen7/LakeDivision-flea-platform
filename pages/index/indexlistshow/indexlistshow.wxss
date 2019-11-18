@@ -95,3 +95,64 @@ image.quiet {
   transition: all 0.2s ease-in 0s;
 }
 
+
+.indexlistshowbottom{
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 116rpx; 
+  /* border: 1px solid #000; */
+  display: flex;
+  justify-content: space-between;
+  background: #fff;
+}
+.indexlistshowbottom>.indexlistshowbottomleft{
+  display: flex;
+}
+.indexlistshowbottom>.indexlistshowbottomleft>view{
+    /* border: 1px solid #000; */
+    text-align: center;
+    margin-left: 35rpx;
+     color: #aaa;
+}
+
+.indexlistshowbottom>.indexlistshowbottomleft>view>.iconfont{
+  font-size: 54rpx;
+  margin: 10rpx 10rpx 0rpx;
+  color: #aaa;
+}
+.indexlistshowbottom>.indexlistshowbottomleft>view>.content{
+    text-align: center;
+    font-size: 28rpx;
+    color: #bbb;
+}
+
+.indexlistshowbottomright>button{
+    background: linear-gradient(to right, #ff6034, #ee0a24);
+    color: #fff;
+    width: 174rpx;
+    height: 66rpx;
+    text-align: center;
+    border-radius: 38rpx;
+    font-size: 26rpx;
+    font-weight: bold;
+    line-height: 66rpx;
+    margin: 22rpx 10rpx 5rpx 0;
+}
+
+
+#seller{
+  border: 1px solid black;
+  display: flex;
+}
+
+#seller>.seller_left{
+   border: 1px solid red;
+}
+
+#seller>.seller_left>image{
+   border: 1px solid salmon;
+   width: 40rpx;
+   height: 40rpx;
+}

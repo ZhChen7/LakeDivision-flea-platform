@@ -8,6 +8,27 @@
 </van-nav-bar>
 </van-sticky>
 
+
+<view id="seller">
+      <view class="seller_left">
+            <image src=""></image>
+      </view> 
+
+       <view class="seller_right">
+          <view class="seller_right_top">
+              <view class="sellerName">一楼红尘1213</view>
+              <view> <text></text>信用极好 </view>
+              <view class="seller_logo"></view> 
+          </view>
+
+          <view class="seller_right_bottom"> 
+                <text>1小时前来过</text>
+                <view>发布于 <text>北京</text></view>
+          </view> 
+      </view> 
+</view>
+
+
  <swiper class='swiperClass' autoplay indicator-color="#a39f99" indicator-active-color="#f49641" indicator-dots  interval="2000" duration="1000" previous-margin="30px" next-margin="30px" circular bindchange="bindchange" style='height: {{swiperHeight}}px'>
  <block wx:for="{{imgUrls}}" wx:key="{{index}}">
  <swiper-item>
@@ -37,37 +58,36 @@
       <text>JAVA学习2</text>
   </view>
 
-<view class='commodity_intro'>
-闲鱼是阿里巴巴旗下闲置交易平台App客户端（iOS版和安卓版）。会员只要使用淘宝或支付宝账户登录，无需经过复杂的开店流程，即可达成包括一键转卖个人淘宝账号中“已买到宝贝”、自主手机拍照上传二手闲置物品、以及在线交易等诸多功能。下载并使用全新概念的“闲鱼”app，个人卖家能获得更大程度的曝光量、更高效的流通路径和更具优势的物流价格等三大优势，让闲置的宝贝以最快的速度奔赴天南海北的新主人手中物尽其用。此外，闲鱼平台后端已无缝接入淘宝信用支付体系，从而最大程度保障交易安全。
+    <view class='commodity_intro'>
+    闲鱼是阿里巴巴旗下闲置交易平台App客户端（iOS版和安卓版）。会员只要使用淘宝或支付宝账户登录，无需经过复杂的开店流程，即可达成包括一键转卖个人淘宝账号中“已买到宝贝”、自主手机拍照上传二手闲置物品、以及在线交易等诸多功能。下载并使用全新概念的“闲鱼”app，个人卖家能获得更大程度的曝光量、更高效的流通路径和更具优势的物流价格等三大优势，让闲置的宝贝以最快的速度奔赴天南海北的新主人手中物尽其用。此外，闲鱼平台后端已无缝接入淘宝信用支付体系，从而最大程度保障交易安全。
+    </view>
 </view>
 
+
+
+<view class="indexlistshowbottom">
+    <view class="indexlistshowbottomleft">
+        <view>
+                <view class="iconfont icon-changyongtubiao-xianxingdaochu-zhuanqu-1"></view>
+                <view class="content">超赞</view>
+        </view>
+
+          <view>
+                <view class="iconfont icon-liuyan2"></view>
+                <view class="content">留言</view>
+        </view>
+
+         <view>
+                <view class="iconfont icon-shoucang4"></view>
+                <view class="content">收藏</view>
+        </view>
+    </view>
+
+     <view class="indexlistshowbottomright">
+       <button>我想要</button>
+     </view>
 </view>
 
-<van-goods-action>
-  <van-goods-action-icon
-    dot 
-    icon="chat-o"
-    text="客服"
-    bind:click="onClickIcon"
-  />
-  <van-goods-action-icon
-    info="5"
-    icon="cart-o"
-    text="购物车"
-    bind:click="onClickIcon"
-  />
-   <van-goods-action-icon   icon="shop-o" text="店铺" />
-  <van-goods-action-button
-
-    text="加入收藏"
-    type="warning"
-    bind:click="onClickButton" 
-  />
-  <van-goods-action-button
-    text="立即购买"
-    bind:click="onClickButton"
-  />
-</van-goods-action>
 
 
 
