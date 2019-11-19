@@ -1,5 +1,5 @@
 <view class="section">
-  <form bindsubmit="bindFormSubmit">
+  <form bindsubmit="formSubmit" bindreset="formReset">
     <textarea class='textarea' placeholder="添加商品描述..." name="textarea" placeholder-style="color:#aaa;" auto-focus />
 
    <van-uploader file-list="{{ fileList }}" bind:after-read="afterRead"  max-count="5" />
@@ -33,10 +33,20 @@
          <checkbox value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}
      </label>
     </view>
-
   </checkbox-group>
 
+      <view class="btn-area">
+          <view>
+              <button formType="submit" class="Submitbtn">Submit</button>
+              <button formType="reset">Reset</button>
+          </view>
+
+      </view>
+
   </form>
+
+
+
 </view>
 
  

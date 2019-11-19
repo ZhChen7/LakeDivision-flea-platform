@@ -1,9 +1,13 @@
 <!--湖师跳蚤平台-->
 <view id='Lake_division_flea_platform'>
 
-    <view id="Publish" bindtap="ToPublish">
-        <view class="iconfont icon-tianjia2"></view>
-    </view>
+
+    <!--发布按钮-->
+    <van-transition show="{{ show1 }}" custom-class="block" name="fade-right" duration="{{ { enter: 500, leave: 1000 } }}">
+        <view id="Publish" bindtap="ToPublish">
+            <view class="iconfont icon-icon-test"></view>
+        </view>
+    </van-transition>
 
 
 <view class='header_sort'>
@@ -41,7 +45,7 @@
   </swiper>
   </view> -->
 
-   <swiper class='swiperClass' autoplay indicator-color="#a39f99" indicator-active-color="#f49641" indicator-dots  interval="2000" duration="1500" previous-margin="30px" next-margin="30px" circular bindchange="bindchange" style='height: {{swiperHeight}}px'>
+   <swiper class='swiperClass' autoplay indicator-color="#a39f99" indicator-active-color="#f49641" indicator-dots  interval="3000" duration="2500" previous-margin="30px" next-margin="30px" circular bindchange="bindchange" style='height: {{swiperHeight}}px'>
  <block wx:for="{{imgUrls}}" wx:key="{{index}}">
  <swiper-item>
  <image src="{{item}}" class="slide-image {{swiperIndex == index ? 'active' : 'quiet'}}" mode='aspectFill'>

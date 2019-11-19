@@ -5,6 +5,7 @@
   "van-divider": "vant-weapp/divider/index",
   "van-datetime-picker": "vant-weapp/datetime-picker/index",
   "van-notice-bar": "vant-weapp/notice-bar/index",
-  "van-tag": "vant-weapp/tag/index"
+  "van-tag": "vant-weapp/tag/index",
+  "van-transition": "vant-weapp/transition/index"
   }
 }

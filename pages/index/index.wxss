@@ -93,6 +93,7 @@ input::-webkit-input-placeholder {
    border: none;
    font-size: 23rpx;
    left: 0;
+   color: #e1251b;
  }
 
 .BannerBox{
@@ -242,10 +243,21 @@ image.quiet {
 #Publish{
     position: fixed;
     bottom:73rpx;
-    right: 65rpx;
+    right: 84rpx;
+    width: 60rpx;
+    height: 60rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: salmon;
+  opacity: 0.7;
+
+
 }
 
-#Publish>.iconfont{
-  font-size: 70rpx;
-  color: #FF7162;
+#Publish>view{
+  font-size: 40rpx;
+  color: #fff;
+  font-weight: bold;
 }

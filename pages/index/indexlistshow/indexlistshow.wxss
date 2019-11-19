@@ -5,6 +5,11 @@
   width:100%;
 }
 
+swiper{
+    height: 600rpx;
+    /*border: 1px solid #000;*/
+}
+
 .box >swiper>swiper-item{
   border: 10px solid red;
 }
@@ -55,7 +60,7 @@
 .commodity_title >view{
     font-size: 21rpx;
     height: 25rpx;
-    padding: 3rpx 8rpx;
+    padding: 6rpx 8rpx;
     background: red;
     color: #ccc;
 }
@@ -65,11 +70,11 @@
 }
 
 .commodity_intro{
-    font: 700 32rpx Arial,"microsoft yahei";
+    font: 32rpx Microsoft YaHei,Heiti SC,tahoma,arial,Hiragino Sans GB,"\5B8B\4F53",sans-serif;
     color: #666;
-    padding-top: 10px;
     line-height: 28px;
     margin-bottom: 5px;
+    padding: 15rpx 10rpx 0;
 }
 
 
@@ -80,7 +85,7 @@
 
 .slide-image {
   width: 100%; 
-  height: 90%;
+  height: 100%;
   border-radius: 10px;
   position: relative;
 }
@@ -118,8 +123,8 @@ image.quiet {
 }
 
 .indexlistshowbottom>.indexlistshowbottomleft>view>.iconfont{
-  font-size: 54rpx;
-  margin: 10rpx 10rpx 0rpx;
+  font-size: 43rpx;
+  margin: 17rpx 10rpx 0rpx;
   color: #aaa;
 }
 .indexlistshowbottom>.indexlistshowbottomleft>view>.content{
@@ -138,17 +143,20 @@ image.quiet {
     font-size: 26rpx;
     font-weight: bold;
     line-height: 66rpx;
-    margin: 22rpx 10rpx 5rpx 0;
+    margin: 24rpx 32rpx 5rpx 0;
 }
 
 
 #seller{
-     display: flex;
+    display: flex;
     padding-left: 27rpx;
-    margin-top: 13rpx;
+    margin: 0rpx 0 63rpx 0;
 }
 
 #seller>.seller_left{
+    display: flex;
+    /*align-items: center;*/
+    justify-content: center;
 }
 
 #seller>.seller_left>image{
@@ -188,8 +196,8 @@ image.quiet {
 
 .seller_right>.seller_right_top>.seller_logo{
     color: #2E9571;
-    font-size: 22rpx;
-    margin-top: 8rpx;
+    font-size: 21rpx;
+    margin-top: 10rpx;
 }
 
 .seller_right>.seller_right_bottom{
@@ -199,7 +207,10 @@ image.quiet {
     color: #aaa;
 }
 
-
+.seller_right>.seller_right_bottom>view{
+    margin-left: 17rpx;
+    font-size: 26rpx;
+}
 
 
 

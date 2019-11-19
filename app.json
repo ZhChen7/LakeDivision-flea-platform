@@ -1,8 +1,8 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/publish/publish",
     "pages/index/indexlistshow/indexlistshow",
+    "pages/publish/publish",
     "pages/recommend/recommend",
     "pages/logs/logs",
     "pages/user/user",

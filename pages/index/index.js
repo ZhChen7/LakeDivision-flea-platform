@@ -51,7 +51,8 @@ Page({
         intro: '华为 p20pro6 + 128 珠光贝母全原在保99新',
         price: '￥1680',
         WantPeople: 2
-      }]
+      }],
+      show1:true
   },
   bindchange(e) {
     this.setData({
@@ -78,6 +79,14 @@ Page({
       url: '../publish/publish',
     })
   },
+
+
+    formSubmit: function (e) {
+        console.log('form发生了submit事件，携带数据为：', e.detail.value)
+    },
+    formReset: function () {
+        console.log('form发生了reset事件')
+    },
 
   onLoad: function () {
     

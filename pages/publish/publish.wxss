@@ -68,3 +68,39 @@ textarea{
   font-weight: bold;
 }
 
+
+
+button{
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  height: 44px;
+  margin: 0;
+   /*padding: 0; */
+   /*font-size: 16px; */
+  line-height: 42px;
+  text-align: center;
+  border-radius: 2px;
+  border-width: 0;
+  transition: opacity 0.2s;
+  color: #07c160;
+  padding: 0 15px;
+  font-size: 14px;
+  background-color: #fff;
+  border: none;
+}
+
+.btn-area{
+  display: flex;
+  justify-content: center;
+}
+.btn-area>view>button:nth-of-type(1){
+  margin-right: 5rpx;
+}
+button::after{
+  border: none;
+}
+.btn-area>view>button:nth-of-type(2){
+  color: #07c160;
+  opacity: 0.5;
+}
