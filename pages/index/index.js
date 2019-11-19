@@ -52,7 +52,12 @@ Page({
         price: '￥1680',
         WantPeople: 2
       }],
-      show1:true
+      show1:true,
+      buttonTop: 0,
+      buttonLeft: 0,
+      windowHeight: '',
+      windowWidth: ''
+
   },
   bindchange(e) {
     this.setData({
@@ -88,17 +93,39 @@ Page({
         console.log('form发生了reset事件')
     },
 
-  onLoad: function () {
-    
-  },
+  onLoad: function (options) {
+    var that = this;
+    wx.getSystemInfo({
+      success: function (res) {
+        console.log(res);
+        // 屏幕宽度、高度
+        console.log('height=' + res.windowHeight);
+        console.log('width=' + res.windowWidth);
+        // 高度,宽度 单位为px
+        that.setData({
+          windowHeight: res.windowHeight,
+          windowWidth: res.windowWidth
+        })
+      }
+    })
+    },
+
 
   //页面相关事件处理函数---监听用户下拉动作
   onPullDownRefresh: function () {
-    console.log('下拉！')
+    wx.showToast({
+      title: '下拉事件',
+      icon: 'success',
+      duration: 2000
+    })
   },
   //页面上拉触底事件的处理函数
   onReachBottom: function () {
-    console.log('上拉')
+    wx.showToast({
+      title: '到底啦！',
+      icon: 'success',
+      duration: 2000
+    })
   }
-  
+
 })

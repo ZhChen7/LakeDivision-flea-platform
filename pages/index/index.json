@@ -7,5 +7,7 @@
   "van-notice-bar": "vant-weapp/notice-bar/index",
   "van-tag": "vant-weapp/tag/index",
   "van-transition": "vant-weapp/transition/index"
-  }
+  },
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle": "dark"
 }

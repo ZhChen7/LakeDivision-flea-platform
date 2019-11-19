@@ -2,7 +2,11 @@
   <form bindsubmit="formSubmit" bindreset="formReset">
     <textarea class='textarea' placeholder="添加商品描述..." name="textarea" placeholder-style="color:#aaa;" auto-focus />
 
-   <van-uploader file-list="{{ fileList }}" bind:after-read="afterRead"  max-count="5" />
+
+
+   <van-uploader file-list="{{ fileList }}" bind:after-read="afterRead"  max-count="5"  deletable/>
+
+
 
    <view class='input1'>
         <text>想卖</text>   
