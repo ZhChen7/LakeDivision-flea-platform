@@ -91,13 +91,15 @@ swiper{
 }
 
 image.active {
+    opacity: 1;
   transform: none;
-  transition: all 0.2s ease-in 0s;
+  transition: all 2s ease-in 0s;
 } 
 
 image.quiet {
-  transform: scale(0.8333333);
-  transition: all 0.2s ease-in 0s;
+    opacity: 0;
+  /*transform:  scale(0.6333333);*/
+  transition: all 2.3s ease-in 0s;
 }
 
 
@@ -225,3 +227,5 @@ image.quiet {
     text-align: center;
     background-color: #f44;
 }
+
+

@@ -39,10 +39,10 @@
 
 <!--轮播 （商品展示）-->
 
- <swiper class='swiperClass' easing-function="easeInOutCubic" autoplay indicator-color="#a39f99" indicator-active-color="#f49641"  indicator-dots="{{false}}"  interval="3000" duration="1000" previous-margin="30px" next-margin="30px" circular bindchange="bindchange" style='height: {{swiperHeight}}px'>
+ <swiper class='swiperClass' easing-function="easeInOutCubic"  current="{{swiperIndex}}" autoplay indicator-color="#a39f99" indicator-active-color="#f49641"  indicator-dots="{{true}}"  interval="5000" vertical="true" duration="2500" previous-margin="30px" next-margin="30px" circular bindchange="bindchange" bindtap="tapName">
     <block wx:for="{{imgUrls}}" wx:key="{{index}}">
         <swiper-item>
-            <image src="{{item}}" class="slide-image {{swiperIndex == index ? 'active' : 'quiet'}}" mode='aspectFit'>
+            <image src="{{item}}"  class="slide-image {{swiperIndex == index ? 'active' : 'quiet'}}" mode='aspectFit' >
             </image>
         </swiper-item>
     </block>

@@ -231,12 +231,14 @@ input::-webkit-input-placeholder {
 
 image.active {
   transform: none;
-  transition: all 0.2s ease-in 0s;
+  transition: all 1s ease-in 0s;
+    opacity: 1;
 } 
 
 image.quiet {
   transform: scale(0.8333333);
-  transition: all 0.2s ease-in 0s;
+  transition: all 1s ease-in 0s;
+    opacity: 0.8;
 }
 
 
