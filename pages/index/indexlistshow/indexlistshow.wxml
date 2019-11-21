@@ -71,6 +71,23 @@
 
 
 
+<view class="comment">
+    <view class="release" hidden="{{!releaseFocus}}">
+    <textarea class="text"
+              placeholder-class="input_null"
+              fixed="true"
+              maxlength="-1"
+              show-confirm-bar="false"
+              cursor-spacing="15"
+              auto-height="true"
+              focus="{{releaseFocus}}"
+              placeholder="回复 {{releaseName}}"></textarea>
+        <view class="submit" bindtap="bindReplysend">发送</view>
+    </view>
+</view>
+
+
+
 <view class="indexlistshowbottom">
     <view class="indexlistshowbottomleft">
         <view>
@@ -78,7 +95,7 @@
                 <view class="content">超赞</view>
         </view>
 
-          <view>
+          <view bindtap="bindReply">
                 <view class="iconfont icon-liuyan2"></view>
                 <view class="content">留言</view>
         </view>
