@@ -7,6 +7,16 @@
   </movable-area> -->
 
 
+
+<!-- 
+<button bindtap="adddata">添加数据</button>
+<button bindtap="Getdata">查询数据</button>
+<button bindtap="deldata">删除数据</button>
+<button bindtap="udpdata">更新数据</button> -->
+
+<button bindtap="qiuhe">求和</button>
+<button bindtap="getID">获取用户ID</button>
+<button bindtap="getshuju">云函数获取数据</button>
     <!--发布按钮-->
     <van-transition show="{{ show1 }}" custom-class="block" name="fade-right" duration="{{ { enter: 1500, leave: 1000 } }}" >
         <view id="Publish" bindtap="ToPublish" bindtouchmove="buttonMove">

@@ -14,10 +14,14 @@ Page({
       { name: 'Pinkage', value: '其它' }
     ],
     fileList: [
-      { url: 'https://img.yzcdn.cn/vant/cat.jpeg', name: '图片1' },
-      { url: 'http://q0hfh28wl.bkt.clouddn.com/3AA05DD719CC259FD1FF0B6A882A4BB4.jpg', name: '图片1' }
-      // Uploader 根据文件后缀来判断是否为图片文件
-      // 如果图片 URL 中不包含类型信息，可以添加 isImage 标记来声明
+     'https://img.yzcdn.cn/vant/cat.jpeg',
+     'http://q0hfh28wl.bkt.clouddn.com/3AA05DD719CC259FD1FF0B6A882A4BB4.jpg',
+      'https://img.yzcdn.cn/vant/cat.jpeg',
+      'http://q0hfh28wl.bkt.clouddn.com/3AA05DD719CC259FD1FF0B6A882A4BB4.jpg',
+      'https://img.yzcdn.cn/vant/cat.jpeg',
+      'http://q0hfh28wl.bkt.clouddn.com/3AA05DD719CC259FD1FF0B6A882A4BB4.jpg',
+      'https://img.yzcdn.cn/vant/cat.jpeg',
+      'http://q0hfh28wl.bkt.clouddn.com/3AA05DD719CC259FD1FF0B6A882A4BB4.jpg'
     ]
   },
 
@@ -26,22 +30,55 @@ Page({
   },
 
 
-  afterRead(event) {
-    const { file } = event.detail;
-    // 当设置 mutiple 为 true 是 file 是一个数组，mutiple 默认为 false，file 是一个对象
-    wx.uploadFile({
-      url: 'https://example.weixin.qq.com/upload', //仅为示例，非真实的接口地址
-      filePath: file.path,
-      name: 'file',
-      formData: { 'user': 'test' },
-      success (res){
-        // 上传完成需要更新fileList
-        const { fileList = [] } = this.data;
-        fileList.push({ ...file, url: res.data });
-        this.setData({ fileList });
+  unloadimg(){
+    console.log('hello')
+
+    var _that=this
+
+    wx.chooseImage({
+      count: 5,
+      sizeType: ['original', 'compressed'],
+      sourceType: ['album', 'camera'],
+      success(res) {
+        // tempFilePath可以作为img标签的src属性显示图片
+        const tempFilePaths = res.tempFilePaths
+        console.log(tempFilePaths)
+
+        console.log(_that.data.fileList)
+
+        var newarr = _that.data.fileList.concat(tempFilePaths)
+        _that.setData({
+          fileList: newarr
+        })
+
+        var uploads = [];
+        for (var i = 0; i < tempFilePaths.length; i++) {
+          uploads[i] = new Promise((resolve, reject) => {
+            wx.cloud.uploadFile({
+              cloudPath: new Date().getTime() + '.png', // 上传至云端的路径
+              filePath: tempFilePaths[0], // 小程序临时文件路径
+              success: res => {
+                resolve(result)
+                console.log(res)
+              },
+              fail: console.error
+            })
+          })
+        }
+        Promise.all(uploads).then((result) => {
+          resolve(result)
+          console.log('1111')
+        })
       }
-    });
+    })
   },
+
+
+  closeimg(e){
+    console.log(e)
+    console.log('hello world')
+  },
+
 
   delete(){
     console.log('xxxx')

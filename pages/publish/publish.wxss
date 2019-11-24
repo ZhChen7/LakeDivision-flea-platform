@@ -104,3 +104,64 @@ button::after{
   color: #07c160;
   opacity: 0.5;
 }
+
+
+
+#unload{
+  /*border: 1px solid black;*/
+}
+#unload >.unloadBox{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#unload >.unloadBox>.unloadBox-item{
+  margin: 0rpx 16rpx 16rpx 0rpx;
+  transition: all 1s;
+  position: relative;
+}
+
+#unload >.unloadBox>.unloadBox-item>image{
+  width: 160rpx;
+  height: 160rpx;
+  /*border: 1px solid black;*/
+}
+
+#unload >.unloadBox>.unloadBox-item>.close{
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  color: #969799;
+  font-size: 18px;
+  background-color: #fff;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.9;
+  z-index: 999;
+}
+
+
+#unload >.unloadBox>.unloadBox-item>.close>.iconfont{
+  color: #999;
+}
+
+.addimage{
+  width: 160rpx;
+  height: 160rpx;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  margin: 0 8px 8px 0;
+  background-color: #fff;
+  border: 1px dashed #e5e5e5;
+  border-radius: 4px;
+}
+
+.addimage>view{
+  color: #969799;
+  font-size: 48rpx;
+}

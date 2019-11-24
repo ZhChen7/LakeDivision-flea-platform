@@ -4,7 +4,22 @@
 
 
 
-   <van-uploader file-list="{{ fileList }}" bind:after-read="afterRead"  max-count="5"  deletable/>
+
+      <!--上传图片-->
+     <view id="unload">
+         <view class="unloadBox">
+                <view class="unloadBox-item" wx:for="{{fileList}}" wx:key="{{item}}">
+                        <image src="{{item}}" mode="aspectFill"></image>
+                        <view class="close" bindtap="closeimg">
+                            <text class="iconfont icon-guanbi1"></text>
+                        </view>
+                </view>
+
+                <view class="addimage unloadBox-item" bindtap="unloadimg">
+                    <view class="iconfont icon-tianjia"></view>
+                </view>
+         </view>
+     </view>
 
 
 

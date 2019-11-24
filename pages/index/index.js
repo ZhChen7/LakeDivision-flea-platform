@@ -1,6 +1,7 @@
 //index.js
 //获取应用实例
-const app = getApp()
+const DB = wx.cloud.database().collection("list")
+
 
 Page({
   data: {
@@ -59,6 +60,47 @@ Page({
       windowWidth: ''
 
   },
+
+// 云函数
+  qiuhe(){
+      wx.cloud.callFunction({
+        name:"add",
+        data:{
+          a:9,
+          b:22
+        },
+        success(res){
+            console.log(res)
+        }
+      })
+  },
+
+  getID(){
+    wx.cloud.callFunction({
+      name: "getopenid",
+      success(res) {
+        console.log(res)
+      },
+      fail(res){
+        console.log("获取失败")
+      }
+    })
+  },
+  getshuju(){
+    wx.cloud.callFunction({
+      name: "getshuju",
+      success(res) {
+        console.log(res)
+      },
+      fail(res) {
+        console.log("获取失败")
+      }
+    })
+  },
+
+
+
+
   bindchange(e) {
     this.setData({
       swiperIndex: e.detail.current
