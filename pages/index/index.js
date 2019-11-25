@@ -135,8 +135,8 @@ Page({
         console.log('form发生了reset事件')
     },
 
-  onLoad: function (options) {
-   
+    onLoad: function (options) {
+
     },
 
 
@@ -144,7 +144,7 @@ Page({
   onPullDownRefresh: function () {
     wx.showToast({
       title: '下拉事件',
-      icon: 'success',
+      icon: 'none',
       duration: 2000
     })
   },
@@ -152,7 +152,7 @@ Page({
   onReachBottom: function () {
     wx.showToast({
       title: '到底啦！',
-      icon: 'success',
+      icon: 'none',
       duration: 2000
     })
   }

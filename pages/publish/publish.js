@@ -130,6 +130,8 @@ Page({
 
   formSubmit: function (e) {
 
+
+
     if(e.detail.value.textarea.length==0||e.detail.value.Wanttosell.length==0||e.detail.value.originalprice.length==0){
       wx.showToast({
         title: '输入不能为空哟！',

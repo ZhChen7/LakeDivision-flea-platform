@@ -7,6 +7,7 @@
   </movable-area> -->
 
 
+
     <!--发布按钮-->
     <van-transition show="{{ show1 }}" custom-class="block" name="fade-right" duration="{{ { enter: 1500, leave: 1000 } }}" >
         <view id="Publish" bindtap="ToPublish" bindtouchmove="buttonMove">
