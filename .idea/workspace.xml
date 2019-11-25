@@ -3,12 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="98acec65-d3a5-49a2-9ef1-455ceea8c8d3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.json" beforeDir="false" afterPath="$PROJECT_DIR$/app.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/icon/icon.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/icon/icon.wxss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/index/index.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index/index.wxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/publish/publish.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/publish/publish.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/publish/publish.json" beforeDir="false" afterPath="$PROJECT_DIR$/pages/publish/publish.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/publish/publish.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/publish/publish.wxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/publish/publish.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/publish/publish.wxss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project.config.json" beforeDir="false" afterPath="$PROJECT_DIR$/project.config.json" afterDir="false" />
@@ -23,14 +21,26 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5433131">
+    <splitter split-orientation="horizontal" split-proportion="0.32646048">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/pages/publish/publish.wxml">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="204">
-                  <caret line="12" column="61" selection-start-line="12" selection-start-column="61" selection-end-line="12" selection-end-column="61" />
+                <state>
+                  <caret line="2" column="125" lean-forward="true" selection-start-line="2" selection-start-column="123" selection-end-line="2" selection-end-column="125" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/pages/index/index.wxml">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="187">
+                  <caret line="11" column="12" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
+                  <folding>
+                    <element signature="n#swiper#0;n#view#0;n#!!top" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -38,14 +48,14 @@
         </leaf>
       </split-first>
       <split-second>
-        <splitter split-orientation="horizontal" split-proportion="0.61752135">
+        <splitter split-orientation="horizontal" split-proportion="0.2">
           <split-first>
             <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
               <file pinned="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/pages/publish/publish.wxss">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="190">
-                      <caret line="119" column="19" selection-start-line="119" selection-start-column="19" selection-end-line="119" selection-end-column="19" />
+                    <state relative-caret-position="203">
+                      <caret line="53" selection-start-line="52" selection-end-line="53" />
                     </state>
                   </provider>
                 </entry>
@@ -57,8 +67,8 @@
               <file pinned="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/pages/publish/publish.json">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="34">
-                      <caret line="2" column="31" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="31" />
+                    <state relative-caret-position="119">
+                      <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
                     </state>
                   </provider>
                 </entry>
@@ -66,8 +76,17 @@
               <file pinned="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/pages/publish/publish.js">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="604">
-                      <caret line="77" column="18" selection-start-line="77" selection-start-column="18" selection-end-line="77" selection-end-column="18" />
+                    <state relative-caret-position="469">
+                      <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file pinned="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/app.json">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state relative-caret-position="34">
+                      <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
                     </state>
                   </provider>
                 </entry>
@@ -75,8 +94,8 @@
               <file pinned="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/pages/index/index.js">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="68">
-                      <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+                    <state relative-caret-position="34">
+                      <caret line="2" selection-start-line="2" selection-end-line="2" selection-end-column="30" />
                       <folding>
                         <element signature="n#!!doc" expanded="true" />
                       </folding>
@@ -108,6 +127,8 @@
       <find>seller_logo</find>
       <find>active</find>
       <find>bindchange</find>
+      <find>uploads</find>
+      <find>formSubmit</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -116,29 +137,30 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/pages/publish/publish.json" />
         <option value="$PROJECT_DIR$/pages/index/index.json" />
         <option value="$PROJECT_DIR$/pages/index/indexlistshow/indexlistshow.json" />
-        <option value="$PROJECT_DIR$/pages/index/index.wxml" />
         <option value="$PROJECT_DIR$/pages/index/index.wxss" />
         <option value="$PROJECT_DIR$/pages/index/indexlistshow/indexlistshow.wxss" />
         <option value="$PROJECT_DIR$/pages/index/indexlistshow/indexlistshow.wxml" />
         <option value="$PROJECT_DIR$/pages/index/indexlistshow/indexlistshow.js" />
         <option value="$PROJECT_DIR$/project.config.json" />
         <option value="$PROJECT_DIR$/pages/index/index.js" />
-        <option value="$PROJECT_DIR$/app.json" />
         <option value="$PROJECT_DIR$/icon/icon.wxss" />
-        <option value="$PROJECT_DIR$/pages/publish/publish.js" />
-        <option value="$PROJECT_DIR$/pages/publish/publish.wxml" />
+        <option value="$PROJECT_DIR$/pages/publish/publish.json" />
         <option value="$PROJECT_DIR$/pages/publish/publish.wxss" />
+        <option value="$PROJECT_DIR$/cloud/deleteimgfun/index.js" />
+        <option value="$PROJECT_DIR$/pages/publish/publish.wxml" />
+        <option value="$PROJECT_DIR$/pages/index/index.wxml" />
+        <option value="$PROJECT_DIR$/app.json" />
+        <option value="$PROJECT_DIR$/pages/publish/publish.js" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="125" />
-    <option name="y" value="39" />
-    <option name="width" value="1546" />
-    <option name="height" value="970" />
+    <option name="x" value="228" />
+    <option name="y" value="132" />
+    <option name="width" value="1432" />
+    <option name="height" value="827" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -146,17 +168,13 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="小程序" type="b2602c69:ProjectViewProjectNode" />
               <item name="小程序" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="小程序" type="b2602c69:ProjectViewProjectNode" />
-              <item name="小程序" type="462c0819:PsiDirectoryNode" />
-              <item name="icon" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="小程序" type="b2602c69:ProjectViewProjectNode" />
@@ -169,17 +187,23 @@
               <item name="pages" type="462c0819:PsiDirectoryNode" />
               <item name="index" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="小程序" type="b2602c69:ProjectViewProjectNode" />
+              <item name="小程序" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="publish" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -212,7 +236,8 @@
       <workItem from="1574217699775" duration="6209000" />
       <workItem from="1574299968181" duration="21000" />
       <workItem from="1574325363583" duration="840000" />
-      <workItem from="1574580808242" duration="7577000" />
+      <workItem from="1574580808242" duration="7644000" />
+      <workItem from="1574646223700" duration="19576000" />
     </task>
     <task id="LOCAL-00001" summary="fixed indexlistshow something">
       <created>1574069282917</created>
@@ -249,17 +274,24 @@
       <option name="project" value="LOCAL" />
       <updated>1574223290025</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="finish 2019/11/24 1.0 versions">
+      <created>1574602827245</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1574602827245</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48365000" />
+    <option name="totallyTimeSpent" value="68008000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="425" y="100" width="1546" height="970" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12789927" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.08056872" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -306,7 +338,26 @@
     <MESSAGE value="finish 2019/11/19 1.0" />
     <MESSAGE value="finish 2019/11/19 2.0" />
     <MESSAGE value="finish 2019/11/20 1.0 versions" />
-    <option name="LAST_COMMIT_MESSAGE" value="finish 2019/11/20 1.0 versions" />
+    <MESSAGE value="finish 2019/11/24 1.0 versions" />
+    <option name="LAST_COMMIT_MESSAGE" value="finish 2019/11/24 1.0 versions" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/pages/publish/publish.js</url>
+          <line>38</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/pages/publish/publish.js</url>
+          <line>81</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/pages/index/index.json">
@@ -337,16 +388,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/index/index.wxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="806">
-          <caret line="62" column="127" selection-start-line="62" selection-start-column="127" selection-end-line="62" selection-end-column="127" />
-          <folding>
-            <element signature="n#swiper#0;n#view#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/index/indexlistshow/indexlistshow.wxss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="738">
@@ -368,30 +409,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/index/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="28" selection-start-line="2" selection-start-column="28" selection-end-line="2" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/publish/publish.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="31" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/icon/icon.wxss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="806">
@@ -402,26 +419,89 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/publish/publish.js">
+    <entry file="file://$PROJECT_DIR$/cloud/add/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="604">
-          <caret line="77" column="18" selection-start-line="77" selection-start-column="18" selection-end-line="77" selection-end-column="18" />
+        <state relative-caret-position="187">
+          <caret line="11" column="1" lean-forward="true" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/publish/publish.wxml">
+    <entry file="file://$PROJECT_DIR$/pages/publish/publish.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="61" selection-start-line="12" selection-start-column="61" selection-end-line="12" selection-end-column="61" />
+        <state relative-caret-position="119">
+          <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/publish/publish.wxss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="119" column="19" selection-start-line="119" selection-start-column="19" selection-end-line="119" selection-end-column="19" />
+        <state relative-caret-position="203">
+          <caret line="53" selection-start-line="52" selection-end-line="53" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/cloud/deleteimgfun/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/index/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" selection-start-line="2" selection-end-line="2" selection-end-column="30" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/publish/publish.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="2" column="125" lean-forward="true" selection-start-line="2" selection-start-column="123" selection-end-line="2" selection-end-column="125" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/index/index.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="12" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
+          <folding>
+            <element signature="n#swiper#0;n#view#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/publish/publish.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="469">
+          <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>

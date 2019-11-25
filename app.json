@@ -1,13 +1,18 @@
 {
   "pages": [
-    "pages/publish/publish",
     "pages/index/index",
+    "pages/publish/publish",
     "pages/index/indexlistshow/indexlistshow",
     "pages/recommend/recommend",
     "pages/logs/logs",
     "pages/user/user",
     "pages/information/information"
   ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
   "window": {
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTextStyle": "black",

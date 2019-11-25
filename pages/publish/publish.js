@@ -1,42 +1,46 @@
 // pages/publish/publish.js
-Page({
 
+const db = wx.cloud.database()
+
+let finallimgUrl=[]
+let checkbox1=[]
+let checkbox2=[]
+
+
+Page({
   data: {
     Pinkageitems: [
-      { name: 'kexiaodao', value: '可小刀', checked: 'true' },
+      { name: 'kexiaodao', value: '可小刀'},
       { name: 'Pinkage', value: '包邮' }
     ],
     category: [
       { name: 'book', value: '书籍' },
-      { name: 'Pinkage', value: '生活用品', checked: 'true' },
-      { name: 'Pinkage', value: '3C数码' },
-      { name: 'Pinkage', value: '鞋服美妆' },
-      { name: 'Pinkage', value: '其它' }
+      { name: 'articlesofdailyuse', value: '生活用品' },
+      { name: '3Cshuma', value: '3C数码' },
+      { name: 'Shoesclothesbeautifulmakeup', value: '鞋服美妆' },
+      { name: 'other', value: '其它' }
     ],
-    fileList: [
-     'https://img.yzcdn.cn/vant/cat.jpeg',
-     'http://q0hfh28wl.bkt.clouddn.com/3AA05DD719CC259FD1FF0B6A882A4BB4.jpg',
-      'https://img.yzcdn.cn/vant/cat.jpeg',
-      'http://q0hfh28wl.bkt.clouddn.com/3AA05DD719CC259FD1FF0B6A882A4BB4.jpg',
-      'https://img.yzcdn.cn/vant/cat.jpeg',
-      'http://q0hfh28wl.bkt.clouddn.com/3AA05DD719CC259FD1FF0B6A882A4BB4.jpg',
-      'https://img.yzcdn.cn/vant/cat.jpeg',
-      'http://q0hfh28wl.bkt.clouddn.com/3AA05DD719CC259FD1FF0B6A882A4BB4.jpg'
-    ]
+    fileList: [],
+    max:10
   },
 
   checkboxChange: function (e) {
-    console.log('checkbox发生change事件，携带value值为：', e.detail.value)
+    checkbox1=e.detail.value
+    // console.log('checkbox发生change事件，携带value值为：', e.detail.value)
   },
 
+  checkboxChange1(e){
+    // console.log(e)
+    checkbox2=e.detail.value
+    // console.log('checkbox发生change事件，携带value值为：', e.detail.value)
+  },
 
   unloadimg(){
-    console.log('hello')
-
-    var _that=this
+    // console.log('hello')
+    let _that=this
 
     wx.chooseImage({
-      count: 5,
+      count: 3,
       sizeType: ['original', 'compressed'],
       sourceType: ['album', 'camera'],
       success(res) {
@@ -44,30 +48,30 @@ Page({
         const tempFilePaths = res.tempFilePaths
         console.log(tempFilePaths)
 
-        console.log(_that.data.fileList)
 
-        var newarr = _that.data.fileList.concat(tempFilePaths)
         _that.setData({
-          fileList: newarr
+          fileList: _that.data.fileList.concat(tempFilePaths)
         })
 
-        var uploads = [];
-        for (var i = 0; i < tempFilePaths.length; i++) {
+
+        let __that=_that
+
+        let uploads = [];
+        for (let i = 0; i < tempFilePaths.length; i++) {
           uploads[i] = new Promise((resolve, reject) => {
             wx.cloud.uploadFile({
               cloudPath: new Date().getTime() + '.png', // 上传至云端的路径
               filePath: tempFilePaths[0], // 小程序临时文件路径
               success: res => {
+                finallimgUrl.push(res.fileID)
                 resolve(result)
-                console.log(res)
               },
               fail: console.error
             })
           })
         }
         Promise.all(uploads).then((result) => {
-          resolve(result)
-          console.log('1111')
+          console.log(result)
         })
       }
     })
@@ -75,68 +79,128 @@ Page({
 
 
   closeimg(e){
-    console.log(e)
-    console.log('hello world')
+    let currentTargetimgindex =  e.currentTarget.dataset.index
+    // console.log(currentTargetimgindex)
+    this.data.fileList.splice(currentTargetimgindex,1)
+    finallimgUrl.splice(currentTargetimgindex,1)
+
+    console.log(finallimgUrl[currentTargetimgindex])
+
+
+    wx.cloud.deleteFile({
+      fileList: [finallimgUrl[currentTargetimgindex]],
+      success: res => {
+        // handle success
+        console.log(res.fileList)
+      },
+      fail: err => {
+        console.log("error")
+      }
+    })
+
+    // wx.cloud.callFunction({
+    //   // 需调用的云函数名
+    //   name: 'deleteimgfun',
+    //   // 传给云函数的参数
+    //   data: {
+    //     dleimgsrc:finallimgUrl[currentTargetimgindex]
+    //   },
+    //   success(res){
+    //     console.log("success")
+    //     console.log(res)
+    //   },
+    //   // 成功回调
+    //   complete(res){
+    //       console.log("成功回调")
+    //   }
+    // })
+
+
+    // console.log(newfileList)
+     this.setData({
+       fileList: this.data.fileList
+    })
   },
 
 
-  delete(){
-    console.log('xxxx')
-  },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
+  bindinputvalue(e){
 
   },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
+
+  formSubmit: function (e) {
+
+    if(e.detail.value.textarea.length==0||e.detail.value.Wanttosell.length==0||e.detail.value.originalprice.length==0){
+      wx.showToast({
+        title: '输入不能为空哟！',
+        icon: 'none',
+        duration: 2000
+      })
+      return
+    }
+
+    console.log('form发生了submit事件，携带数据为：', e.detail.value)
+    let textarea= e.detail.value.textarea
+    let publishimg= finallimgUrl
+    let Wanttosell= e.detail.value.Wanttosell
+    let originalprice= e.detail.value.originalprice
+
+    let checkboxone=checkbox1
+    let checkboxtwo=checkbox2
+
+
+    console.log(textarea)
+    console.log(publishimg)
+    console.log(Wanttosell)
+    console.log(originalprice)
+    console.log(checkboxone)
+    console.log(checkboxtwo)
+
+
+    console.log(new Date().toLocaleString())
+
+    // wx.getLocation({
+    //   type: 'wgs84',
+    //   success (res) {
+    //     console.log(res)
+    //     const latitude = res.latitude
+    //     const longitude = res.longitude
+    //     const speed = res.speed
+    //     const accuracy = res.accuracy
+    //   }
+    // })
+
+    db.collection('publish').add({
+      // data 字段表示需新增的 JSON 数据
+      data: {
+        description: textarea,
+        publishimgarr: publishimg,
+        Wanttosell: Wanttosell,
+        originalprice:originalprice,
+        checkboxone:checkboxone,
+        checkboxtwo:checkboxtwo,
+        publishTime:new Date().toLocaleString(),
+        style: {
+          "color": "red"
+        },
+      }
+    })
+        .then(res => {
+          wx.reLaunch({
+            url: '../index/indexlistshow/indexlistshow?id=1'
+          })
+        })
+
 
   },
 
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
 
-  },
 
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  formReset: function () {
+    console.log('form发生了reset事件')
   }
+
+
+
+
 })

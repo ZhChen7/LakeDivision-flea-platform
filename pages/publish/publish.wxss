@@ -109,25 +109,28 @@ button::after{
 
 #unload{
   /*border: 1px solid black;*/
-}
-#unload >.unloadBox{
-    display: flex;
-    flex-wrap: wrap;
+  padding: 0 8rpx;
 }
 
-#unload >.unloadBox>.unloadBox-item{
+.unloadBox{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+#unload >.unloadBox .unloadBox-item{
   margin: 0rpx 16rpx 16rpx 0rpx;
   transition: all 1s;
   position: relative;
 }
 
-#unload >.unloadBox>.unloadBox-item>image{
+#unload >.unloadBox .unloadBox-item>image{
   width: 160rpx;
   height: 160rpx;
   /*border: 1px solid black;*/
 }
 
-#unload >.unloadBox>.unloadBox-item>.close{
+#unload >.unloadBox .unloadBox-item>.close{
   position: absolute;
   top: -8px;
   right: -8px;
@@ -143,7 +146,7 @@ button::after{
 }
 
 
-#unload >.unloadBox>.unloadBox-item>.close>.iconfont{
+#unload >.unloadBox .unloadBox-item>.close>.iconfont{
   color: #999;
 }
 

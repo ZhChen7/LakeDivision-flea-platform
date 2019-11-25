@@ -1,6 +1,6 @@
 <view class="section">
   <form bindsubmit="formSubmit" bindreset="formReset">
-    <textarea class='textarea' placeholder="添加商品描述..." name="textarea" placeholder-style="color:#aaa;" auto-focus />
+    <textarea class='textarea' placeholder="添加商品描述..." name="textarea" placeholder-style="color:#aaa;" auto-focus  required/>
 
 
 
@@ -8,12 +8,13 @@
       <!--上传图片-->
      <view id="unload">
          <view class="unloadBox">
-                <view class="unloadBox-item" wx:for="{{fileList}}" wx:key="{{item}}">
-                        <image src="{{item}}" mode="aspectFill"></image>
-                        <view class="close" bindtap="closeimg">
-                            <text class="iconfont icon-guanbi1"></text>
-                        </view>
-                </view>
+
+                     <view class="unloadBox-item" wx:for="{{fileList}}" wx:key="{{item}}">
+                         <image src="{{item}}" mode="aspectFill"></image>
+                         <view class="close" bindtap="closeimg" data-index="{{index}}">
+                             <text class="iconfont icon-guanbi1"></text>
+                         </view>
+                     </view>
 
                 <view class="addimage unloadBox-item" bindtap="unloadimg">
                     <view class="iconfont icon-tianjia"></view>
@@ -25,13 +26,13 @@
 
    <view class='input1'>
         <text>想卖</text>   
-        <input type='text' placeholder='￥ 0.00'  placeholder-style="color:#ccc;" id='wangtomai'></input>
+        <input type='digit' name="Wanttosell" placeholder='￥ 0.00'  placeholder-style="color:#ccc;" id='wangtomai' maxlength="{{max}}" bindinput="bindinputvalue" required></input>
 
     </view>
 
      <view class='input1 input2'>
         <text>原价</text>
-      <input type='text' placeholder='￥ 0.00' placeholder-style="color:#ccc;"></input>
+      <input type='text' name="originalprice" placeholder='￥ 0.00' placeholder-style="color:#ccc;" required></input>
     </view>
 
     <!-- <button form-type="submit"> 提交 </button> -->
@@ -45,11 +46,11 @@
   </checkbox-group>
 
 
-    <checkbox-group bindchange="checkboxChange" class='category'>
+    <checkbox-group bindchange="checkboxChange1" class='category' >
     <view class='category_header'>类别</view>
     <view class='category_content'>
        <label class="checkbox checkbox2" wx:for="{{category}}" wx:key="item.name">
-         <checkbox value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}
+         <checkbox value="{{item.name}}" name="{{item.name}}" checked="{{item.checked}}" data-index="{{index}}"/>{{item.value}}
      </label>
     </view>
   </checkbox-group>
