@@ -4,7 +4,6 @@
 
 
 
-
       <!--上传图片-->
      <view id="unload">
          <view class="unloadBox">
@@ -24,6 +23,17 @@
 
 
 
+      <view id="promulgator">
+                <view class="promulgator_left">
+                    <image src="{{userinfo.avatarUrl}}"></image>
+                </view>
+                <view class="promulgator_right">
+                      <view>Hi!<text class="nickname">{{userinfo.nickName}}</text> <text class="sex">{{userinfo.gender}}</text></view>
+                      <text class="huanyingintro">欢迎来到方便实惠油好玩滴~ 湖师小程序二手交易市场！</text>
+                </view>
+      </view>
+
+
    <view class='input1'>
         <text>想卖</text>   
         <input type='digit' name="Wanttosell" placeholder='￥ 0.00'  placeholder-style="color:#ccc;" id='wangtomai' maxlength="{{max}}" bindinput="bindinputvalue" required></input>
@@ -32,11 +42,17 @@
 
      <view class='input1 input2'>
         <text>原价</text>
-      <input type='text' name="originalprice" placeholder='￥ 0.00' placeholder-style="color:#ccc;" required></input>
+      <input type='digit' name="originalprice" placeholder='￥ 0.00' placeholder-style="color:#ccc;" required></input>
     </view>
 
     <!-- <button form-type="submit"> 提交 </button> -->
 
+
+    <view class="Categorysort">
+        <view class="Categorysort_header">分类</view>
+
+
+    </view>
 
 
   <checkbox-group bindchange="checkboxChange" class='Pinkage'>

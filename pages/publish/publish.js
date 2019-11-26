@@ -1,5 +1,5 @@
 // pages/publish/publish.js
-
+const app = getApp();
 const db = wx.cloud.database()
 
 let finallimgUrl=[]
@@ -21,7 +21,8 @@ Page({
       { name: 'other', value: '其它' }
     ],
     fileList: [],
-    max:10
+    max:10,
+    userinfo:null
   },
 
   checkboxChange: function (e) {
@@ -61,8 +62,9 @@ Page({
           uploads[i] = new Promise((resolve, reject) => {
             wx.cloud.uploadFile({
               cloudPath: new Date().getTime() + '.png', // 上传至云端的路径
-              filePath: tempFilePaths[0], // 小程序临时文件路径
+              filePath: tempFilePaths[i], // 小程序临时文件路径
               success: res => {
+                console.log(res)
                 finallimgUrl.push(res.fileID)
                 resolve(result)
               },
@@ -151,15 +153,13 @@ Page({
     let checkboxtwo=checkbox2
 
 
-    console.log(textarea)
-    console.log(publishimg)
-    console.log(Wanttosell)
-    console.log(originalprice)
-    console.log(checkboxone)
-    console.log(checkboxtwo)
-
-
-    console.log(new Date().toLocaleString())
+    // console.log(textarea)
+    // console.log(publishimg)
+    // console.log(Wanttosell)
+    // console.log(originalprice)
+    // console.log(checkboxone)
+    // console.log(checkboxtwo)
+    // console.log(new Date().toLocaleString())
 
     // wx.getLocation({
     //   type: 'wgs84',
@@ -172,26 +172,37 @@ Page({
     //   }
     // })
 
+  let publishobj={
+    description: textarea,
+    publishimgarr: publishimg,
+    Wanttosell: Wanttosell,
+    originalprice:originalprice,
+    checkboxone:checkboxone,
+    checkboxtwo:checkboxtwo,
+    publishTime:new Date().toLocaleString(),
+    Wantpeople:1,
+    Thumbupnumber:0,
+    collectnumber:0,
+    pageviewnumber:0,
+    style: {
+      "color": "red"
+    },
+  }
+
     db.collection('publish').add({
       // data 字段表示需新增的 JSON 数据
-      data: {
-        description: textarea,
-        publishimgarr: publishimg,
-        Wanttosell: Wanttosell,
-        originalprice:originalprice,
-        checkboxone:checkboxone,
-        checkboxtwo:checkboxtwo,
-        publishTime:new Date().toLocaleString(),
-        style: {
-          "color": "red"
-        },
-      }
+      data: publishobj
     })
-        .then(res => {
-          wx.reLaunch({
-            url: '../index/indexlistshow/indexlistshow?id=1'
+          .then(res => {
+
+            // console.log(res)
+            // console.log(publishobj)
+
+            var _id=res._id
+            wx.redirectTo({
+              url: '../index/indexlistshow/indexlistshow?id='+_id
+            })
           })
-        })
 
 
   },
@@ -200,9 +211,22 @@ Page({
 
   formReset: function () {
     console.log('form发生了reset事件')
+  },
+
+
+  onReady() {
+    console.log("onReady")
+    console.log(app.globalData);
+    if (app.globalData.userInfo.gender == 1){
+      app.globalData.userInfo.gender='帅气的小男孩'
+    }else{
+      app.globalData.userInfo.gender='漂亮的小女生'
+    }
+
+    this.setData({
+      userinfo:  app.globalData.userInfo
+    })
+    console.log(this.data.userinfo)
   }
-
-
-
 
 })

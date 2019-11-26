@@ -1,17 +1,19 @@
 // pages/index/indexlistshow/indexlistshow.js
+
+const app = getApp();
+const db = wx.cloud.database()
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    imgUrls: ['https://img10.360buyimg.com/mobilecms/s250x250_jfs/t1/74132/21/14761/169293/5dc39d53Eb7598160/6e1756dce7fd4283.jpg',
-      'https://img13.360buyimg.com/mobilecms/s250x250_jfs/t1/96438/29/1795/202527/5dc4d29bE7e66f381/ad9ae17970173349.jpg',
-      'https://img.alicdn.com/img/bao/uploaded/i4/i4/72694814/O1CN01VH38GI1lQrCY7RqHw_!!72694814.jpg_420x280Q50s50.jpg_.webp',
-      'https://img12.360buyimg.com/mobilecms/s250x250_jfs/t1/96494/24/1754/188237/5dc4eb04E76fdf5cc/87ca849bbdf813cc.jpg'],
-     swiperIndex: 0, //这里不写第一次启动展示的时候会有问题
-     show:false,
-    releaseFocus: false
+    imgUrls:[],
+    swiperIndex: 0, //这里不写第一次启动展示的时候会有问题
+    show:false,
+    releaseFocus: false,
+    userinfo:null,
+    GetDatalist:null
   },
 
 
@@ -73,41 +75,33 @@ Page({
   },
 
 
-
-  
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
+  onReady() {
 
   },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
 
-  },
+  onLoad:function(option){
 
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
+    console.log(option);
 
-  },
 
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
+    let _id = option.id
+    let that= this
+    db.collection('publish').where({
+      _id: _id
+    })
+        .get({
+          success: function(res) {
+            // res.data 是包含以上定义的两条记录的数组
+              console.log(res.data)
 
-  },
 
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
+             that.setData({
+                imgUrls:res.data[0].publishimgarr,
+                GetDatalist:res.data[0]
+             })
+          }
+        })
   },
 
   /**

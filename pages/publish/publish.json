@@ -1,6 +1,7 @@
 {
   "usingComponents": {
-    "van-transition": "vant-weapp/transition/index"
+    "van-transition": "vant-weapp/transition/index",
+    "van-notice-bar": "vant-weapp/notice-bar/index"
   },
       "navigationBarBackgroundColor": "#fff",
       "navigationBarTextStyle": "black",

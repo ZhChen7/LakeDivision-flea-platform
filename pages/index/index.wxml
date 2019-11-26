@@ -10,9 +10,9 @@
 
     <!--发布按钮-->
     <van-transition show="{{ show1 }}" custom-class="block" name="fade-right" duration="{{ { enter: 1500, leave: 1000 } }}" >
-        <view id="Publish" bindtap="ToPublish" bindtouchmove="buttonMove">
+        <button id="Publish" bindtap="ToPublish" bindtouchmove="buttonMove" open-type="getUserInfo">
             <view class="iconfont icon-icon-test"></view>
-        </view>
+        </button>
     </van-transition>
 
 
@@ -117,17 +117,16 @@
 
 
 
-
   <view class='index_show_list' >
-    <view class='index_show_list_item' bindtap='listclick' wx:for="{{indexshowlistdata}}" wx:key="{{item.numeration}}">
+    <view class='index_show_list_item' bindtap='listclick' data-index="{{index}}" wx:for="{{indexshowlistdata}}" wx:key="{{item._id}}">
         <view class='index_show_list_img'>
-            <image src='{{item.img}}' mode='aspectFit'></image>
+            <image src='{{item.publishimgarr[0]}}' mode='aspectFill'></image>
         </view>
         <view class='index_show_list_footer'>
-            <text class='index_show_list_footer_intro van-multi-ellipsis--l2'>{{item.intro}}</text>
+            <text class='index_show_list_footer_intro van-multi-ellipsis--l2'>{{item.description}}</text>
             <view>
-                <text class='price'>{{item.price}}</text>
-                <text class='WantPeople'>{{item.WantPeople}}人想要</text>
+                <text class='price'>￥ {{item.Wanttosell}}</text>
+                <text class='WantPeople'>{{item.WantPeople}}1人想要</text>
             </view>
         </view>
     </view>

@@ -168,3 +168,71 @@ button::after{
   color: #969799;
   font-size: 48rpx;
 }
+
+#promulgator{
+  display: flex;
+  padding: 15rpx 15rpx;
+}
+
+#promulgator>.promulgator_left{
+  padding: 5rpx 15rpx;
+}
+
+#promulgator>.promulgator_left>image{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+}
+
+#promulgator>.promulgator_right{
+  /*border: 1px solid seagreen;*/
+  padding: 5rpx 15rpx;
+}
+
+
+#promulgator>.promulgator_right>view{
+  overflow: hidden;
+  height: 20px;
+  line-height: 20px;
+  width: 100%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: #666;
+  letter-spacing: 3rpx;
+  font: 24rpx/1.5 Microsoft YaHei,Heiti SC,tahoma,arial,Hiragino Sans GB,"\5B8B\4F53",sans-serif;
+  text-align: right;
+}
+
+#promulgator>.promulgator_right>view>.sex{
+  font-size: 19rpx;
+  position: relative;
+  left: 0;
+  top: 0;
+  padding: 5rpx 8rpx;
+}
+
+.nickname{
+  color: red;
+  display: inline-block;
+  padding: 0 5rpx;
+}
+
+
+.huanyingintro{
+  display: inline-block;
+  text-align: center;
+  font-size: 27rpx;
+  letter-spacing: 5rpx;
+}
+
+
+.Categorysort{
+  padding: 5rpx 15rpx;
+  font-weight: 400;
+  margin-top: 35rpx;
+  color: #999;
+}
+
+
+
+

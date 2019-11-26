@@ -20,12 +20,12 @@
 
 <view id="seller">
       <view class="seller_left">
-            <image src="http://q0hfh28wl.bkt.clouddn.com/QQ%E5%9B%BE%E7%89%8720191118170954.jpg"></image>
+            <image src="{{userinfo.avatarUrl}}"></image>
       </view> 
 
        <view class="seller_right">
           <view class="seller_right_top">
-              <view class="sellerName">一楼红尘1213</view>
+              <view class="sellerName">{{userinfo.nickName}}</view>
               <view class="goodcredit"> <text class="iconfont icon-xinyong"></text>信用极好</view>
               <view class="seller_logo iconfont icon-quanguomaijia"></view>
           </view>
@@ -37,10 +37,11 @@
       </view> 
 </view>
 
+
 <!--轮播 （商品展示）-->
 
  <swiper class='swiperClass' easing-function="easeInOutCubic"  current="{{swiperIndex}}" autoplay indicator-color="#a39f99" indicator-active-color="#f49641"  indicator-dots="{{true}}"  interval="5000" vertical="true" duration="2500" previous-margin="30px" next-margin="30px" circular bindchange="bindchange" bindtap="tapName">
-    <block wx:for="{{imgUrls}}" wx:key="{{index}}">
+    <block wx:for="{{GetDatalist.publishimgarr}}" wx:key="{{item}}">
         <swiper-item>
             <image src="{{item}}"  class="slide-image {{swiperIndex == index ? 'active' : 'quiet'}}" mode='aspectFit' >
             </image>
@@ -55,17 +56,17 @@
 
 <view class='commodityBox'>
 <view class='commodity_price_show'>
-    <view class='commodity_price'>￥ <text>25.00</text> </view>
-    <view class='original_price'> <text>￥60</text></view>
+    <view class='commodity_price'>￥ <text>{{GetDatalist.Wanttosell}}</text> </view>
+    <view class='original_price'> <text>￥{{GetDatalist.originalprice}}</text></view>
 </view>
 
   <view class='commodity_title'>
       <view>全新</view>
-      <text>JAVA学习2</text>
+      <text>來看看他的宝贝！</text>
   </view>
 
     <view class='commodity_intro'>
-    闲鱼是阿里巴巴旗下闲置交易平台App客户端（iOS版和安卓版）。会员只要使用淘宝或支付宝账户登录，无需经过复杂的开店流程，即可达成包括一键转卖个人淘宝账号中“已买到宝贝”、自主手机拍照上传二手闲置物品、以及在线交易等诸多功能。下载并使用全新概念的“闲鱼”app，个人卖家能获得更大程度的曝光量、更高效的流通路径和更具优势的物流价格等三大优势，让闲置的宝贝以最快的速度奔赴天南海北的新主人手中物尽其用。此外，闲鱼平台后端已无缝接入淘宝信用支付体系，从而最大程度保障交易安全。    闲鱼是阿里巴巴旗下闲置交易平台App客户端（iOS版和安卓版）。会员只要使用淘宝或支付宝账户登录，无需经过复杂的开店流程，即可达成包括一键转卖个人淘宝账号中“已买到宝贝”、自主手机拍照上传二手闲置物品、以及在线交易等诸多功能。下载并使用全新概念的“闲鱼”app，个人卖家能获得更大程度的曝光量、更高效的流通路径和更具优势的物流价格等三大优势，让闲置的宝贝以最快的速度奔赴天南海北的新主人手中物尽其用。此外，闲鱼平台后端已无缝接入淘宝信用支付体系，从而最大程度保障交易安全。
+      {{GetDatalist.description}}
     </view>
 </view>
 
