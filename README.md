@@ -16,15 +16,18 @@
 
 
 
-开发工具： 微信web开发工具
+**开发工具**： 微信web开发工具
 
-运用到的技术:
 
-- WXML
-- WXSS
-- JavaScript
 
-开发工具： 微信web开发工具
+**运用到的技术**:
+
+- WXML WXSS JavaScript
+- 云开发
+
+
+
+![mark](http://static.zxinc520.com/blog/20191126/04xa5nxqoO8e.png?imageslim)
 
 
 
@@ -57,4 +60,10 @@
 ![mark](http://static.zxinc520.com/blog/20191014/Pe8z2yWWo0i4.png?imageslim)
 
 
+
+效果图：
+
+![mark](http://static.zxinc520.com/blog/20191126/3IBYngjpNHYh.png?imageslim)
+
+![mark](http://static.zxinc520.com/blog/20191126/z4wcdhSEAJBz.png?imageslim)
 

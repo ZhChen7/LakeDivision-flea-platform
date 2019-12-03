@@ -8,9 +8,13 @@
 
 
 
+<!-- bindgetuserinfo="onGotUserInfo"
+  bindtap="ToPublish"
+ -->
+
     <!--发布按钮-->
     <van-transition show="{{ show1 }}" custom-class="block" name="fade-right" duration="{{ { enter: 1500, leave: 1000 } }}" >
-        <button id="Publish" bindtap="ToPublish" bindtouchmove="buttonMove" open-type="getUserInfo">
+      <button id="Publish" bindtouchmove="buttonMove" open-type="getUserInfo" bindgetuserinfo="onGotUserInfo" >
             <view class="iconfont icon-icon-test"></view>
         </button>
     </van-transition>

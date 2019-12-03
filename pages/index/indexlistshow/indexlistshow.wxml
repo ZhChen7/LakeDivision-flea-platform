@@ -20,12 +20,12 @@
 
 <view id="seller">
       <view class="seller_left">
-            <image src="{{userinfo.avatarUrl}}"></image>
+            <image src="{{userdata.avatarUrl}}"></image>
       </view> 
 
        <view class="seller_right">
           <view class="seller_right_top">
-              <view class="sellerName">{{userinfo.nickName}}</view>
+              <view class="sellerName">{{userdata.nickName}}</view>
               <view class="goodcredit"> <text class="iconfont icon-xinyong"></text>信用极好</view>
               <view class="seller_logo iconfont icon-quanguomaijia"></view>
           </view>

@@ -22,7 +22,35 @@ Page({
     ],
     fileList: [],
     max:10,
-    userinfo:null
+    userinfo:null,
+    columns: ['杭州', '宁波', '温州', '嘉兴', '湖州'],
+    show: false,
+    Choosecitydata:'黄石'
+  },
+
+
+  onConfirm(event) {
+    const { picker, value, index } = event.detail;
+    this.setData({
+      Choosecitydata:value
+    })
+    this.setData({
+      show:false
+    })
+  },
+
+  onCancel() {
+    this.setData({
+      show:false
+    })
+  },
+
+  onClose() {
+    this.setData({ show: false });
+  },
+
+  showChoosecity(){
+    this.setData({ show: true });
   },
 
   checkboxChange: function (e) {
@@ -100,24 +128,6 @@ Page({
       }
     })
 
-    // wx.cloud.callFunction({
-    //   // 需调用的云函数名
-    //   name: 'deleteimgfun',
-    //   // 传给云函数的参数
-    //   data: {
-    //     dleimgsrc:finallimgUrl[currentTargetimgindex]
-    //   },
-    //   success(res){
-    //     console.log("success")
-    //     console.log(res)
-    //   },
-    //   // 成功回调
-    //   complete(res){
-    //       console.log("成功回调")
-    //   }
-    // })
-
-
     // console.log(newfileList)
      this.setData({
        fileList: this.data.fileList
@@ -131,8 +141,6 @@ Page({
 
 
   formSubmit: function (e) {
-
-
 
     if(e.detail.value.textarea.length==0||e.detail.value.Wanttosell.length==0||e.detail.value.originalprice.length==0){
       wx.showToast({
@@ -148,18 +156,10 @@ Page({
     let publishimg= finallimgUrl
     let Wanttosell= e.detail.value.Wanttosell
     let originalprice= e.detail.value.originalprice
-
     let checkboxone=checkbox1
     let checkboxtwo=checkbox2
+    let placeofdispatch=this.data.Choosecitydata
 
-
-    // console.log(textarea)
-    // console.log(publishimg)
-    // console.log(Wanttosell)
-    // console.log(originalprice)
-    // console.log(checkboxone)
-    // console.log(checkboxtwo)
-    // console.log(new Date().toLocaleString())
 
     // wx.getLocation({
     //   type: 'wgs84',
@@ -172,6 +172,7 @@ Page({
     //   }
     // })
 
+
   let publishobj={
     description: textarea,
     publishimgarr: publishimg,
@@ -180,6 +181,7 @@ Page({
     checkboxone:checkboxone,
     checkboxtwo:checkboxtwo,
     publishTime:new Date().toLocaleString(),
+    placeofdispatch:placeofdispatch,
     Wantpeople:1,
     Thumbupnumber:0,
     collectnumber:0,
@@ -194,17 +196,11 @@ Page({
       data: publishobj
     })
           .then(res => {
-
-            // console.log(res)
-            // console.log(publishobj)
-
             var _id=res._id
             wx.redirectTo({
               url: '../index/indexlistshow/indexlistshow?id='+_id
             })
           })
-
-
   },
 
 
@@ -215,18 +211,68 @@ Page({
 
 
   onReady() {
-    console.log("onReady")
-    console.log(app.globalData);
-    if (app.globalData.userInfo.gender == 1){
-      app.globalData.userInfo.gender='帅气的小男孩'
-    }else{
-      app.globalData.userInfo.gender='漂亮的小女生'
-    }
+    let _that=this
+    // 查看是否授权
+    wx.getSetting({
+      success: function(res){
+        if (res.authSetting['scope.userInfo']) {
+          wx.getUserInfo({
+            success: function(res) {
 
-    this.setData({
-      userinfo:  app.globalData.userInfo
+              console.log(res)
+
+
+              //用户已经授权过
+             let userInfo1=res.userInfo
+
+              wx.cloud.callFunction({
+                name: 'login',
+                complete: res => {
+                  db.collection('user').where({
+                    _openid:res.result.openid
+                  })
+                      .get({
+                        success: function(res) {
+                          // res.data 是包含以上定义的两条记录的数组
+                          if(res.data.length>0){
+                               return
+                          }else{
+                            console.log(userInfo1)
+
+                            let userobj={
+                              nickName:userInfo1.nickName,
+                              country:userInfo1.country
+                            }
+
+                             db.collection('user').add({
+                             // data 字段表示需新增的 JSON 数据
+                               data: userobj
+                              })
+                                 .then(res => {
+                                })
+                          }
+
+                        }
+                      })
+
+                }
+              })
+              if (res.userInfo.gender === 1){
+                res.userInfo.gender='帅气的小男孩'
+              }else{
+                res.userInfo.gender='漂亮的小女生'
+              }
+              _that.setData({
+                userinfo:res.userInfo
+              })
+            }
+          })
+        }
+      }
     })
-    console.log(this.data.userinfo)
+
+
+
   }
 
 })

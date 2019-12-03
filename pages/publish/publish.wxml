@@ -23,6 +23,38 @@
 
 
 
+
+      <button id="Choosecity" bindtap="showChoosecity">
+          <view>
+              <text class="iconfont icon-position"></text>
+              <text>发货地：</text>
+              <text class="position">{{Choosecitydata}}</text>
+          </view>
+
+      </button>
+
+
+      <van-popup show="{{ show }}"
+                 position="bottom"
+                 custom-style="height: 60%;"
+                 bind:close="onClose"
+                 bind:close="onClose">
+
+          <van-picker
+                  show-toolbar
+                  title="选择你的城市"
+                  columns="{{ columns }}"
+                  bind:cancel="onCancel"
+                  bind:confirm="onConfirm"
+          />
+      </van-popup>
+
+
+
+
+
+
+
       <view id="promulgator">
                 <view class="promulgator_left">
                     <image src="{{userinfo.avatarUrl}}"></image>
@@ -74,7 +106,7 @@
       <view class="btn-area">
           <view>
               <button formType="submit" class="Submitbtn">Submit</button>
-              <button formType="reset">Reset</button>
+              <button formType="reset" id="Reset">Reset</button>
           </view>
 
       </view>

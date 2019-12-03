@@ -1,7 +1,7 @@
 {
   "usingComponents": {
-    "van-transition": "vant-weapp/transition/index",
-    "van-notice-bar": "vant-weapp/notice-bar/index"
+    "van-picker": "vant-weapp/picker/index",
+    "van-popup": "vant-weapp/popup/index"
   },
       "navigationBarBackgroundColor": "#fff",
       "navigationBarTextStyle": "black",

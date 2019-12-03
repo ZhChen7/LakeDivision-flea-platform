@@ -8,12 +8,12 @@ App({
       env:"hbsell-jgvfo"
     })
 
-    // 登录
+   // 登录
     // wx.login({
     //   success: function(loginRes) {
     //     if (loginRes.code) {
     //       console.log(loginRes)
-    //       // example: 081LXytJ1Xq1Y40sg3uJ1FWntJ1LXyth
+         
     //     }
     //   }
     // })
@@ -53,6 +53,16 @@ App({
             }
           })
         }
+      }
+    })
+
+    wx.getSetting({
+      success(res) {
+        console.log(res)
+        // res.authSetting = {
+        //   "scope.userInfo": true,
+        //   "scope.userLocation": true
+        // }
       }
     })
 

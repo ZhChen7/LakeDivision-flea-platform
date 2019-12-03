@@ -13,7 +13,8 @@ Page({
     show:false,
     releaseFocus: false,
     userinfo:null,
-    GetDatalist:null
+    GetDatalist:null,
+    userdata:null
   },
 
 
@@ -93,15 +94,56 @@ Page({
         .get({
           success: function(res) {
             // res.data 是包含以上定义的两条记录的数组
-              console.log(res.data)
+            //   console.log(res.data)
 
 
              that.setData({
                 imgUrls:res.data[0].publishimgarr,
                 GetDatalist:res.data[0]
              })
+
+
+            console.log(res.data[0]._openid)
+
+
+            db.collection('user').where({
+              _openid: res.data[0]._openid,
+              nickName:res.data[0].nickName
+            })
+                .get({
+                  success: function(res) {
+                    // res.data 是包含以上定义的两条记录的数组
+                    console.log(res.data)
+                  }
+                })
+
           }
         })
+
+
+
+    // wx.cloud.callFunction({
+    //   name: 'login',
+    //   complete: res => {
+    //     console.log(res)
+    //     console.log(res.result.openid)
+    //
+    //     db.collection('user').where({
+    //       _openid: res.result.openid
+    //     })
+    //         .get({
+    //           success: function(res) {
+    //             // res.data 是包含以上定义的两条记录的数组
+    //             console.log(res.data[0].userInfo1)
+    //
+    //             that.setData({
+    //               userdata:res.data[0].userInfo1
+    //             })
+    //           }
+    //         })
+    //   }
+    // })
+
   },
 
   /**

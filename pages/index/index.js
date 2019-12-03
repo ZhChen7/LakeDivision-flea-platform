@@ -91,12 +91,31 @@ Page({
   },
 
 
-  ToPublish(){
-    wx.navigateTo({
-      url: '../publish/publish',
-    })
-  },
+  // ToPublish(){
+  //   wx.navigateTo({
+  //     url: '../publish/publish',
+  //   })
+  // },
 
+  onGotUserInfo(e){
+    console.log(e.detail)
+    console.log(e.detail.errMsg)
+    console.log(e.detail.userInfo)
+    console.log(e.detail.rawData)
+
+    if (e.detail.userInfo){
+          wx.navigateTo({
+            url: '../publish/publish',
+          })
+    }
+    else if(e.detail.userInfo == undefined){
+      wx.showToast({
+        title: '请先授权登录哟!',
+        icon: 'none',
+        duration: 2000
+      })
+    }
+  },
 
     formSubmit: function (e) {
         console.log('form发生了submit事件，携带数据为：', e.detail.value)
