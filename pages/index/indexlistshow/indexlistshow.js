@@ -114,6 +114,12 @@ Page({
                   success: function(res) {
                     // res.data 是包含以上定义的两条记录的数组
                     console.log(res.data)
+
+                    // console.log(res.data[0].userInfo1)
+
+                    that.setData({
+                      userdata:res.data[0]
+                    })
                   }
                 })
 

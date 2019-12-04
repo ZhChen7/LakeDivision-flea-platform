@@ -23,7 +23,7 @@ Page({
     fileList: [],
     max:10,
     userinfo:null,
-    columns: ['杭州', '宁波', '温州', '嘉兴', '湖州'],
+    columns: ['杭州', '宁波', '温州', '嘉兴', '湖州','黄石', '武汉', '鄂州', '北京', '宜昌'],
     show: false,
     Choosecitydata:'黄石'
   },
@@ -241,7 +241,8 @@ Page({
 
                             let userobj={
                               nickName:userInfo1.nickName,
-                              country:userInfo1.country
+                              country:userInfo1.country,
+                              ChatHead:userInfo1.avatarUrl
                             }
 
                              db.collection('user').add({
