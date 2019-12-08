@@ -25,21 +25,7 @@ Page({
         content: "周末一起唱，跳，rap，篮球！"
       },
     ],
-    friends:[
-      {
-        headPic: "http://q0hfh28wl.bkt.clouddn.com/9C4D8F35E4E2E4F132A9EB2D401C6098.jpg",
-        name: "周杰伦"
-      },
-      {
-        headPic: "http://q0hfh28wl.bkt.clouddn.com/mmexport1572933424525.webp",
-        name: "吴亦凡"
-      },
-      {
-        headPic: "http://q0hfh28wl.bkt.clouddn.com/QQ%E5%9B%BE%E7%89%8720191118170954.jpg",
-        name: "蔡徐坤"
-      }
-
-    ]
+    
   },
 
   /**

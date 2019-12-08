@@ -152,7 +152,7 @@ image.quiet {
 #seller{
     display: flex;
     padding-left: 27rpx;
-    margin: 0rpx 0 63rpx 0;
+    margin: 50rpx 0 63rpx 0;
 }
 
 #seller>.seller_left{
@@ -232,6 +232,7 @@ image.quiet {
 .input_null{
     color: #C9C9C9;
 }
+
 .release{
     display: flex;
     align-items: flex-end; /*底部对齐*/

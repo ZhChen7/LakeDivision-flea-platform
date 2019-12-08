@@ -1,15 +1,15 @@
 //index.js
 //获取应用实例
 const db = wx.cloud.database()
-
+const app = getApp()
 
 Page({
   data: {
     show: false,
-    imgUrls:['http://q0hfh28wl.bkt.clouddn.com/mmexport1572933342587.jpg',
-   'http://q0hfh28wl.bkt.clouddn.com/timg.jpg',
-    'http://q0hfh28wl.bkt.clouddn.com/mmexport1572933388916.webp',
-    'http://q0hfh28wl.bkt.clouddn.com/CEEA0838C309EFBC5B0A016FC9CC21B9.jpg'],
+    imgUrls:['cloud://hbsell-jgvfo.6862-hbsell-jgvfo-1300713089/HomePagebanner1.webp',
+    'cloud://hbsell-jgvfo.6862-hbsell-jgvfo-1300713089/HomePagebanner2.jpg',
+     'cloud://hbsell-jgvfo.6862-hbsell-jgvfo-1300713089/HomePagebanner3.jpg'
+    ],
     swiperIndex: 0,//这里不写第一次启动展示的时候会有问题
     indexshowlistdata:[],
       show1:true,
@@ -17,7 +17,6 @@ Page({
       buttonLeft: 0,
       windowHeight: '',
       windowWidth: ''
-
   },
 
 // 云函数

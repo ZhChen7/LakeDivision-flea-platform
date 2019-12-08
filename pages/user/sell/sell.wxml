@@ -1,30 +1,47 @@
 <!--pages/user/sell/sell.wxml-->
 <!-- <text>pages/user/sell/sell.wxml</text> -->
 
-<view class='header_sort'>
- <view class='index_header'>
-    <!-- 输入框 -->
-    <view class='search'>
-      <text class='iconfont icon-sousuo'></text>
-      <input type='text' placeholder='卖出去的物品'></input>
-    </view>
-  </view>
-</view>
-<view class = "content">
-  <van-tabs active="a">
-    <van-tab title="全 部" class = "all"></van-tab>
-    <van-tab title="待收钱" class = "pay"></van-tab>
-    <van-tab title="待发货" class = "deliver"></van-tab>
+
+<van-search value="{{ value }}" placeholder="请输入搜索关键词" />
+<view class = "content" >
+  <van-tabs active="a" animated = "true">
+    <van-tab title="全 部" class = "all">
+      <view wx:for="{{all}}" wx:key = "{{item.num}}"> 
+        <van-card
+          num="{{item.num}}"
+          price="{{item.price}}"
+          desc="{{item.desc}}"
+          title="{{item.title}}"
+          thumb="{{item.img}}"
+        ></van-card>
+      </view>
+    </van-tab>
+
+    <van-tab title="待收钱" class = "pay">
+      <view wx:for="{{pay}}" wx:key = "{{item.num}}"> 
+        <van-card
+          num="{{item.num}}"
+          price="{{item.price}}"
+          desc="{{item.desc}}"
+          title="{{item.title}}"
+          thumb="{{item.img}}"
+        ></van-card>
+      </view>
+    </van-tab>
+
+    <van-tab title="待发货" class = "deliver">
+      <view wx:for="{{deliver}}" wx:key = "{{item.num}}"> 
+        <van-card
+          num="{{item.num}}"
+          price="{{item.price}}"
+          desc="{{item.desc}}"
+          title="{{item.title}}"
+          thumb="{{item.img}}"
+        ></van-card>
+      </view>
+    </van-tab>
   </van-tabs>
-  <view wx:for="{{thingsPic}}" wx:key = "{{item.num}}" class = "things"> 
-    <van-card
-      num="{{item.num}}"
-      price="{{item.price}}"
-      desc="{{item.desc}}"
-      title="{{item.title}}"
-      thumb="{{item.img}}"
-    ></van-card>
-  </view>
+  
   
 </view>
 

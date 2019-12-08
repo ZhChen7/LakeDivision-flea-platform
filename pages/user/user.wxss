@@ -4,6 +4,7 @@
 .whole{
   padding: 0 40rpx;
   margin: 20rpx 0;
+ 
 }
 /* 本人的信息栏 */
 .nav{
@@ -12,7 +13,10 @@
   justify-content: space-between;
   padding: 20rpx 20rpx;
   border-radius: 30rpx;
-  background-color: #fff;
+  /* background-color: #fff; */
+  /* border-left: 1rpx solid #ddd;
+  border-bottom: 1rpx solid #ddd; */
+  background-color: #ffe60071;
   border-left: 1rpx solid #ddd;
   border-bottom: 1rpx solid #ddd;
 }
@@ -76,7 +80,8 @@
   display: flex;
   justify-content: space-around;
   border-radius: 30rpx;
-  background-color: #fff;
+  /* background-color: #fff; */
+  background-color: #ffe60071;
   margin: 20rpx 0;
   border-bottom: 1rpx solid #ddd;
   border-left: 1rpx solid #ddd;
@@ -99,6 +104,7 @@
 .shop{
   height: 320rpx;
   border-radius: 30rpx;
+  
 }
 
 /* 卖在咸鱼的两个选项 */

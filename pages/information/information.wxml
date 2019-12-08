@@ -3,10 +3,10 @@
 
 <view class = "whole">
   <!-- 顶部的文字标题 -->
-  <view class = "topName">My news</view>
+  <van-search value="{{ value }}" placeholder="搜索好友名称" shape = "round"/>
 
   <!-- 标题底下导航栏，我的消息，我的好友，新的好友 -->
-    <van-tabs animated = "true" swipeable = "true" sticky = "true">
+    <!-- <van-tabs animated = "true" swipeable = "true" sticky = "true">
       <van-tab title="我的消息">
         <view class = "list">
           <view class = "listNews" wx:for="{{news}}" wx:key="{{item.name}}">
@@ -34,11 +34,31 @@
           </view>
         </view>
       </van-tab>
-      
       <van-tab title="新的好友"></van-tab>
-    </van-tabs>
+    </van-tabs> -->
 
 
+  <view class = "list">
+    <view class = "listNews" wx:for="{{news}}" wx:key="{{item.name}}">
+      <view class = "left">
+        <image src="{{item.headPic}}"></image>
+      </view>
+      <view class = "right">
+        <view class = "topContent">
+          <view class = "name">{{item.name}}</view>
+          <view class = "time">{{item.time}}</view>
+        </view>
+        <view class = "bottomContent">{{item.content}}</view>
+      </view>
+    </view>
+  </view>
+  
 </view>
-
+<van-swipe-cell right-width="{{ 65 }}" left-width="{{ 65 }}">
+  <view slot="left">选择</view>
+  <van-cell-group>
+    <van-cell title="单元格" value="内容" />
+  </van-cell-group>
+  <view slot="right">删除</view>
+</van-swipe-cell>
 

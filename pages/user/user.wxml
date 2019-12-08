@@ -2,41 +2,39 @@
 <view class = "whole">
   <view class = "nav">
     <view class = "nav-left">
-    <image src = "/images/user.png" class = "headPic"></image>
+    <image src = "http://q0hfh28wl.bkt.clouddn.com/QQ%E5%9B%BE%E7%89%8720191118170954.jpg" class = "headPic"></image>
       <view class = "name">
-        <view class = "name1">哇哈哈哈拜金</view>
-        <view class = "name2">昵称</view>
+        <view class = "name1">蔡徐坤</view>
+        <!-- <view class = "name2">昵称</view> -->
         <view class = "name3">个人主页</view>
       </view>
     </view>
     <view class = "nav-right"><text class = "iconfont icon-shezhi"></text></view>
   </view>
   <view class = "fans">
-    <view class = "agree">超赞</view>
+    <view class = "agree"bindtap="toAgree">超赞</view>
     <view class = "like" bindtap="toLike">关注</view>
-    <view class = "myFans">粉丝</view>
+    <view class = "myFans" bindtap="toFans">粉丝</view>
   </view>
   
-  <view class = "shop">
-      <view class = "shop-bottom1"  bindtap="navigateTo">
-        <view class = "left"><text class = "iconfont icon-mairu"></text>订单</view>
+  <view class = "shop" >
+      <view class = "shop-bottom1"  bindtap="toSell">
+        <view class = "left"><text class = "iconfont icon-mairu"></text>买进</view>
         <view class = "right"><text class = "iconfont icon-changyongtubiao-xianxingdaochu-zhuanqu-"></text></view>
       </view>
 
-      <view class = "shop-bottom2">
+      <view class = "shop-bottom2" bindtap = "toSold">
         <view class = "left"><text class = "iconfont icon-maichu"></text>我卖出的</view>
         <view class = "right"><text class = "iconfont icon-changyongtubiao-xianxingdaochu-zhuanqu-"></text></view>
-        
       </view>
-      <view class = "shop-bottom3">
+      
+      <!-- <view class = "shop-bottom3">
         <view class = "left"><text class = "iconfont icon-mairu"></text>我发布的</view>
         <view class = "right"><text class = "iconfont icon-changyongtubiao-xianxingdaochu-zhuanqu-"></text></view>
-        
       </view>
       <view class = "shop-bottom4">
         <view class = "left"><text class = "iconfont icon-maichu"></text>我卖出的</view>
         <view class = "right"><text class = "iconfont icon-changyongtubiao-xianxingdaochu-zhuanqu-"></text></view>
-        
-      </view>
+      </view> -->
   </view>
 </view>

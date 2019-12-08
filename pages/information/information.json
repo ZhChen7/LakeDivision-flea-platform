@@ -5,7 +5,8 @@
     "van-tabbar": "vant-weapp/tabbar/index",
     "van-tabbar-item": "vant-weapp/tabbar-item/index",
     "van-tab": "vant-weapp/tab/index",
-    "van-tabs": "vant-weapp/tabs/index"
+    "van-tabs": "vant-weapp/tabs/index",
+    "van-swipe-cell": "vant-weapp/swipe-cell/index"
   },
   "navigationBarBackgroundColor": "#fff",
   "navigationBarTextStyle": "black",

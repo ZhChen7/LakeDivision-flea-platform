@@ -1,6 +1,8 @@
 {
   "pages": [
+    "pages/home/home",
     "pages/index/index",
+    "pages/chatroom/chatroom",
     "pages/index/indexlistshow/indexlistshow",
     "pages/publish/publish",
     "pages/recommend/recommend",
@@ -14,13 +16,13 @@
     }
   },
   "window": {
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTextStyle": "black",
-    "navigationBarTitleText": "HSsell",
-    "backgroundColor": "#FC9D99",
-    "backgroundTextStyle": "light"
+    "navigationStyle": "custom"
+  },
+  "usingComponents": {
+    "cu-custom": "/colorui/components/cu-custom"
   },
   "tabBar": {
+    "custom": true,
     "color": "#333",
     "selectedColor": "#f30",
     "list": [

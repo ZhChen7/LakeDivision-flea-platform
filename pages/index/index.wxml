@@ -1,4 +1,10 @@
 <!--湖师跳蚤平台-->
+<cu-custom bgColor="bg-gradual-pink" isBack="{{false}}">
+	<view slot="backText">返回</view>
+	<view slot="content">导航栏</view>
+</cu-custom>
+
+
 <view id='Lake_division_flea_platform'>
 <!-- 
   <movable-area style="height: 200px; width: 200px; background: red;">
@@ -24,7 +30,7 @@
 <!-- 头部（搜索框...） -->
  <view class='index_header'>
     <view class='SchoolLogo'>
-    <image src='http://q0hfh28wl.bkt.clouddn.com/92230112EA6A15EFC01E1D9728C96552.jpg'></image>
+    <image src='cloud://hbsell-jgvfo.6862-hbsell-jgvfo-1300713089/shouyelogo.jpg'></image>
     </view>
     <!-- 搜索框 -->
     <view class='search'>
@@ -139,4 +145,5 @@
 
 
 
-  
+
+

@@ -5,16 +5,52 @@ Page({
    * 页面的初始数据
    */
   data: {
-      thingsPic: [
+      all: [
         {
           num: "1",
           tag: "标签",
+          price: "9999999.99",
+          desc: "描述信息",
+          title: "湖北师范大学操场看台",
+          img: "http://q0hfh28wl.bkt.clouddn.com/9C4D8F35E4E2E4F132A9EB2D401C6098.jpg"
+        },
+        {
+          num: "10",
+          tag: "标签",
+          price: "998.00",
+          desc: "描述信息",
+          title: "湖北师范大学孔子雕像",
+          img: "http://q0hfh28wl.bkt.clouddn.com/mmexport1572933424525.webp"
+        },
+        {
+          num: "2",
+          tag: "标签",
           price: "10.00",
           desc: "描述信息",
-          title: "商品标题",
-          img: "http://q0hfh28wl.bkt.clouddn.com/9C4D8F35E4E2E4F132A9EB2D401C6098.jpg"
-        } 
+          title: "周琛",
+          img: "http://q0hfh28wl.bkt.clouddn.com/QQ%E5%9B%BE%E7%89%8720191118170954.jpg"
+        }
     ],
+    pay: [
+      {
+        num: "10",
+        tag: "标签",
+        price: "998.00",
+        desc: "描述信息",
+        title: "湖北师范大学孔子雕像",
+        img: "http://q0hfh28wl.bkt.clouddn.com/mmexport1572933424525.webp"
+      }
+    ],
+    deliver: [
+      {
+        num: "2",
+        tag: "标签",
+        price: "10.00",
+        desc: "描述信息",
+        title: "周琛",
+        img: "http://q0hfh28wl.bkt.clouddn.com/QQ%E5%9B%BE%E7%89%8720191118170954.jpg"
+      }
+    ]
 
   },
 

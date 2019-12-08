@@ -1,5 +1,5 @@
 
-
+<cu-custom bgColor="bg-gradual-pink" isBack="{{true}}"><view slot="backText">返回</view><view slot="content">列表页</view></cu-custom>
 
 <!--沾粘布局  感觉没必要！！-->
 <!--<van-sticky>-->
@@ -108,7 +108,7 @@
     </view>
 
      <view class="indexlistshowbottomright">
-       <button>我想要</button>
+       <button bindtap="WangtoBuy">我想要</button>
      </view>
 </view>
 

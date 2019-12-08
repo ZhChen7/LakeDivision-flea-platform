@@ -76,6 +76,13 @@ Page({
   },
 
 
+  WangtoBuy(){
+    wx.navigateTo({
+      url: '../../chatroom/chatroom'
+    })
+  },
+
+
   onReady() {
 
   },

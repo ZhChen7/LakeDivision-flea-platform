@@ -8,22 +8,37 @@ Page({
 
   },
 
+  toSell() {
+    wx.navigateTo({
+      url: "sell/sell"
+    })
+  },
+  toLike() {
+    wx.navigateTo({
+      url: "like/like"
+    })
+  },
+  toSold() {
+    wx.navigateTo({
+      url: "sold/sold"
+    })
+  },
+  toFans() {
+    wx.navigateTo({
+      url: "fans/fans"
+    })
+  },
+  toAgree() {
+    wx.navigateTo({
+      url: "agree/agree"
+    })
+  },
+
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
 
-  },
-
-  navigateTo() {
-    wx.navigateTo({
-      url: "sell/sell"
-    })
-  },
-  toLike(){
-    wx.navigateTo({
-      url: "like/like"
-    })
   },
 
   /**

@@ -1,4 +1,7 @@
 @import "/icon/icon.wxss";
+@import "colorui/main.wxss";
+@import "colorui/icon.wxss";
+/* @import "app.css"; 你的项目css */
 
 ::-webkit-scrollbar {
   /* display: none; */
