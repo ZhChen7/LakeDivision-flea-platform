@@ -77,8 +77,12 @@ Page({
 
 
   WangtoBuy(){
+
+
+    let senduserdata = JSON.stringify(this.data.userdata)
+
     wx.navigateTo({
-      url: '../../chatroom/chatroom'
+      url: '../../chatroom/chatroom?commodityid='+ senduserdata
     })
   },
 
@@ -90,7 +94,7 @@ Page({
 
   onLoad:function(option){
 
-    console.log(option);
+    // console.log(option);
 
 
     let _id = option.id
@@ -110,9 +114,6 @@ Page({
              })
 
 
-            console.log(res.data[0]._openid)
-
-
             db.collection('user').where({
               _openid: res.data[0]._openid,
               nickName:res.data[0].nickName
@@ -120,7 +121,7 @@ Page({
                 .get({
                   success: function(res) {
                     // res.data 是包含以上定义的两条记录的数组
-                    console.log(res.data)
+                    // console.log(res.data)
 
                     // console.log(res.data[0].userInfo1)
 

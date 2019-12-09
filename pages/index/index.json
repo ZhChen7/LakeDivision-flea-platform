@@ -1,16 +1,6 @@
 {
  "usingComponents": {
-  "van-button": "vant-weapp/button/index",
-  "van-popup": "vant-weapp/popup/index",
-  "van-divider": "vant-weapp/divider/index",
-  "van-datetime-picker": "vant-weapp/datetime-picker/index",
-  "van-notice-bar": "vant-weapp/notice-bar/index",
-  "van-tag": "vant-weapp/tag/index",
-  "van-transition": "vant-weapp/transition/index",
-  "index": "/pages/basics/home/home",
-  "classify": "/pages/component/home/home",
-  "message": "/pages/plugin/home/home",
-  "user": "/pages/about/home/home"
+  "van-divider": "vant-weapp/divider/index"
   },
   "enablePullDownRefresh": true,
   "backgroundTextStyle": "dark"

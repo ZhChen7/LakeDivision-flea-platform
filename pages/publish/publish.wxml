@@ -1,3 +1,9 @@
+<scroll-view scroll-y class="scrollPage">
+    <cu-custom bgColor="bg-gradual-pink" isBack="{{true}}">
+        <view slot="backText">返回</view>
+        <view slot="content">导航栏</view>
+    </cu-custom>
+
 <view class="section">
   <form bindsubmit="formSubmit" bindreset="formReset">
     <textarea class='textarea' placeholder="添加商品描述..." name="textarea" placeholder-style="color:#aaa;" auto-focus  required/>
@@ -117,4 +123,5 @@
 
 </view>
 
- 
+
+</scroll-view>
