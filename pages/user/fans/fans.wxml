@@ -1,0 +1,17 @@
+<!--pages/user/fans/fans.wxml-->
+<!-- <text>pages/user/fans/fans.wxml</text> -->
+<van-search value="{{ value }}" placeholder="请输入搜索关键词" />
+<van-grid>
+  <van-grid-item icon="photo-o" text="文字" />
+  <van-grid-item icon="photo-o" text="文字" />
+  <van-grid-item icon="photo-o" text="文字" />
+  <van-grid-item icon="photo-o" text="文字" />
+</van-grid>
+<view class = "myFans">
+  <view class = "fans" wx:for = "{{fans}}" wx:key = "{{item.name}}">
+    <view class = "headPic">
+      <image src="{{item.headPic}}"></image>
+    </view>
+    <view class = "name">{{item.name}}</view>
+  </view>
+</view>

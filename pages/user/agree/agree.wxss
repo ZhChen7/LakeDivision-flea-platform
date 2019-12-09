@@ -1,0 +1,32 @@
+/* pages/user/sell/sell.wxss */
+
+.header_sort{
+  padding: 15rpx 0 30rpx;
+  background-size: contain;
+}
+.index_header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.search{
+  width: 529rpx;
+  margin-left: -30rpx;
+  position: relative;
+}
+.search > text{
+  position: absolute;
+  top:6rpx;
+  left:20rpx;
+  font-size:34rpx;
+  color: #999;
+}
+.search > input{
+  border-radius: 0 0 0 11rpx;
+  font-size: 21rpx;
+  padding-left: 60rpx;
+  background: #fff;
+  line-height: 50rpx;
+  height: 50rpx;
+  border-bottom: 1rpx solid #ccc;
+}

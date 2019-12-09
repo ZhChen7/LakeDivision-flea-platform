@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "index": "/pages/index/index",
+    "classify": "/pages/recommend/recommend",
+    "information": "/pages/information/information",
+    "user": "/pages/user/user"
+  }
+}

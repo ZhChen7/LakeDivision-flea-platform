@@ -1,0 +1,189 @@
+/* pages/chatroom/chatroom.wxss */
+
+
+/*公共样式*/
+
+.message{
+    margin-top: 35rpx;
+    padding: 0 15rpx;
+}
+
+.message::after{
+    content: '';
+    height: 0;
+    display: block;
+    clear: both;
+}
+
+
+
+
+/* user */
+.message_sender{
+    color: red;
+}
+
+.message_sender>image{
+    float: left;
+    display: inline;
+    height: 45px;
+    width: 45px;
+    margin-top: 0;
+    margin-right: 5px;
+    margin-bottom: 0;
+    margin-left: 0;
+    font-size: 12px;
+    line-height: 20px;
+    text-align: center;
+}
+
+.message_sender>.main{
+    padding: 0 8rpx;
+    float: left;
+    display: inline-block;
+    min-height: 30px;
+    max-width: 466rpx;
+    position: relative;
+    margin: 12px auto 0;
+    background: aquamarine;
+    border-radius: 5px;
+    left: 26rpx;
+}
+
+.message_sender>.main:after{
+    content: '';
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 5px;
+    left: -16px;
+    border: solid 8px;
+    border-color: transparent aquamarine transparent transparent ;
+    font-size: 0;
+}
+.message_sender>.main>.text-content{
+    word-break:break-all;
+}
+
+
+
+
+
+
+
+
+/* 卖家*/
+.message_accept{
+    color: black;
+    /*border: 1px solid black;*/
+}
+
+.message_accept>image{
+    float: right;
+    display: inline;
+    height: 45px;
+    width: 45px;
+    margin-top: 0;
+    margin-right: 5px;
+    margin-bottom: 0;
+    margin-left: 0;
+    font-size: 12px;
+    line-height: 20px;
+    text-align: center;
+}
+
+.message_accept>.main{
+    padding: 0 8rpx;
+    float: right;
+    display: inline-block;
+    min-height: 30px;
+    max-width: 466rpx;
+    position: relative;
+    margin: 12px auto 0;
+    background: #f8ac09;
+    border-radius: 5px;
+    right: 35rpx;
+}
+
+
+
+.message_accept>.main:after{
+    content: '';
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 5px;
+    right: -16px;
+    border: solid 8px;
+    border-color: transparent transparent transparent #f8ac09;
+    font-size: 0;
+}
+
+.message_accept>.main>.text-content{
+    word-break:break-all;
+}
+
+
+
+
+/*发送消息*/
+
+.footer{
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+.message-sender{
+    display: flex;
+}
+
+.message-sender>input{
+    border: 1px solid #ccc;
+}
+
+
+
+.input_null{
+    color: #C9C9C9;
+}
+
+.release{
+    display: flex;
+    align-items: flex-end; /*底部对齐*/
+    justify-content: space-between; /*两端对齐*/
+    box-sizing: border-box;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 18rpx 0 18rpx 30rpx;
+    background-color: #F7F8F7;
+    font-size: 28rpx;
+    z-index: 999;
+}
+.release .text{
+    width: 604rpx;
+    min-height: 34rpx;
+    max-height: 102rpx; /*最多显示三行*/
+    border-width: 15rpx 20rpx; /*使用padding与预期留白不一致，故使用border*/
+    border-style: solid;
+    border-color:  #ffffff;
+    line-height: 34rpx;
+    font-size: 28rpx;
+    background-color: #ffffff;
+    border-radius: 4rpx;
+}
+.release .submit{
+    width: 116rpx;
+    height: 64rpx;
+    line-height: 64rpx;
+    text-align: center;
+    color: #66CC00;
+}
+
+
+
+
+

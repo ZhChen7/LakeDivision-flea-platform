@@ -1,0 +1,38 @@
+
+<!--123213213-->
+<index wx:if="{{PageCur=='index'}}"></index>
+<classify wx:if="{{PageCur=='classify'}}"></classify>
+<information wx:if="{{PageCur=='information'}}"></information>
+<user wx:if="{{PageCur=='user'}}"></user>
+
+
+
+
+<view class="cu-bar tabbar  bg-white  shadow  foot">
+    <view class="action text-green" bindtap="NavChange" data-cur="index">
+        <view class="cuIcon-home {{PageCur=='index'?'text-green':'text-gray'}}"></view>
+        <view class="{{PageCur=='index'?'text-green':'text-gray'}}">首页</view>
+    </view>
+
+    <view class="action text-gray" bindtap="NavChange" data-cur="classify">
+        <view class="cuIcon-similar {{PageCur=='classify'?'text-green':'text-gray'}}"></view>
+        <view class="{{PageCur=='classify'?'text-green':'text-gray'}}">分类</view>
+    </view>
+    <view class="action text-gray add-action">
+        <button class="cu-btn cuIcon-add bg-green shadow" open-type="getUserInfo" bindgetuserinfo="onGotUserInfo"></button>
+        发布
+    </view>
+    <view class="action text-gray" bindtap="NavChange" data-cur="information">
+        <view class="cuIcon-cart {{PageCur=='information'?'text-green':'text-gray'}}">
+            <view class="cu-tag badge">3</view>
+        </view>
+
+        <view class="{{PageCur=='information'?'text-green':'text-gray'}}">消息</view>
+    </view>
+    <view class="action text-gray" bindtap="NavChange" data-cur="user">
+        <view class="cuIcon-my {{PageCur=='user'?'text-green':'text-gray'}}">
+            <view class="cu-tag badge"></view>
+        </view>
+        <view class="{{PageCur=='user'?'text-green':'text-gray'}}">我的</view>
+    </view>
+</view>

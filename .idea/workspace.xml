@@ -3,12 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="98acec65-d3a5-49a2-9ef1-455ceea8c8d3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.json" beforeDir="false" afterPath="$PROJECT_DIR$/app.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index/index.json" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index/index.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index/index.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index/index.wxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index/indexlistshow/indexlistshow.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index/indexlistshow/indexlistshow.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/publish/publish.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/publish/publish.wxml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -20,7 +14,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.27765363">
+    <splitter split-orientation="horizontal" split-proportion="0.35348225">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="false">
@@ -41,11 +35,11 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/pages/chatroom/chatroom.wxml">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1581">
-                  <caret line="93" column="48" lean-forward="true" selection-start-line="93" selection-start-column="48" selection-end-line="93" selection-end-column="48" />
+                <state relative-caret-position="34">
+                  <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
                   <folding>
                     <element signature="n#style#0;n#scroll-view#0;n#view#0;n#!!top" expanded="true" />
                     <element signature="n#style#0;n#view#0;n#view#0;n#view#0;n#scroll-view#0;n#view#0;n#!!top" expanded="true" />
@@ -53,6 +47,15 @@
                     <element signature="n#style#0;n#button#0;n#view#0;n#view#0;n#!!top" expanded="true" />
                     <element signature="n#style#0;n#view#0;n#view#0;n#view#0;n#view#0;n#!!top" expanded="true" />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/pages/home/home.wxml">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="17">
+                  <caret line="1" column="13" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
                 </state>
               </provider>
             </entry>
@@ -138,12 +141,12 @@
       <find>onsend</find>
       <find>WangtoBuy</find>
       <find>w</find>
-      <find>toView</find>
       <find>ONL</find>
       <find>我想要</find>
       <find>userInfo</find>
       <find>u</find>
       <find>onl</find>
+      <find>toView</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -169,19 +172,19 @@
         <option value="$PROJECT_DIR$/pages/home/home.js" />
         <option value="$PROJECT_DIR$/pages/publish/publish.wxml" />
         <option value="$PROJECT_DIR$/pages/index/index.wxml" />
-        <option value="$PROJECT_DIR$/pages/home/home.wxml" />
         <option value="$PROJECT_DIR$/pages/chatroom/chatroom.json" />
         <option value="$PROJECT_DIR$/pages/chatroom/chatroom.wxss" />
         <option value="$PROJECT_DIR$/pages/index/indexlistshow/indexlistshow.js" />
         <option value="$PROJECT_DIR$/pages/chatroom/chatroom.wxml" />
         <option value="$PROJECT_DIR$/pages/chatroom/chatroom.js" />
         <option value="$PROJECT_DIR$/app.json" />
+        <option value="$PROJECT_DIR$/pages/home/home.wxml" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="210" />
-    <option name="y" value="103" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="436" />
+    <option name="y" value="87" />
     <option name="width" value="1912" />
     <option name="height" value="911" />
   </component>
@@ -208,13 +211,7 @@
               <item name="小程序" type="b2602c69:ProjectViewProjectNode" />
               <item name="小程序" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="chatroom" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="小程序" type="b2602c69:ProjectViewProjectNode" />
-              <item name="小程序" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="publish" type="462c0819:PsiDirectoryNode" />
+              <item name="home" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -274,7 +271,7 @@
       <workItem from="1575441706750" duration="177000" />
       <workItem from="1575512320377" duration="1952000" />
       <workItem from="1575767198940" duration="28409000" />
-      <workItem from="1575851657815" duration="23889000" />
+      <workItem from="1575851657815" duration="24283000" />
     </task>
     <task id="LOCAL-00001" summary="fixed indexlistshow something">
       <created>1574069282917</created>
@@ -360,17 +357,24 @@
       <option name="project" value="LOCAL" />
       <updated>1575812386377</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="finish 2019/12/09   使用colorUI 完成聊天室">
+      <created>1575881345116</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1575881345116</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="173105000" />
+    <option name="totallyTimeSpent" value="173499000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.057398632" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19852553" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -424,7 +428,8 @@
     <MESSAGE value="finish 2019/12/3   add some 完善功能" />
     <MESSAGE value="finish 2019/12/04   解决云开发查询数据库的小bug" />
     <MESSAGE value="finish 2019/12/08   使用colorUI 完成聊天室及自定义Tabbar" />
-    <option name="LAST_COMMIT_MESSAGE" value="finish 2019/12/08   使用colorUI 完成聊天室及自定义Tabbar" />
+    <MESSAGE value="finish 2019/12/09   使用colorUI 完成聊天室" />
+    <option name="LAST_COMMIT_MESSAGE" value="finish 2019/12/09   使用colorUI 完成聊天室" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -557,13 +562,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/home/home.wxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/colorui/components/cu-custom.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -668,20 +666,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/chatroom/chatroom.wxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1581">
-          <caret line="93" column="48" lean-forward="true" selection-start-line="93" selection-start-column="48" selection-end-line="93" selection-end-column="48" />
-          <folding>
-            <element signature="n#style#0;n#scroll-view#0;n#view#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#view#0;n#view#0;n#view#0;n#scroll-view#0;n#view#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#view#2;n#view#0;n#view#0;n#scroll-view#0;n#view#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#0;n#view#0;n#view#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#view#0;n#view#0;n#view#0;n#view#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/chatroom/chatroom.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="422">
@@ -696,6 +680,27 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/chatroom/chatroom.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+          <folding>
+            <element signature="n#style#0;n#scroll-view#0;n#view#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#view#0;n#view#0;n#view#0;n#scroll-view#0;n#view#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#view#2;n#view#0;n#view#0;n#scroll-view#0;n#view#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#view#0;n#view#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#view#0;n#view#0;n#view#0;n#view#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/home/home.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="13" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
         </state>
       </provider>
     </entry>

@@ -1,0 +1,12 @@
+<!--pages/user/sold/sold.wxml-->
+<!-- <text>pages/user/sold/sold.wxml</text> -->
+<van-search value="{{ value }}" placeholder="请输入搜索关键词" />
+<view wx:for = "{{things}}" wx:key = "{{item.num}}">
+  <van-card
+    num="{{item.num}}"
+    price="{{item.price}}"
+    desc="{{item.desc}}"
+    title="{{item.title}}"
+    thumb="{{item.img}}"
+  />
+</view>

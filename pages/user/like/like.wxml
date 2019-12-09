@@ -1,0 +1,18 @@
+<!--pages/user/like/like.wxml-->
+<!-- <text>pages/user/like/like.wxml</text> -->
+<van-search value="{{ value }}" placeholder="搜索全部关注" />
+<van-grid>
+  <van-grid-item icon="photo-o" text="特别关注" />
+  <van-grid-item icon="photo-o" text="我的分组" />
+  <van-grid-item icon="photo-o" text="最新发布" />
+  <van-grid-item  icon="photo-o" text="字母排序" ></van-grid-item>
+</van-grid>
+<view class = "myLike">
+  <view class = "like" wx:for = "{{like}}" wx:key = "{{item.name}}">
+    <view class = "headPic">
+      <image src="{{item.headPic}}"></image>
+    </view>
+    <view class = "name">{{item.name}}</view>
+  </view>
+</view>
+

@@ -1,0 +1,37 @@
+<!--pages/user/sell/sell.wxml-->
+<!-- <text>pages/user/sell/sell.wxml</text> -->
+
+<view class='header_sort'>
+ <view class='index_header'>
+    <!-- 输入框 -->
+    <view class='search'>
+      <text class='iconfont icon-sousuo'></text>
+      <input type='text' placeholder='我点赞的物品'></input>
+    </view>
+  </view>
+</view>
+<view class = "content">
+  
+
+  
+  <view wx:for="{{thingsPic}}" wx:key = "{{item.num}}" class = "things"> 
+    <van-card
+      num="{{item.num}}"
+      price="{{item.price}}"
+      desc="{{item.desc}}"
+      title="{{item.title}}"
+      thumb="{{item.img}}"
+    ></van-card>
+  </view>
+  <view wx:for="{{thingsPic1}}" wx:key = "{{item.num}}" class = "things"> 
+    <van-card
+      num="{{item.num}}"
+      price="{{item.price}}"
+      desc="{{item.desc}}"
+      title="{{item.title}}"
+      thumb="{{item.img}}"
+    ></van-card>
+  </view>
+  
+</view>
+
