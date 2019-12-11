@@ -1,14 +1,15 @@
 {
   "pages": [
     "pages/home/home",
-    "pages/index/index",
-    "pages/chatroom/chatroom",
-    "pages/index/indexlistshow/indexlistshow",
     "pages/publish/publish",
+    "pages/sortlist/sortlist",
+    "pages/information/information",
+    "pages/chatroom/chatroom",
+    "pages/index/index",
+    "pages/index/indexlistshow/indexlistshow",
     "pages/recommend/recommend",
     "pages/logs/logs",
-    "pages/user/user",
-    "pages/information/information"
+    "pages/user/user"
   ],
   "permission": {
     "scope.userLocation": {

@@ -1,137 +1,137 @@
-/**index.wxss**/
+/*!**index.wxss**!*/
 
 
-.whole{
-  padding: 0 40rpx;
-  margin: 20rpx 0;
- 
-}
-/* 本人的信息栏 */
-.nav{
-  height: 150rpx;
-  display: flex;
-  justify-content: space-between;
-  padding: 20rpx 20rpx;
-  border-radius: 30rpx;
-  /* background-color: #fff; */
-  /* border-left: 1rpx solid #ddd;
-  border-bottom: 1rpx solid #ddd; */
-  background-color: #ffe60071;
-  border-left: 1rpx solid #ddd;
-  border-bottom: 1rpx solid #ddd;
-}
+/*.whole{*/
+  /*padding: 0 40rpx;*/
+  /*margin: 20rpx 0;*/
+
+/*}*/
+/*!* 本人的信息栏 *!*/
+/*.nav{*/
+  /*height: 150rpx;*/
+  /*display: flex;*/
+  /*justify-content: space-between;*/
+  /*padding: 20rpx 20rpx;*/
+  /*border-radius: 30rpx;*/
+  /*!* background-color: #fff; *!*/
+  /*!* border-left: 1rpx solid #ddd;*/
+  /*border-bottom: 1rpx solid #ddd; *!*/
+  /*background-color: #ffe60071;*/
+  /*border-left: 1rpx solid #ddd;*/
+  /*border-bottom: 1rpx solid #ddd;*/
+/*}*/
 
 
-/* 头像，昵称栏 */
-.nav .nav-left{
-  display: flex;
-  height: 100%;
-  width: 400rpx;
-}
+/*!* 头像，昵称栏 *!*/
+/*.nav .nav-left{*/
+  /*display: flex;*/
+  /*height: 100%;*/
+  /*width: 400rpx;*/
+/*}*/
 
-/* 用户头像 */
-.nav .nav-left .headPic{
-  height: 150rpx;
-  width: 150rpx;
-}
+/*!* 用户头像 *!*/
+/*.nav .nav-left .headPic{*/
+  /*height: 150rpx;*/
+  /*width: 150rpx;*/
+/*}*/
 
-/* 用户信息 */
-.nav .nav-left .name{
-  padding: 10rpx;
-  height: 150rpx;
-  width: 230rpx;
-}
-.nav .nav-left .name .name1,
-.nav .nav-left .name .name2,
-.nav .nav-left .name .name3{
-  height: 46rpx;
-  width: 250rpx;
-}
+/*!* 用户信息 *!*/
+/*.nav .nav-left .name{*/
+  /*padding: 10rpx;*/
+  /*height: 150rpx;*/
+  /*width: 230rpx;*/
+/*}*/
+/*.nav .nav-left .name .name1,*/
+/*.nav .nav-left .name .name2,*/
+/*.nav .nav-left .name .name3{*/
+  /*height: 46rpx;*/
+  /*width: 250rpx;*/
+/*}*/
 
-/* 用户名 */
-.nav-left .name .name2{
-  font-size: 25rpx;
-  line-height: 46rpx;
-}
+/*!* 用户名 *!*/
+/*.nav-left .name .name2{*/
+  /*font-size: 25rpx;*/
+  /*line-height: 46rpx;*/
+/*}*/
 
-/* 个人主页选项 */
-.nav .nav-left .name .name3{
-  width: 120rpx;
-  font-size: 25rpx;
-  text-align: center;
-  line-height: 46rpx;
-  background-color: #F5FFFA;
-  border-radius: 30rpx;
-}
+/*!* 个人主页选项 *!*/
+/*.nav .nav-left .name .name3{*/
+  /*width: 120rpx;*/
+  /*font-size: 25rpx;*/
+  /*text-align: center;*/
+  /*line-height: 46rpx;*/
+  /*background-color: #F5FFFA;*/
+  /*border-radius: 30rpx;*/
+/*}*/
 
-.nav .nav-right{
-  height: 50rpx;
-  width: 50rpx;
-}
+/*.nav .nav-right{*/
+  /*height: 50rpx;*/
+  /*width: 50rpx;*/
+/*}*/
 
-.nav .nav-right .icon-shezhi{
-  font-size: 50rpx;
-}
+/*.nav .nav-right .icon-shezhi{*/
+  /*font-size: 50rpx;*/
+/*}*/
 
 
-/* 关于点赞和关注的地方 */
-.fans{
-  height: 100rpx;
-  display: flex;
-  justify-content: space-around;
-  border-radius: 30rpx;
-  /* background-color: #fff; */
-  background-color: #ffe60071;
-  margin: 20rpx 0;
-  border-bottom: 1rpx solid #ddd;
-  border-left: 1rpx solid #ddd;
-}
-.fans .agree,
-.fans .like,
-.fans .myFans{
-  height: 100rpx;
-  width: 350rpx;
-  text-align: center;
-  line-height: 100rpx;
-}
+/*!* 关于点赞和关注的地方 *!*/
+/*.fans{*/
+  /*height: 100rpx;*/
+  /*display: flex;*/
+  /*justify-content: space-around;*/
+  /*border-radius: 30rpx;*/
+  /*!* background-color: #fff; *!*/
+  /*background-color: #ffe60071;*/
+  /*margin: 20rpx 0;*/
+  /*border-bottom: 1rpx solid #ddd;*/
+  /*border-left: 1rpx solid #ddd;*/
+/*}*/
+/*.fans .agree,*/
+/*.fans .like,*/
+/*.fans .myFans{*/
+  /*height: 100rpx;*/
+  /*width: 350rpx;*/
+  /*text-align: center;*/
+  /*line-height: 100rpx;*/
+/*}*/
 
-/* .fans .like{
-  border-left: 1rpx solid #ddd;
-  border-right: 1rpx solid #ddd;
-} */
+/*!* .fans .like{*/
+  /*border-left: 1rpx solid #ddd;*/
+  /*border-right: 1rpx solid #ddd;*/
+/*} *!*/
 
-/* 卖在咸鱼 */
-.shop{
-  height: 320rpx;
-  border-radius: 30rpx;
-  
-}
+/*!* 卖在咸鱼 *!*/
+/*.shop{*/
+  /*height: 320rpx;*/
+  /*border-radius: 30rpx;*/
 
-/* 卖在咸鱼的两个选项 */
-.shop .shop-bottom1,
-.shop .shop-bottom2,
-.shop .shop-bottom3,
-.shop .shop-bottom4{
-  margin: 20rpx 0;
-  display: flex;
-  justify-content: space-between;
-  line-height: 80rpx;
-  height: 80rpx;
-  width: 100%;
-  background-color: #fff;
-  border-bottom: 1rpx solid #ddd;
-}
+/*}*/
 
-.shop .shop-bottom1 .icon-changyongtubiao-xianxingdaochu-zhuanqu-,
-.shop .shop-bottom2 .icon-changyongtubiao-xianxingdaochu-zhuanqu-,
-.shop .shop-bottom3 .icon-changyongtubiao-xianxingdaochu-zhuanqu-,
-.shop .shop-bottom4 .icon-changyongtubiao-xianxingdaochu-zhuanqu-{
-  margin: 0 20rpx;
-}
-.shop .shop-bottom1 .icon-mairu,
-.shop .shop-bottom2 .icon-maichu,
-.shop .shop-bottom3 .icon-mairu,
-.shop .shop-bottom4 .icon-maichu{
-  margin: 0 10rpx;
-  font-size: 40rpx;
-}
+/*!* 卖在咸鱼的两个选项 *!*/
+/*.shop .shop-bottom1,*/
+/*.shop .shop-bottom2,*/
+/*.shop .shop-bottom3,*/
+/*.shop .shop-bottom4{*/
+  /*margin: 20rpx 0;*/
+  /*display: flex;*/
+  /*justify-content: space-between;*/
+  /*line-height: 80rpx;*/
+  /*height: 80rpx;*/
+  /*width: 100%;*/
+  /*background-color: #fff;*/
+  /*border-bottom: 1rpx solid #ddd;*/
+/*}*/
+
+/*.shop .shop-bottom1 .icon-changyongtubiao-xianxingdaochu-zhuanqu-,*/
+/*.shop .shop-bottom2 .icon-changyongtubiao-xianxingdaochu-zhuanqu-,*/
+/*.shop .shop-bottom3 .icon-changyongtubiao-xianxingdaochu-zhuanqu-,*/
+/*.shop .shop-bottom4 .icon-changyongtubiao-xianxingdaochu-zhuanqu-{*/
+  /*margin: 0 20rpx;*/
+/*}*/
+/*.shop .shop-bottom1 .icon-mairu,*/
+/*.shop .shop-bottom2 .icon-maichu,*/
+/*.shop .shop-bottom3 .icon-mairu,*/
+/*.shop .shop-bottom4 .icon-maichu{*/
+  /*margin: 0 10rpx;*/
+  /*font-size: 40rpx;*/
+/*}*/

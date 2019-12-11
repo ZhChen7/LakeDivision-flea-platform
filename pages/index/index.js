@@ -10,7 +10,8 @@ Component({
   data: {
     show: false,
     imgUrls:[
-     'cloud://hbsell-jgvfo.6862-hbsell-jgvfo-1300713089/HomePagebanner3.jpg'
+     'cloud://hbsell-jgvfo.6862-hbsell-jgvfo-1300713089/HomePagebanner3.jpg',
+        'cloud://hbsell-jgvfo.6862-hbsell-jgvfo-1300713089/lovehs.jpg'
     ],
     swiperIndex: 0,//这里不写第一次启动展示的时候会有问题
     indexshowlistdata:[],

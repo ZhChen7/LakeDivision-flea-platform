@@ -1,9 +1,4 @@
 {
   "usingComponents": {
-    "van-picker": "vant-weapp/picker/index",
-    "van-popup": "vant-weapp/popup/index"
-  },
-      "navigationBarBackgroundColor": "#fff",
-      "navigationBarTextStyle": "black",
-      "navigationBarTitleText": "发布二手物品"
+  }
 }

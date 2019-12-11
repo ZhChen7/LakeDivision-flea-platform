@@ -1,0 +1,25 @@
+/* pages/sortlist/sortlist.wxss */
+
+
+.cu-list.menu>.cu-item:after{
+    border: none;
+}
+
+.cu-item{
+    border-bottom: 1rpx solid #eee;
+}
+
+
+
+.activecss{
+    border-bottom: 1px dotted red;
+    border-top: 1px dotted red;
+}
+
+.activecss>.content>.text-grey{
+    color: red;
+}
+
+.zclistcss{
+    margin-left: 15rpx;
+}

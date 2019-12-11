@@ -1,67 +1,135 @@
 // pages/information/information.js
-Page({
-
+const app = getApp();
+Component({
+  options: {
+    addGlobalClass: true,
+  },
   /**
    * 页面的初始数据
    */
   data: {
-    news:[
-      {
-        headPic: "http://q0hfh28wl.bkt.clouddn.com/9C4D8F35E4E2E4F132A9EB2D401C6098.jpg",
-        name: "周杰伦",
-        time: "2019/10/10",
-        content: "哎呦，不错呦！"
-      },
-      {
-        headPic: "http://q0hfh28wl.bkt.clouddn.com/mmexport1572933424525.webp",
-        name: "吴亦凡",
-        time: "2019/10/15",
-        content: "你看这个面，它又长又宽，就像这个碗，它又大又圆，你们来这里吃饭，就像我给你们拉面一样很开心"
-      },
-      {
-        headPic: "http://q0hfh28wl.bkt.clouddn.com/QQ%E5%9B%BE%E7%89%8720191118170954.jpg",
-        name: "蔡徐坤",
-        time: "2019/10/25",
-        content: "周末一起唱，跳，rap，篮球！"
-      },
-    ],
-    
+    listheader:['消息','好友'],
+    TabCur: 0,
+    scrollLeft:0,
+    StatusBar: app.globalData.StatusBar,
+    CustomBar: app.globalData.CustomBar,
+    hidden: true
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-
+  lifetimes: {
+    // 生命周期函数，可以为函数，或一个在methods段中定义的方法名
+    attached: function (res) {
+      let list = [];
+      for (let i = 0; i < 26; i++) {
+        list[i] = String.fromCharCode(65 + i)
+      }
+      this.setData({
+        list: list,
+        listCur: list[0]
+      })
+    },
+    detached: function () { },
   },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
 
+
+
+
+  // onLoad() {
+  //   let list = [];
+  //   for (let i = 0; i < 26; i++) {
+  //     list[i] = String.fromCharCode(65 + i)
+  //   }
+  //   this.setData({
+  //     list: list,
+  //     listCur: list[0]
+  //   })
+  // },
+
+
+  onReady() {
+    let that = this;
+    wx.createSelectorQuery().select('.indexBar-box').boundingClientRect(function(res) {
+      that.setData({
+        boxTop: res.top
+      })
+    }).exec();
+    wx.createSelectorQuery().select('.indexes').boundingClientRect(function(res) {
+      that.setData({
+        barTop: res.top
+      })
+    }).exec()
   },
 
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
 
-  },
+ methods:{
+   tabSelect(e) {
+     this.setData({
+       TabCur: e.currentTarget.dataset.id,
+       scrollLeft: (e.currentTarget.dataset.id-1)*60
+     })
+   },
 
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
+   //获取文字信息
+   getCur(e) {
+     this.setData({
+       hidden: false,
+       listCur: this.data.list[e.target.id],
+     })
+   },
 
-  },
+   setCur(e) {
+     this.setData({
+       hidden: true,
+       listCur: this.data.listCur
+     })
+   },
+   //滑动选择Item
+   tMove(e) {
+     let y = e.touches[0].clientY,
+         offsettop = this.data.boxTop,
+         that = this;
+     //判断选择区域,只有在选择区才会生效
+     if (y > offsettop) {
+       let num = parseInt((y - offsettop) / 20);
+       this.setData({
+         listCur: that.data.list[num]
+       })
+     };
+   },
 
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
+   //触发全部开始选择
+   tStart() {
+     this.setData({
+       hidden: false
+     })
+   },
 
-  },
+   //触发结束选择
+   tEnd() {
+     this.setData({
+       hidden: true,
+       listCurID: this.data.listCur
+     })
+   },
+   indexSelect(e) {
+     let that = this;
+     let barHeight = this.data.barHeight;
+     let list = this.data.list;
+     let scrollY = Math.ceil(list.length * e.detail.y / barHeight);
+     for (let i = 0; i < list.length; i++) {
+       if (scrollY < i + 1) {
+         that.setData({
+           listCur: list[i],
+           movableY: i * 20
+         })
+         return false
+       }
+     }
+   }
+ },
+
+
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作

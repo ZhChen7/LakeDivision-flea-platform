@@ -67,8 +67,6 @@ Page({
                           if(res.data.length>0){
                             return
                           }else{
-                            console.log(userInfo1)
-
                             let userobj={
                               nickName:userInfo1.nickName,
                               country:userInfo1.country,
@@ -109,17 +107,39 @@ Page({
     }
 
 
-    console.log(this.Transfertime)
+    // console.log(this.data.openId)
+    // console.log(this.data.sellerdata._openid)
+
+      console.log(this.data.sellerdata)
+
+
+
+
+   if(this.data.openId === this.data.sellerdata._openid){
+       selleropenId = this.data.openId
+       buyeropenId = otherId
+
+   }else{
+       buyeropenId = this.data.openId
+       selleropenId= this.data.sellerdata._openid
+   }
+
+
+   console.log(this.data.sellerdata)
+
 
     const doc={
       avatar: this.data.userInfo.avatarUrl,
       nickName: this.data.userInfo.nickName,
+      sellerdata:this.data.sellerdata,
+      sellname:this.data.sellerdata.nickName,
       msgText:'text',
       textContent:this.data.textInputValue,
       sendTime:new Date(),
       practicalTime:this.Transfertime(Date.now()),
       sendTimeTs:Date.now()
     }
+
 
     db.collection('chatroom').add({
       // data 字段表示需新增的 JSON 数据
@@ -141,9 +161,9 @@ Page({
    */
   onLoad: function (options) {
 
-   // this.setData({
-   //     sellerdata:JSON.parse(options.commodityid)
-   // })
+   this.setData({
+       sellerdata:JSON.parse(options.commodityid)
+   })
 
 
 
@@ -171,7 +191,6 @@ Page({
 
       let that =this
 
-
       const p =new Promise((resolve,reject)=>{
           wx.cloud.callFunction({
               name: 'login',
@@ -184,40 +203,45 @@ Page({
           })
       }).then(
           value => {
-              console.log(value)
+
+
+
+              // if(this.data.openId === this.data.sellerdata._openid){
+              //     selleropenId = this.data.openId
+              //     buyeropenId = otherId
+              //
+              // }else{
+              //     buyeropenId = this.data.openId
+              //     selleropenId= this.data.sellerdata._openid
+              // }
+
+
+
+              db.collection('chatroom').where({
+                  _openid: value.result.openid, // 填入当前用户 openid
+                  sellname:this.data.sellerdata.nickName
+              }).watch({
+                  onChange:this.onChange.bind(this),
+                  onError(err) {
+                      console.log(err)
+                  }
+              })
+
           }
       )
-
-
-
-      console.log(that.data.openId)
-
-
-
-      db.collection('chatroom').where({
-        _openid: 'xxx' // 填入当前用户 openid
-    }).watch({
-      onChange:this.onChange.bind(this),
-      onError(err) {
-        console.log(err)
-      }
-    })
-
-
   },
 
 
     Transfertime(timechuo){
-            var time=+ timechuo
-            var date = new Date(time + 8 * 3600 * 1000); // 增加8小时
-            return date.toJSON().substr(0, 19).replace('T', ' ');
+        var time=+ timechuo
+        var date = new Date(time + 8 * 3600 * 1000); // 增加8小时
+        return date.toJSON().substr(0, 19).replace('T', ' ');
     },
 
-  onChange(snapshot){
 
-      console.log(snapshot)
+   onChange(snapshot){
 
-      // console.log(this.Transfertime(snapshot.docs[0].sendTimeTs))
+     console.log(snapshot)
 
 
     //监听开始时的初始化数据
@@ -230,6 +254,9 @@ Page({
         ]
       })
     }else{
+
+       // otherId =snapshot.docChanges[0].doc._openid
+
       const chats=[...this.data.chats]
       for (const docChange of snapshot.docChanges){
 
@@ -247,7 +274,6 @@ Page({
 
     }
 
-    // console.log(this.data.chats)
 
   },
 

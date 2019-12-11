@@ -1,0 +1,26 @@
+<!--分类列表-->
+<cu-custom bgColor="bg-olive" isBack="{{true}}"><view slot="backText">返回</view><view slot="content">分类</view></cu-custom>
+
+<!--
+ {{activeindex===index?'activecss':''}}
+-->
+<view class="cu-list menu">
+
+    <view class="cu-item {{activeindex===index?'activecss':''}}" wx:for="{{sortlistdata}}" wx:key="{{item.tag}}" data-index="{{index}}" bindtap="ItemClick">
+        <view class="content">
+            <!--<text class="cuIcon-warn text-green"></text>-->
+            <text class="text-grey">{{item.tag}} </text>
+        </view>
+        <view class="action">
+            <text class="text-grey text-sm">{{item.action}}</text>
+        </view>
+
+        <button wx:if="{{activeindex===index}}" class="cu-btn round bg-cyan zclistcss" bindtap="listsurebtn">确认</button>
+    </view>
+
+
+</view>
+
+
+
+

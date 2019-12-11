@@ -1,24 +1,36 @@
 
+
+.scrollPage{
+  background: #fff !important;
+}
+
 .section{
-  padding: 0 15rpx;
+  padding: 35rpx 15rpx;
 }
+
+
 textarea{
-  height: 93px;
+  height: 93px !important;
 }
+
+
+
 
 .input1{
   margin-top: 18rpx;
   color: #111;
-  background: #F4F4F4;
+  /*background: #F4F4F4;*/
   display: flex;
   font-size: 28rpx;
   justify-content: space-between;
   padding: 9rpx 30rpx;
+  align-items: center;
 }
+
 .input1 > input{
-  /* border: 1px solid black; */
-  width: 100rpx;
-  padding: 10rpx 20rpx;
+  /*text-align: center;*/
+   width: 150rpx;
+   /*border: 1px solid salmon;*/
 }
 
 .input1 >input::-webkit-input-placeholder{
@@ -28,45 +40,18 @@ textarea{
 .input1 > text{
   font-size: 32rpx;
   line-height: 66rpx;
+  color: #f37b1d;
 }
 
 .Pinkage{
-  /* border: 1px solid black; */
-  padding: 30rpx 15rpx;
+  width: 100%;
+  padding: 30rpx 0rpx;
   display: flex;
-  justify-content: space-between;
-   width: 350rpx;
-}
-
-.category{
-  padding: 30rpx 15rpx; 
-  /* border: 1px solid saddlebrown;  */
-  width: 400rpx;
+  justify-content: space-around;
 }
 
 
 
-.category_content{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  /* border: 1px solid salmon; */
-}
-
-.category>label{
-  /* margin-left: 135rpx; */
-  width: 200rpx;
-  /* border: 1px solid rgb(9, 9, 61); */
-}
-
-.checkbox2{
-  margin-top: 30rpx;
-}
-
-.category_header{
-  font-size: 33rpx;
-  font-weight: bold;
-}
 
 
 
@@ -91,9 +76,12 @@ button{
 }
 
 .btn-area{
+  margin-top: 35rpx;
   display: flex;
   justify-content: center;
 }
+
+
 .btn-area>view>button:nth-of-type(1){
   margin-right: 5rpx;
 }
@@ -171,7 +159,11 @@ button::after{
 
 #promulgator{
   display: flex;
-  padding: 15rpx 15rpx;
+  /*padding: 15rpx 15rpx;*/
+  background: #fff;
+
+  margin: 3rpx 0rpx 15rpx;
+  padding: 22rpx 15rpx;
 }
 
 #promulgator>.promulgator_left{
@@ -226,11 +218,17 @@ button::after{
 }
 
 
+
 .Categorysort{
-  padding: 5rpx 15rpx;
+  padding: 5rpx 25rpx;
   font-weight: 400;
   margin-top: 35rpx;
   color: #999;
+}
+
+.Categorysort>.Categorysort_header{
+  font-size: 33rpx;
+
 }
 
 #Choosecity{
@@ -240,5 +238,21 @@ button::after{
   color: #e1251b !important;
   letter-spacing: 3rpx;
 }
+
+
+.icon-gengduoxuanxiang{
+  color: #bbb;
+  opacity: 0.6;
+  font-size: 50rpx !important;
+}
+
+.ershouitem{
+  border-top: 1px solid #ddd;
+}
+.ershouitem:nth-of-type(2){
+  border-bottom: 1px solid #ddd;
+}
+
+
 
 

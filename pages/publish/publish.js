@@ -3,9 +3,6 @@ const app = getApp();
 const db = wx.cloud.database()
 
 let finallimgUrl=[]
-let checkbox1=[]
-let checkbox2=[]
-
 
 Page({
   data: {
@@ -25,9 +22,45 @@ Page({
     userinfo:null,
     columns: ['杭州', '宁波', '温州', '嘉兴', '湖州','黄石', '武汉', '鄂州', '北京', '宜昌'],
     show: false,
-    Choosecitydata:'黄石'
+    region: ['湖北省', '黄石市', '黄石港区'],
+    Alldata:['生鲜水果'],
+    boxid:'',
+    UsedOptions:[{value:'全新',IsSelect:true,color:'bg-pink'},
+      {value:'不讲价',IsSelect:true,color:'bg-olive'},
+      {value:'仅自提',IsSelect:true,color:'bg-blue'},
+      {value:'可借',IsSelect:false,color:'bg-pink'}],
+
+    UsedOption:['全新', '不讲价', '仅自提'],
+    colorList:["bg-pink","bg-olive","bg-blue","bg-purple"],
+    IstoBottom:false
   },
 
+
+  ToAlllistPage(){
+
+    this.setData({
+      IstoBottom:true
+    })
+
+    wx.navigateTo({
+      url: '/pages/sortlist/sortlist',
+      events: {
+        // 为指定事件添加一个监听器，获取被打开页面传送到当前页面的数据
+        acceptDataFromOpenedPage: function(data) {
+          console.log(data)
+        },
+        someEvent: function(data) {
+          console.log(data)
+        }
+      }
+    })
+  },
+
+  menuArrow: function (e) {
+    this.setData({
+      menuArrow: e.detail.value
+    });
+  },
 
   onConfirm(event) {
     const { picker, value, index } = event.detail;
@@ -53,16 +86,20 @@ Page({
     this.setData({ show: true });
   },
 
+
   checkboxChange: function (e) {
-    checkbox1=e.detail.value
     // console.log('checkbox发生change事件，携带value值为：', e.detail.value)
+
+    let checkarr=e.detail.value
+
+    this.setData({
+      UsedOption:e.detail.value
+    })
+
+    // console.log(this.data.UsedOptions)
   },
 
-  checkboxChange1(e){
-    // console.log(e)
-    checkbox2=e.detail.value
-    // console.log('checkbox发生change事件，携带value值为：', e.detail.value)
-  },
+
 
   unloadimg(){
     // console.log('hello')
@@ -135,6 +172,15 @@ Page({
   },
 
 
+
+  RegionChange: function(e) {
+    console.log(e.detail.value)
+    this.setData({
+      region: e.detail.value
+    })
+  },
+
+
   bindinputvalue(e){
 
   },
@@ -154,12 +200,11 @@ Page({
     console.log('form发生了submit事件，携带数据为：', e.detail.value)
     let textarea= e.detail.value.textarea
     let publishimg= finallimgUrl
-    let Wanttosell= e.detail.value.Wanttosell
-    let originalprice= e.detail.value.originalprice
-    let checkboxone=checkbox1
-    let checkboxtwo=checkbox2
-    let placeofdispatch=this.data.Choosecitydata
-
+    let Wanttosell= e.detail.value.Wanttosell  //想卖的价格
+    let originalprice= e.detail.value.originalprice  //原始价格
+    let placeofdispatch=this.data.RegionChange  //地点
+    let Allofsort= this.data.Alldata  //全部分类
+    let CommonUse=this.data.UsedOption
 
     // wx.getLocation({
     //   type: 'wgs84',
@@ -178,10 +223,10 @@ Page({
     publishimgarr: publishimg,
     Wanttosell: Wanttosell,
     originalprice:originalprice,
-    checkboxone:checkboxone,
-    checkboxtwo:checkboxtwo,
     publishTime:new Date().toLocaleString(),
     placeofdispatch:placeofdispatch,
+    Allofsort:Allofsort,
+    CommonUse:CommonUse,
     Wantpeople:1,
     Thumbupnumber:0,
     collectnumber:0,
@@ -210,7 +255,42 @@ Page({
   },
 
 
+
+  onLoad: function(options) {
+
+    // let that =this
+    // wx.getStorage({//获取本地缓存
+    //   key:"sortlistdata",
+    //   success:function(res){
+    //     console.log(res)
+    //       that.setData({
+    //         Alldata:res.data,
+    //         boxid:'bottombox'
+    //       });
+    //   },
+    // })
+
+  },
+
+
+  onShow(){
+    let that =this
+    if(this.data.IstoBottom){
+      wx.getStorage({//获取本地缓存
+        key:"sortlistdata",
+        success:function(res){
+          console.log(res)
+          that.setData({
+            Alldata:res.data,
+            boxid:'bottombox'
+          });
+        },
+      })
+    }
+  },
+
   onReady() {
+
     let _that=this
     // 查看是否授权
     wx.getSetting({
@@ -218,9 +298,6 @@ Page({
         if (res.authSetting['scope.userInfo']) {
           wx.getUserInfo({
             success: function(res) {
-
-              console.log(res)
-
 
               //用户已经授权过
              let userInfo1=res.userInfo

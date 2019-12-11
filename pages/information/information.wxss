@@ -1,74 +1,71 @@
-/* pages/information/information.wxss */
-.whole{
-  padding: 0 1rpx;
+page {
+    /*padding-top: 100rpx;*/
 }
 
-/* 文字标题底下的三个选项 */
-.whole .van-tabs .van-tabs__wrap{
-  background-color: rgba(240, 230, 230, 0.2);
-  border-radius: 30rpx;
-  margin: 0 20rpx;
-  border-bottom: 0 solid black;
+.indexes {
+    position: relative;
 }
 
-.whole .van-tabs .van-tabs__wrap .van-tabs__line{
-  height: 0 !important;
-  width: 0 !important;
+.indexBar {
+    position: fixed;
+    right: 0px;
+    bottom: 0px;
+    padding: 20rpx 20rpx 20rpx 60rpx;
+    display: flex;
+    align-items: center;
 }
 
-.whole .van-tabs .van-tabs__wrap .van-ellipsis{
-  font-size: 30rpx;
+.indexBar .indexBar-box {
+    width: 40rpx;
+    height: auto;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 20rpx rgba(0, 0, 0, 0.1);
+    border-radius: 10rpx;
 }
 
-.whole .list .listNews{
-  height: 120rpx;
-  display: flex;
-  padding: 10rpx 30rpx;
+.indexBar-item {
+    flex: 1;
+    width: 40rpx;
+    height: 40rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24rpx;
+    color: #888;
 }
 
-.whole .list .listNews .left > image{
-  border-radius: 62rpx;
-  height: 100rpx;
-  width: 100rpx;
-  margin: 10rpx;
+movable-view.indexBar-item {
+    width: 40rpx;
+    height: 40rpx;
+    z-index: 9;
+    position: relative;
 }
 
-.whole .list .listNews .right .topContent{
-  height: 60rpx;
-  width: 550rpx;
-  display: flex;
-  justify-content: space-between;
-}
-.whole .list .listNews .right .topContent .name,
-.whole .list .listNews .right .topContent .time{
-  height: 60rpx;
-  line-height: 60rpx;
-}
-.whole .list .listNews .right .topContent .time{
-  font-size: 20rpx;
+movable-view.indexBar-item::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 10rpx;
+    height: 20rpx;
+    width: 4rpx;
+    background-color: #f37b1d;
 }
 
-.whole .list .listNews .right .bottomContent{
-  height: 60rpx;
-  width: 550rpx;
-  /* line-height: 60rpx; */
-  white-space: nowrap;
-	overflow: hidden;
-	text-overflow: ellipsis;
-  font-size: 27rpx;
-  color: gray;
-}
-
-/* 滑动信息条的效果 */
-.van-swipe-cell__left,
-.van-swipe-cell__right {
-    display: inline-block;
-    width: 65px;
-    height: 44px;
-    font-size: 15px;
-    line-height: 44px;
+.indexToast {
+    position: fixed;
+    top: 0;
+    right: 80rpx;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    width: 100rpx;
+    height: 100rpx;
+    border-radius: 10rpx;
+    margin: auto;
     color: #fff;
+    line-height: 100rpx;
     text-align: center;
-    background-color: #f44;
+    font-size: 48rpx;
 }
-

@@ -1,127 +1,165 @@
-<scroll-view scroll-y class="scrollPage">
-    <cu-custom bgColor="bg-gradual-pink" isBack="{{true}}">
-        <view slot="backText">返回</view>
-        <view slot="content">导航栏</view>
+<scroll-view scroll-y class="scrollPage" scroll-into-view="{{boxid}}" scroll-with-animation style="height:100vh">
+
+    <!--<cu-custom bgColor="bg-gradual-blue" isBack="{{true}}">-->
+    <!--<view slot="backText">返回</view>-->
+    <!--<text class="cuIcon-homefill" bindtap="toHome"></text>-->
+    <!--<view slot="content">发布二手商品</view>-->
+    <!--</cu-custom>-->
+
+
+    <cu-custom bgColor="bg-gradual-blue" isCustom="{{true}}">
+        <view slot="content">发布二手商品</view>
     </cu-custom>
 
-<view class="section">
-  <form bindsubmit="formSubmit" bindreset="formReset">
-    <textarea class='textarea' placeholder="添加商品描述..." name="textarea" placeholder-style="color:#aaa;" auto-focus  required/>
+    <view class="radius bg-gradual-blue shadow-blur">
+        <image src="cloud://hbsell-jgvfo.6862-hbsell-jgvfo-1300713089/wave.gif" mode="scaleToFill"
+               class="gif-black response" style="height:100rpx"></image>
+    </view>
 
 
+    <view class="cu-bar  bg-white">
+        <view class="action sub-title">
+            <text class="text-xl text-bold text-blue">发 布</text>
+            <text class="text-ABC text-blue"> Welcome</text>
+            <!-- last-child选择器-->
+        </view>
+    </view>
 
-      <!--上传图片-->
-     <view id="unload">
-         <view class="unloadBox">
 
-                     <view class="unloadBox-item" wx:for="{{fileList}}" wx:key="{{item}}">
-                         <image src="{{item}}" mode="aspectFill"></image>
-                         <view class="close" bindtap="closeimg" data-index="{{index}}">
-                             <text class="iconfont icon-guanbi1"></text>
-                         </view>
-                     </view>
+    <view id="promulgator">
+        <view class="promulgator_left">
+            <image src="{{userinfo.avatarUrl}}"></image>
+        </view>
+        <view class="promulgator_right">
+            <view>Hi!
+                <text class="nickname">{{userinfo.nickName}}</text>
+                <text class="sex">{{userinfo.gender}}</text>
+            </view>
+            <text class="huanyingintro">欢迎来到方便实惠油好玩滴~ 湖师小程序二手交易市场！</text>
+        </view>
+    </view>
 
-                <view class="addimage unloadBox-item" bindtap="unloadimg">
-                    <view class="iconfont icon-tianjia"></view>
+
+    <view class="section">
+        <form bindsubmit="formSubmit" bindreset="formReset">
+            <textarea class='textarea' placeholder="添加商品描述..." name="textarea" placeholder-style="color:#aaa;"/>
+
+
+            <!--上传图片-->
+            <view id="unload">
+                <view class="unloadBox">
+
+                    <view class="unloadBox-item" wx:for="{{fileList}}" wx:key="{{item}}">
+                        <image src="{{item}}" mode="aspectFill"></image>
+                        <view class="close" bindtap="closeimg" data-index="{{index}}">
+                            <text class="iconfont icon-guanbi1"></text>
+                        </view>
+                    </view>
+
+                    <view class="addimage unloadBox-item" bindtap="unloadimg">
+                        <view class="iconfont icon-tianjia"></view>
+                    </view>
                 </view>
-         </view>
-     </view>
+            </view>
 
 
-
-
-      <button id="Choosecity" bindtap="showChoosecity">
-          <view>
-              <text class="iconfont icon-position"></text>
-              <text>发货地：</text>
-              <text class="position">{{Choosecitydata}}</text>
-          </view>
-
-      </button>
-
-
-      <van-popup show="{{ show }}"
-                 position="bottom"
-                 custom-style="height: 60%;"
-                 bind:close="onClose"
-                 bind:close="onClose">
-
-          <van-picker
-                  show-toolbar
-                  title="选择你的城市"
-                  columns="{{ columns }}"
-                  bind:cancel="onCancel"
-                  bind:confirm="onConfirm"
-          />
-      </van-popup>
-
-
-
-
-
-
-
-      <view id="promulgator">
-                <view class="promulgator_left">
-                    <image src="{{userinfo.avatarUrl}}"></image>
+            <view class="cu-form-group">
+                <view class="title">
+                    <text class="cuIcon-locationfill text-orange"></text>
+                    地址选择
                 </view>
-                <view class="promulgator_right">
-                      <view>Hi!<text class="nickname">{{userinfo.nickName}}</text> <text class="sex">{{userinfo.gender}}</text></view>
-                      <text class="huanyingintro">欢迎来到方便实惠油好玩滴~ 湖师小程序二手交易市场！</text>
+                <picker mode="region" bindchange="RegionChange" value="{{region}}" custom-item="{{customItem}}">
+                    <view class="picker">
+                        {{region[0]}}，{{region[1]}}，{{region[2]}}
+                    </view>
+                </picker>
+            </view>
+
+
+            <view class='input1 flow-wave'>
+                <text>想卖：</text>
+                <input type='digit' name="Wanttosell" placeholder='￥ 0.00' placeholder-style="color:#ccc;"
+                       id='wangtomai' maxlength="{{max}}" bindinput="bindinputvalue" required></input>
+
+            </view>
+
+            <view class='input1 input2 flow-wave'>
+                <text>原价：</text>
+                <input type='digit' name="originalprice" placeholder='￥ 0.00' placeholder-style="color:#ccc;"
+                       required></input>
+            </view>
+
+            <!-- <button form-type="submit"> 提交 </button> -->
+
+
+            <view class="Categorysort">
+                <view class="Categorysort_header">物品信息:</view>
+            </view>
+
+
+            <!--<checkbox-group bindchange="checkboxChange1" class='category' >-->
+                <!--<view class='category_header'>类别</view>-->
+                <!--<view class='category_content'>-->
+                <!--<label class="checkbox checkbox2" wx:for="{{category}}" wx:key="item.name">-->
+                  <!--<checkbox value="{{item.name}}" name="{{item.name}}" checked="{{item.checked}}" data-index="{{index}}"/>{{item.value}}-->
+                <!--</label>-->
+                <!--</view>-->
+            <!--</checkbox-group>-->
+
+
+            <view class="cu-list menu" style="margin-top: 25rpx">
+
+                <view class="cu-item ershouitem arrow" bindtap="ToAlllistPage">
+                    <view class="content">
+                        <!--<text class="cuIcon-shop text-red"></text>-->
+                        <text class="cuIcon-list"></text>
+                        <text class="text-grey"> 全部</text>
+                    </view>
+                    <view class="action">
+                        <view class="cu-tag round bg-orange light">{{Alldata}}</view>
+                        <!--<view class="cu-tag round bg-olive light">电影</view>-->
+                        <!--<view class="cu-tag round bg-blue light">旅行</view>-->
+                    </view>
                 </view>
-      </view>
+
+                <view class="cu-item ershouitem">
+                    <view class="content">
+                        <!--<text class="cuIcon-shop text-red"></text>-->
+                        <text class="cuIcon-like"></text>
+                        <text class="text-grey"> 常用选项</text>
+                    </view>
+                    <view class="action" >
+                        <view class="cu-tag round {{colorList[index]}} light" wx:for="{{UsedOption}}" wx:key="{{item}}">{{item}}</view>
+
+                    </view>
+                </view>
+
+            </view>
 
 
-   <view class='input1'>
-        <text>想卖</text>   
-        <input type='digit' name="Wanttosell" placeholder='￥ 0.00'  placeholder-style="color:#ccc;" id='wangtomai' maxlength="{{max}}" bindinput="bindinputvalue" required></input>
+
+            <checkbox-group bindchange="checkboxChange" class='Pinkage'>
+                <label class="checkbox" wx:for="{{UsedOptions}}" wx:key="{{item.value}}" >
+                    <checkbox value="{{item.value}}" checked="{{item.IsSelect}}" class="round blue"/> {{item.value}}
+                </label>
+            </checkbox-group>
+
+
+
+            <view class="btn-area">
+                <view>
+                    <button formType="submit" class="Submitbtn">Submit</button>
+                    <button formType="reset" id="Reset">Reset</button>
+                </view>
+
+            </view>
+
+
+
+        </form>
+
 
     </view>
 
-     <view class='input1 input2'>
-        <text>原价</text>
-      <input type='digit' name="originalprice" placeholder='￥ 0.00' placeholder-style="color:#ccc;" required></input>
-    </view>
-
-    <!-- <button form-type="submit"> 提交 </button> -->
-
-
-    <view class="Categorysort">
-        <view class="Categorysort_header">分类</view>
-
-
-    </view>
-
-
-  <checkbox-group bindchange="checkboxChange" class='Pinkage'>
-    <label class="checkbox" wx:for="{{Pinkageitems}}" wx:key="item.name">
-      <checkbox value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}
-    </label>
-  </checkbox-group>
-
-
-    <checkbox-group bindchange="checkboxChange1" class='category' >
-    <view class='category_header'>类别</view>
-    <view class='category_content'>
-       <label class="checkbox checkbox2" wx:for="{{category}}" wx:key="item.name">
-         <checkbox value="{{item.name}}" name="{{item.name}}" checked="{{item.checked}}" data-index="{{index}}"/>{{item.value}}
-     </label>
-    </view>
-  </checkbox-group>
-
-      <view class="btn-area">
-          <view>
-              <button formType="submit" class="Submitbtn">Submit</button>
-              <button formType="reset" id="Reset">Reset</button>
-          </view>
-
-      </view>
-
-  </form>
-
-
-
-</view>
-
-
+    <view id="bottombox"></view>
 </scroll-view>

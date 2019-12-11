@@ -1,4 +1,4 @@
-<scroll-view scroll-y class="scrollPage">
+<scroll-view scroll-y class="scrollPage" style=" padding-bottom: 122rpx;">
 
 
 <!--湖师跳蚤平台-->
@@ -7,42 +7,68 @@
 </cu-custom>
 
 
-
 <view id='Lake_division_flea_platform' >
 
 
-    <!--发布按钮-->
-    <!--<van-transition show="{{ show1 }}" custom-class="block" name="fade-right" duration="{{ { enter: 1500, leave: 1000 } }}" >-->
-      <!--<button id="Publish" bindtouchmove="buttonMove" open-type="getUserInfo" bindgetuserinfo="onGotUserInfo" >-->
-            <!--<view class="iconfont icon-icon-test"></view>-->
-        <!--</button>-->
-    <!--</van-transition>-->
+
+    <view class="cu-bar bg-white search">
+        <view class="cu-avatar round" style="background-image:url(https://image.weilanwl.com/img/square-1.jpg);"></view>
+        <view class="search-form radius">
+            <text class="cuIcon-search"></text>
+            <input type="text" placeholder="搜索图片、文章、视频" confirm-type="search"></input>
+        </view>
+        <view class="action">
+            <text>黄石</text>
+            <text class="cuIcon-triangledownfill"></text>
+        </view>
+    </view>
+
+    <!-- 热搜 -->
+    <view class='HotSearch'>
+        <view>热搜</view>
 
 
-<view class='header_sort'>
-<!-- 头部（搜索框...） -->
- <view class='index_header'>
-    <view class='SchoolLogo'>
-    <image src='cloud://hbsell-jgvfo.6862-hbsell-jgvfo-1300713089/shouyelogo.jpg'></image>
+
+        <view>小米手机</view>
+        <view>华为</view>
+        <view>苹果</view>
+        <view>apple</view>
     </view>
-    <!-- 搜索框 -->
-    <view class='search'>
-      <text class='iconfont icon-sousuo'></text>
-      <input type='text' placeholder='买点啥呢...'></input>
-    </view>
-    <view class='index_header_right'>
-        <text class='iconfont icon-saoyisao'></text>
-    </view>
-  </view>
-  <!-- 热搜 -->
-  <view class='HotSearch'>
-      <view>热搜</view>
-      <view>小米手机</view>
-      <view>华为</view>
-      <view>苹果</view>
-      <view>apple</view>
-  </view>
-</view >
+
+
+
+<!--发布按钮-->
+<!--<van-transition show="{{ show1 }}" custom-class="block" name="fade-right" duration="{{ { enter: 1500, leave: 1000 } }}" >-->
+  <!--<button id="Publish" bindtouchmove="buttonMove" open-type="getUserInfo" bindgetuserinfo="onGotUserInfo" >-->
+        <!--<view class="iconfont icon-icon-test"></view>-->
+    <!--</button>-->
+<!--</van-transition>-->
+
+
+<!--<view class='header_sort'>-->
+<!--&lt;!&ndash; 头部（搜索框...） &ndash;&gt;-->
+ <!--<view class='index_header'>-->
+    <!--<view class='SchoolLogo'>-->
+    <!--<image src='cloud://hbsell-jgvfo.6862-hbsell-jgvfo-1300713089/shouyelogo.jpg'></image>-->
+    <!--</view>-->
+    <!--&lt;!&ndash; 搜索框 &ndash;&gt;-->
+    <!--<view class='search'>-->
+      <!--<text class='iconfont icon-sousuo'></text>-->
+      <!--<input type='text' placeholder='买点啥呢...'></input>-->
+    <!--</view>-->
+    <!--<view class='index_header_right'>-->
+        <!--<text class='iconfont icon-saoyisao'></text>-->
+    <!--</view>-->
+  <!--</view>-->
+  <!--&lt;!&ndash; 热搜 &ndash;&gt;-->
+  <!--<view class='HotSearch'>-->
+      <!--<view>热搜</view>-->
+      <!--<view>小米手机</view>-->
+      <!--<view>华为</view>-->
+      <!--<view>苹果</view>-->
+      <!--<view>apple</view>-->
+  <!--</view>-->
+<!--</view >-->
 
 
 <!-- 轮播图 -->
@@ -121,7 +147,7 @@
 
 
   <view class='index_show_list' >
-    <view class='index_show_list_item' bindtap='listclick' data-index="{{index}}" wx:for="{{indexshowlistdata}}" wx:key="{{item._id}}">
+    <view class='index_show_list_item radius shadow' bindtap='listclick' data-index="{{index}}" wx:for="{{indexshowlistdata}}" wx:key="{{item._id}}">
         <view class='index_show_list_img'>
             <image src='{{item.publishimgarr[0]}}' mode='aspectFill'></image>
         </view>

@@ -1,89 +1,10 @@
-.box {
-    margin: 20rpx 0;
-}
-
-.box view.cu-bar {
-    margin-top: 20rpx;
-}
-
-
 #Lake_division_flea_platform{
   background:#fff;
 }
-.header_sort{
-  /* border: 1px solid black; */
-  /* background: linear-gradient(180deg,#F5F50F 10%,red,#eee); */
-  /* border-radius: 0 0 30rpx 30rpx; */
-  padding: 15rpx 0 30rpx;
-  /* background:url("http://q0hfh28wl.bkt.clouddn.com/mmexport1572933320227.jpg") no-repeat center; */
-  background-size: contain;
-  /* border-radius: 0 0 70rpx 70rpx; */
-}
 
-.index_header{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    
-}
-.SchoolLogo{
-  width: 100rpx;
-  height: 100rpx;
-}
-
-.SchoolLogo > image{
-  width: 100%;
-  height: 100%;
-}
-
-.Imglogo{
-  text-align: center;
-  /* border: 1px solid black; */
-}
-
-.Imglogo >image{
-  height: 150rpx;
-}
-.index_header_right{
-  position: relative;
-  left: -13rpx;
-}
-.index_header_left{
-  font-size: 27rpx;
-  color: #fff;
-}
-.search{
-  width: 529rpx;
-  margin-left: -30rpx;
-  /* border: 1px solid saddlebrown; */
-  position: relative;
-  /* border: 1px solid black; */
-}
-
-
-.search>text{
-  position: absolute;
-  top:6rpx;
-  left:20rpx;
-  font-size:34rpx;
-  color: #999;
-}
-.search input{
-  border-radius: 0 0 0 11rpx;
-  font-size: 21rpx;
-  padding-left: 60rpx;
-  background: #fff;
-  line-height: 50rpx;
-  height: 50rpx;
-  border-bottom: 1rpx solid #ccc;
-
-}
-input::-webkit-input-placeholder {
-      font-size: 22rpx;
- }
 
 .HotSearch{
-  margin-top: 24rpx;
+    margin: 15rpx 0 35rpx 0;
   /* border: 1px solid red; */
   display: flex;
   justify-content: space-around;
@@ -271,4 +192,13 @@ image.quiet {
   font-size: 40rpx;
   color: #fff;
   font-weight: bold;
+}
+
+
+/* css 滤镜 控制黑白底色gif的 */
+.gif-black{
+    mix-blend-mode: screen;
+}
+.gif-white{
+    mix-blend-mode: multiply;
 }
