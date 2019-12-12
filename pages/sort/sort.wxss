@@ -1,1 +1,40 @@
-/* pages/sort/sort.wxss */
+/* pages/component/nav/nav.wxss */
+.VerticalNav.nav {
+    width: 200 rpx;
+    white-space: initial;
+}
+
+.VerticalNav.nav .cu-item {
+    width: 100%;
+    text-align: center;
+    background-color: #fff;
+    margin: 0;
+    border: none;
+    height: 50px;
+    position: relative;
+}
+
+.VerticalNav.nav .cu-item.cur {
+    background-color: #f1f1f1;
+}
+
+.VerticalNav.nav .cu-item.cur::after {
+    content: "";
+    width: 8 rpx;
+    height: 30 rpx;
+    border-radius: 10 rpx 0 0 10 rpx;
+    position: absolute;
+    background-color: currentColor;
+    top: 0;
+    right: 0 rpx;
+    bottom: 0;
+    margin: auto;
+}
+
+.VerticalBox {
+    display: flex;
+}
+
+.VerticalMain {
+    background-color: #f1f1f1;
+}

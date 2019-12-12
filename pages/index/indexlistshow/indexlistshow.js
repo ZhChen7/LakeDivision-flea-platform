@@ -2,6 +2,8 @@
 
 const app = getApp();
 const db = wx.cloud.database()
+
+
 Page({
 
   /**
@@ -79,11 +81,21 @@ Page({
   WangtoBuy(){
 
 
-    let senduserdata = JSON.stringify(this.data.userdata)
+    // let senduserdata = JSON.stringify(this.data.userdata)
+
+
+    let sellerOpenId = this.data.userdata._openid
+
+
+
+
+
 
     wx.navigateTo({
-      url: '../../chatroom/chatroom?commodityid='+ senduserdata
+      url: '../../chatroom/chatroom?ReceiverOpenId=' + sellerOpenId
     })
+
+
   },
 
 

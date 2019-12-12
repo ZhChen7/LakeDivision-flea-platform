@@ -1,5 +1,4 @@
-
-
+<scroll-view class="scrollPage" scroll-y style=" padding-bottom: 122rpx;">
 
 <cu-custom bgColor="bg-gradual-pink" isCustom="{{true}}">
     <view slot="content">列表页</view>
@@ -117,6 +116,7 @@
 </view>
 
 
+</scroll-view>
 
 
 

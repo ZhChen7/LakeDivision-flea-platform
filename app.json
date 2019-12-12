@@ -1,13 +1,14 @@
 {
   "pages": [
     "pages/home/home",
+    "pages/chatroom/chatroom",
+    "pages/recommend/recommend",
+    "pages/sort/sort",
     "pages/publish/publish",
     "pages/sortlist/sortlist",
     "pages/information/information",
-    "pages/chatroom/chatroom",
     "pages/index/index",
     "pages/index/indexlistshow/indexlistshow",
-    "pages/recommend/recommend",
     "pages/logs/logs",
     "pages/user/user"
   ],

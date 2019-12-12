@@ -11,10 +11,10 @@
         <view slot="content">发布二手商品</view>
     </cu-custom>
 
-    <view class="radius bg-gradual-blue shadow-blur">
+    <!-- <view class="radius bg-gradual-blue shadow-blur">
         <image src="cloud://hbsell-jgvfo.6862-hbsell-jgvfo-1300713089/wave.gif" mode="scaleToFill"
                class="gif-black response" style="height:100rpx"></image>
-    </view>
+    </view> -->
 
 
     <view class="cu-bar  bg-white">

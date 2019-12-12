@@ -1,116 +1,43 @@
-/**index.wxss**/
- 
-.selection{
-  border-bottom: 5px solid #ddd;
-  padding-bottom: 10px;
+
+.VerticalNav.nav {
+    width: 200 rpx;
+    white-space: initial;
 }
- 
-.header {
-  border-left: 2px solid lightgreen;
-  display: flex;
-  /*调整对齐方式  */
-  justify-content: space-between;
-  align-content: center;
-  height: 60rpx;
-  margin-top: 20rpx;
-  padding-left: 10rpx;
-  padding-right: 10rpx;
-  margin-bottom: 10rpx;
-}
- 
-.text-all {
-  color: green;
-  font-size: 13px;
-}
- 
-.content {
-  display: flex;
-  flex-direction: row;
-  /*设置自动换行  */
-  flex-wrap: wrap;
-  justify-content: center;
-}
- 
-.content-item {
-  width: 45%;
-  height: 250rpx;
-  background-color: goldenrod;
-  /* border: 1px solid white; */
-  margin: 5px;
-  /*这个元素定位了文字才能依靠这个绝对定位  */
+
+.VerticalNav.nav .cu-item {
+    width: 100%;
+    text-align: center;
+    background-color: #fff;
+    margin: 0;
+    border: none;
+    height: 50px;
   position: relative;
 }
- 
-.content-item image {
-  /* 宽高100%填满每个content-item */
-  width: 100%;
-  height: 100%;
+
+.VerticalNav.nav .cu-item.cur {
+    background-color: #f1f1f1;
 }
- 
-.content-item-text {
-  /*使用绝对定位来做文字重叠到图片的效果  */
+
+.VerticalNav.nav .cu-item.cur::after {
+    content: "";
+    width: 8 rpx;
+    height: 30 rpx;
+    border-radius: 10 rpx 0 0 10 rpx;
   position: absolute;
-  /*bottom 是以content-item 来定位的  */
-  bottom: 0px;
-  color: white;
-  font-size: 10px;
-  /*生成一个渐变色，黑色由下到上的渐变  */
-  background: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
-  /*渐变高度  */
-  height: 125rpx;
-  /*渐变宽度  */
-  width: 98%;
-  /*设置flex显示， flex-direction:排列方式为纵向， justify-content:从底部开始  */
+    background-color: currentColor;
+    top: 0;
+    right: 0 rpx;
+    bottom: 0;
+    margin: auto;
+}
+
+.VerticalBox {
   display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  /* 设置内边距，注意修改边距时也要修改响应的宽和高 */
-  padding-left: 1%;
-  padding-bottom: 1%;
-  padding-right: 1%;
 }
- 
- 
-.list-item{
-height: 500rpx;
-width: 100%;
+
+.VerticalMain {
+    background-color: #f1f1f1;
 }
- 
-.list-item-images{
-  height: 300rpx;
-  width: 100%;
-  position: relative;
-}
- 
-.list-item-images-img{
-  height: 100%;
-  width: 100%;
-}
- 
- 
-.list-item-text{
-  height: 200rpx;
-  width: 96%;  
-  margin-top: 20rpx;
-  padding-left: 2%;
-  padding-right: 2%;
-  
- 
-  /* background-color: purple; */
-}
-/*head用绝对定位到父元素的对应位置 父元素为list-item-images要设置position  */
-.head{
-  width: 100rpx;
-  height: 100rpx;
-  /*变为圆形  */
-  border-radius: 50%;
-  position: absolute;
-  bottom:-50rpx;
-  right: 50rpx;
-}
- 
-.list-item-text-content{
-  font-size: 13px;
-  color: lightgray;
-  margin-top: 20rpx;
-}
+
+
+

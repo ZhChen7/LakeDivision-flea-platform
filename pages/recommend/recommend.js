@@ -1,82 +1,97 @@
-Page({
+const app = getApp()
 
-  /**
-   * 页面的初始数据
-   */
+Component({
+  options: {
+    addGlobalClass: true,
+  },
   data: {
-    // 以后可以用代码便利文件夹获得文件名
-    images: [
-      'http://q0hfh28wl.bkt.clouddn.com/9C4D8F35E4E2E4F132A9EB2D401C6098.jpg',
-      'http://p2.qhimg.com/bdm/384_237_0/t01f96bfe9163d86786.jpg',
-      'http://p3.qhimg.com/bdm/384_237_0/t01b92be84af8f61a5d.jpg',
-      'http://p2.qhimg.com/bdm/768_474_0/t017fd8af69fc702e72.jpg',
-    ],
-    listItems: [
-      '',
-      '',
-      '',
-      '',
-      '',
-      '',
-      '',
-      '',
-      '',
-    ],
+    StatusBar: app.globalData.StatusBar,
+    CustomBar: app.globalData.CustomBar,
+    Custom: app.globalData.Custom,
+    TabCur: 0,
+    MainCur: 0,
+    VerticalNavTop: 0,
+    list: [],
+    load: true
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
 
+  lifetimes: {
+    // 生命周期函数，可以为函数，或一个在methods段中定义的方法名
+    attached: function (res) {
+      wx.showLoading({
+        title: '加载中...',
+        mask: true
+      });
+
+      let list = [{}];
+      let listdata = ['a', 'b', 'c']
+
+
+      for (let i = 0; i < listdata.length; i++) {
+        list[i] = {};
+        list[i].name = listdata[i];
+        list[i].id = i;
+      }
+
+      this.setData({
+        list: list,
+        listCur: list[0]
+      })
+
+    },
+    detached: function () {
+    },
   },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
 
+  ready() {
+    wx.hideLoading()
   },
 
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
+  methods: {
+    tabSelect(e) {
+      this.setData({
+        TabCur: e.currentTarget.dataset.id,
+        MainCur: e.currentTarget.dataset.id,
+        VerticalNavTop: (e.currentTarget.dataset.id - 1) * 50
+      })
+    },
+    VerticalMain(e) {
+      let that = this;
+      let list = this.data.list;
 
-  },
+      let tabHeight = 0;
 
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
+      if (this.data.load) {
+        for (let i = 0; i < list.length; i++) {
+          let view = wx.createSelectorQuery().select("#main-" + list[i].id);
 
-  },
+          view.fields({
+            size: true
+          }, data => {
 
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
+            list[i].top = tabHeight;
+            tabHeight = tabHeight;
 
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+            list[i].bottom = tabHeight;
+          }).exec();
+        }
+        that.setData({
+          load: false,
+          list: list
+        })
+      }
+      let scrollTop = e.detail.scrollTop + 20;
+      for (let i = 0; i < list.length; i++) {
+        if (scrollTop > list[i].top && scrollTop < list[i].bottom) {
+          that.setData({
+            VerticalNavTop: (list[i].id - 1) * 50,
+            TabCur: list[i].id
+          })
+          return false
+        }
+      }
+    }
   }
 })

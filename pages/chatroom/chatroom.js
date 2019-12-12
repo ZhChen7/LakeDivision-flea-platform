@@ -13,16 +13,12 @@ Page({
     chats:[], //储存聊天记录
     openId:'', //当前用户的 openId
      InputBottom: 0,
-     toView:'',
-      sellerdata:null
+      toView: 'msg',
+      sellerdata: null,
+      RoomId: '',
+      ReceiverOpenId: ''
   },
 
-    xxx(){
-      console.log('xxx')
-        this.setData({
-            toView:'msg'
-        })
-    },
 
     InputFocus(e) {
         this.setData({
@@ -35,7 +31,7 @@ Page({
         })
     },
 
-  onGotUserInfo(e){
+    onGotUserInfo(e) {
     if(e.detail.userInfo){
       this.setData({
         userInfo:e.detail.userInfo
@@ -97,43 +93,22 @@ Page({
     this.setData({
       textInputValue:e.detail.value
     })
+
   },
 
 
 
   onSend(){
+      let that = this
     if(!this.data.textInputValue){
        return
     }
 
-
-    // console.log(this.data.openId)
-    // console.log(this.data.sellerdata._openid)
-
-      console.log(this.data.sellerdata)
-
-
-
-
-   if(this.data.openId === this.data.sellerdata._openid){
-       selleropenId = this.data.openId
-       buyeropenId = otherId
-
-   }else{
-       buyeropenId = this.data.openId
-       selleropenId= this.data.sellerdata._openid
-   }
-
-
-   console.log(this.data.sellerdata)
-
-
     const doc={
       avatar: this.data.userInfo.avatarUrl,
       nickName: this.data.userInfo.nickName,
-      sellerdata:this.data.sellerdata,
-      sellname:this.data.sellerdata.nickName,
       msgText:'text',
+        RoomId: this.data.RoomId,
       textContent:this.data.textInputValue,
       sendTime:new Date(),
       practicalTime:this.Transfertime(Date.now()),
@@ -141,31 +116,34 @@ Page({
     }
 
 
-    db.collection('chatroom').add({
+      db.collection('chatroom').add({
       // data 字段表示需新增的 JSON 数据
       data:doc
     })
         .then(res => {
-          // console.log(res)
+            that.setData({
+                textInputValue: '',
+                toView: 'msg'
+            })
         })
 
-    this.setData({
-      textInputValue:'',
-      toView:'msg'
-    })
+
   },
 
 
   /**
    * 生命周期函数--监听页面加载
    */
+
   onLoad: function (options) {
 
-   this.setData({
-       sellerdata:JSON.parse(options.commodityid)
-   })
-
-
+      // this.setData({
+      //     ReceiverOpenId:options.ReceiverOpenId
+      // })
+      //
+      this.setData({
+          ReceiverOpenId: 'oN3c_5fCjC8pH_e4veY15EStOdbo'
+      })
 
     // 查看是否授权
     let that=this
@@ -174,8 +152,9 @@ Page({
         if (res.authSetting['scope.userInfo']) {
           wx.getUserInfo({
             success: function(res) {
+                console.log(res)
               that.setData({
-                userInfo:res.userInfo
+                  userInfo: res.userInfo
               })
             }
           })
@@ -190,6 +169,7 @@ Page({
  onReady() {
 
       let that =this
+      let ReceiverOpenId = this.data.ReceiverOpenId
 
       const p =new Promise((resolve,reject)=>{
           wx.cloud.callFunction({
@@ -203,23 +183,14 @@ Page({
           })
       }).then(
           value => {
-
-
-
-              // if(this.data.openId === this.data.sellerdata._openid){
-              //     selleropenId = this.data.openId
-              //     buyeropenId = otherId
-              //
-              // }else{
-              //     buyeropenId = this.data.openId
-              //     selleropenId= this.data.sellerdata._openid
-              // }
-
-
+              if (!that.data.RoomId) {
+                  that.setData({
+                      RoomId: value.result.openid + ReceiverOpenId
+                  })
+              }
 
               db.collection('chatroom').where({
-                  _openid: value.result.openid, // 填入当前用户 openid
-                  sellname:this.data.sellerdata.nickName
+                  RoomId: value.result.openid + ReceiverOpenId, // 填入当前用户 openid
               }).watch({
                   onChange:this.onChange.bind(this),
                   onError(err) {
@@ -232,14 +203,14 @@ Page({
   },
 
 
-    Transfertime(timechuo){
+    Transfertime(timechuo) {
         var time=+ timechuo
         var date = new Date(time + 8 * 3600 * 1000); // 增加8小时
         return date.toJSON().substr(0, 19).replace('T', ' ');
     },
 
 
-   onChange(snapshot){
+    onChange(snapshot) {
 
      console.log(snapshot)
 
@@ -254,8 +225,6 @@ Page({
         ]
       })
     }else{
-
-       // otherId =snapshot.docChanges[0].doc._openid
 
       const chats=[...this.data.chats]
       for (const docChange of snapshot.docChanges){
@@ -278,26 +247,8 @@ Page({
   },
 
 
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
 
-  },
 
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作

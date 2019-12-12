@@ -25,12 +25,12 @@ Page({
     region: ['湖北省', '黄石市', '黄石港区'],
     Alldata:['生鲜水果'],
     boxid:'',
-    UsedOptions:[{value:'全新',IsSelect:true,color:'bg-pink'},
-      {value:'不讲价',IsSelect:true,color:'bg-olive'},
-      {value:'仅自提',IsSelect:true,color:'bg-blue'},
+      UsedOptions: [{value: '全新', IsSelect: false, color: 'bg-pink'},
+          {value: '不讲价', IsSelect: false, color: 'bg-olive'},
+          {value: '仅自提', IsSelect: false, color: 'bg-blue'},
       {value:'可借',IsSelect:false,color:'bg-pink'}],
 
-    UsedOption:['全新', '不讲价', '仅自提'],
+      UsedOption: [],
     colorList:["bg-pink","bg-olive","bg-blue","bg-purple"],
     IstoBottom:false
   },
