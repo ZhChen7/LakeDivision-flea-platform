@@ -1,6 +1,6 @@
 {
 	"description": "项目配置文件",
-  "cloudfunctionRoot": "hbsell/",
+	"cloudfunctionRoot": "hbsell/",
 	"packOptions": {
 		"ignore": []
 	},
@@ -10,20 +10,20 @@
 		"postcss": true,
 		"minified": true,
 		"newFeature": true,
-      "nodeModules": true,
+		"nodeModules": true,
 		"autoAudits": false,
-      "uglifyFileName": false,
+		"uglifyFileName": false,
 		"checkInvalidKey": true,
-      "checkSiteMap": true,
-      "uploadWithSourceMap": true,
-      "babelSetting": {
-        "ignore": [],
-        "disablePlugins": [],
-        "outputPath": ""
-      }
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		}
 	},
 	"compileType": "miniprogram",
-  "libVersion": "2.9.4",
+	"libVersion": "2.9.4",
 	"appid": "wx748b005220c78287",
 	"projectname": "%E6%B9%96%E5%B8%88%E8%B7%B3%E8%9A%A4%E4%BA%8C%E6%89%8B%E4%BA%A4%E6%98%93",
 	"debugOptions": {

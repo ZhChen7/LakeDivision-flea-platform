@@ -21,7 +21,7 @@
                 </view>
             </view>
             <view wx:if="{{openId ===item._openid}}" class="cu-avatar radius" style="background-image:url({{item.avatar}});"></view>
-            <view class="date">{{item.practicalTime}}</view>
+            <!--<view class="date">{{item.practicalTime}}</view>-->
         </view>
     </view>
 

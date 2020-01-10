@@ -23,6 +23,7 @@
         </view>
     </view>
 
+
     <!-- 热搜 -->
     <view class='HotSearch'>
         <view>热搜</view>
