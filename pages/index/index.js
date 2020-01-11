@@ -15,11 +15,44 @@ Component({
     ],
     swiperIndex: 0,//这里不写第一次启动展示的时候会有问题
     indexshowlistdata:[],
+    HotList:['小米手机','华为','apple','pear','clothes'] ,
       show1:true,
       buttonTop: 0,
       buttonLeft: 0,
       windowHeight: '',
-      windowWidth: ''
+      windowWidth: '',
+     ColorList: [{
+       title: '嫣红',
+       name: 'red'
+     },
+       {
+         title: '桔橙',
+         name: 'orange'
+       },
+       {
+         title: '明黄',
+         name: 'yellow'
+       },
+       {
+         title: '橄榄',
+         name: 'olive'
+       },{
+         title: '嫣红',
+         name: 'red'
+       },
+       {
+         title: '桔橙',
+         name: 'orange'
+       },
+       {
+         title: '明黄',
+         name: 'yellow'
+       },
+       {
+         title: '橄榄',
+         name: 'olive'
+       }],
+    Allcolor:[]
   },
 
   lifetimes: {
@@ -59,8 +92,14 @@ methods:{
     })
   },
 
+  HotcloseClick(e){
+    let index = e.currentTarget.dataset.index
+    this.data.ColorList.splice(index,1)
+    this.setData({
+      ColorList: this.data.ColorList
+    })
 
-
+  }
 },
 
 

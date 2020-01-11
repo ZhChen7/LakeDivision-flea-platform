@@ -1,6 +1,7 @@
 {
  "usingComponents": {
-  "van-divider": "vant-weapp/divider/index"
+  "van-divider": "vant-weapp/divider/index",
+  "van-notice-bar": "vant-weapp/notice-bar/index"
   },
   "enablePullDownRefresh": true,
   "backgroundTextStyle": "dark"

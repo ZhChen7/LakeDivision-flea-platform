@@ -26,14 +26,14 @@
 
     <!-- 热搜 -->
     <view class='HotSearch'>
-        <view>热搜</view>
-
-
-
-        <view>小米手机</view>
-        <view>华为</view>
-        <view>苹果</view>
-        <view>apple</view>
+        <view class="padding-sm flex flex-wrap">
+            <view class="HotTitle">热搜</view>
+            <view class="padding-xs" wx:for="{{ColorList}}" wx:key >
+                <view class="cu-tag bg-{{item.name}}">{{item.title}}
+                    <text class="cuIcon-close lg" data-index="{{index}}" bindtap="HotcloseClick"></text>
+                </view>
+            </view>
+        </view>
     </view>
 
 
@@ -90,39 +90,18 @@
  </block>
  </swiper>
 
+
+
 <!-- 通告栏 -->
 <van-notice-bar
   mode="closeable" backgroundColor="#fff"
-  text="湖师跳蚤平台，正式营业啦！湖师跳蚤平台，正式营业啦！湖师跳蚤平台，正式营业啦！"
+  text="湖师跳蚤平台，正式营业啦！湖师跳蚤平台，正式营业啦！湖师跳蚤平台，正式营业啦！欢迎大家，嘻嘻😀"
 />
 
 <!-- nav栏 -->
  <view class="index_sort">
     <view class='main_sort'>
-      <view class="index_sort_item">
-        <image mode='aspectFit' src='https://gw.alicdn.com/tfs/TB1Wxi2trsrBKNjSZFpXXcXhFXa-183-144.png_.webp'></image>
-        <text>衣服</text>
-      </view>
-      <view class="index_sort_item">
-        <image mode='aspectFit' src='https://img.alicdn.com/tfs/TB10UHQaNjaK1RjSZKzXXXVwXXa-183-144.png?getAvatar=1_.webp'></image>
-        <text>数码</text>
-      </view>
-            <view class="index_sort_item">
-        <image mode='aspectFit' src='https://gw.alicdn.com/tfs/TB11rTqtj7nBKNjSZLeXXbxCFXa-183-144.png?getAvatar=1_.webp'></image>
-        <text>二手图书</text>
-      </view>
-            <view class="index_sort_item">
-        <image mode='aspectFit' src='https://gw.alicdn.com/tps/TB1eXc7PFXXXXb4XpXXXXXXXXXX-183-144.png?getAvatar=1_.webp'></image>
-        <text>游戏交易</text>
-      </view>
-            <view class="index_sort_item">
-        <image mode='aspectFit' src='https://gw.alicdn.com/tfs/TB1IKqDtpooBKNjSZFPXXXa2XXa-183-144.png_.webp'></image>
-        <text>家居家电</text>
-      </view>
-            <view class="index_sort_item">
-        <image mode='aspectFit' src='https://gw.alicdn.com/tfs/TB1o0FLtyMnBKNjSZFoXXbOSFXa-183-144.png_.webp'></image>
-        <text>服饰鞋包</text>
-      </view>
+
             <view class="index_sort_item">
         <image mode='aspectFit' src='https://gw.alicdn.com/tfs/TB15nKhtpkoBKNjSZFEXXbrEVXa-183-144.png?getAvatar=1_.webp'></image>
         <text>奢品珠宝</text>
@@ -142,18 +121,15 @@
     </view>
   </view>
 
-
  <van-divider contentPosition="left">推荐</van-divider>
 
-
-
-  <view class='index_show_list' >
-    <view class='index_show_list_item radius shadow' bindtap='listclick' data-index="{{index}}" wx:for="{{indexshowlistdata}}" wx:key="{{item._id}}">
+  <view class='index_show_list'>
+    <view class='index_show_list_item radius shadow ' bindtap='listclick' data-index="{{index}}" wx:for="{{indexshowlistdata}}" wx:key="{{item._id}}">
         <view class='index_show_list_img'>
             <image src='{{item.publishimgarr[0]}}' mode='aspectFill'></image>
         </view>
         <view class='index_show_list_footer'>
-            <text class='index_show_list_footer_intro van-multi-ellipsis--l2'>{{item.description}}</text>
+            <view class='index_show_list_footer_intro van-multi-ellipsis--l2 ellipsis'>{{item.description}}</view>
             <view>
                 <text class='price'>￥ {{item.Wanttosell}}</text>
                 <text class='WantPeople'>{{item.WantPeople}}1人想要</text>

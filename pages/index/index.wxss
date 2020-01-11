@@ -3,34 +3,30 @@
 }
 
 
+
 .HotSearch{
     margin: 15rpx 0 35rpx 0;
-  /* border: 1px solid red; */
-  display: flex;
-  justify-content: space-around;
-  font-size: 21rpx;
+  /*font-size: 21rpx;*/
 }
- .HotSearch>view{
-    border: 1px solid #eee;
-    padding: 3rpx 24rpx;
-    border-radius: 25rpx;
-    position: relative;
-    left: -29rpx;
-    color: #000;
- }
 
- .HotSearch>view:nth-of-type(1){
-   border: none;
-   font-size: 23rpx;
-   left: 0;
-   color: #e1251b;
- }
+.HotSearch .HotTitle{
+    font-weight: bold;
+    color: red;
+    padding:  0 10rpx 0 0;
+}
+
+.HotSearch .cuIcon-close{
+    padding-left: 3rpx;
+}
+
+
+
 
 .BannerBox{
   /* margin-top: -165rpx; */
   padding: 0rpx 30rpx 0;
   /* background: red; */
-  
+
 }
 .BannerBox >swiper{
   height: 351rpx;
@@ -90,26 +86,30 @@
   border-radius: 35rpx;
 }
 
+
 .index_show_list{
-  margin-top: -32rpx;
-  /* border: 1px solid red; */
-  padding: 0rpx 24rpx;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  /* background: #F1F3F0; */
+    margin-top: -32rpx;
+    column-count: 2;
+    column-gap: 0px;
+    /*background: #f4f4f4;*/
+    padding: 0 25rpx;
 }
-/* .index_show_list::after{
+
+ .index_show_list::after{
   content: '';
   display: block;
   clear: both;
-} */
+}
 
 .index_show_list_item{
+
   border: 1px solid #ddd;
   width: 340rpx;
   border-radius: 15rpx;
-  margin-top: 15rpx;
+  break-inside: avoid;
+  display: inline-block;
+   margin-top: 8rpx;
+
 }
 
 /* .index_show_list_item:nth-of-type(1){
@@ -118,7 +118,7 @@
 
 .index_show_list_item >.index_show_list_img{
   width: 100%;
-  height: 352rpx;
+  /*height: 352rpx;*/
 }
 .index_show_list_item >.index_show_list_img>image{
   width: 100%;
@@ -126,9 +126,19 @@
 .index_show_list_footer{
   padding: 5rpx 8rpx;
 }
+
+
 .index_show_list_footer>.index_show_list_footer_intro{
   font-weight: bold;
   font-size: 22rpx;
+
+    line-height: 35rpx;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    word-break: break-all;
+
 }
 
 .index_show_list_footer view{
@@ -146,14 +156,17 @@
 }
 
 
-//.wxss
+
+
+
+
 .swiperClass {
   margin: 0;
   margin-top: 10px;
 }
 
 .slide-image {
-  width: 100%; 
+  width: 100%;
   height: 90%;
   border-radius: 10px;
   position: relative;
@@ -163,7 +176,7 @@ image.active {
   transform: none;
   transition: all 1s ease-in 0s;
     opacity: 1;
-} 
+}
 
 image.quiet {
   transform: scale(0.8333333);

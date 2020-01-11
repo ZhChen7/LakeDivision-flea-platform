@@ -3,10 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="98acec65-d3a5-49a2-9ef1-455ceea8c8d3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/chatroom/chatroom.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/chatroom/chatroom.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/chatroom/chatroom.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/chatroom/chatroom.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/index/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/index/index.json" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index/index.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/index/index.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index/index.wxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project.config.json" beforeDir="false" afterPath="$PROJECT_DIR$/project.config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/index/index.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index/index.wxss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/user1/user1.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/user1/user1.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/user1/user1.wxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/user1/user1.wxss" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -18,13 +23,13 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5206107">
+    <splitter split-orientation="horizontal" split-proportion="0.18835616">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/pages/chatroom/chatroom.wxml">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="510">
+                <state relative-caret-position="629">
                   <caret line="37" column="37" selection-start-line="37" selection-start-column="37" selection-end-line="37" selection-end-column="37" />
                   <folding>
                     <element signature="n#style#0;n#scroll-view#0;n#!!top" expanded="true" />
@@ -50,8 +55,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/pages/index/index.wxml">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="180">
-                  <caret line="25" selection-start-line="25" selection-end-line="25" />
+                <state relative-caret-position="-769">
+                  <caret line="32" column="95" selection-start-line="32" selection-start-column="82" selection-end-line="32" selection-end-column="95" />
                   <folding>
                     <element signature="n#style#0;n#scroll-view#0;n#!!top" expanded="true" />
                     <element signature="n#style#0;n#view#0;n#view#0;n#view#0;n#scroll-view#0;n#!!top" expanded="true" />
@@ -63,7 +68,7 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/pages/index/indexlistshow/indexlistshow.wxml">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="2106">
+                <state relative-caret-position="1989">
                   <caret line="117" selection-start-line="117" selection-end-line="117" />
                   <folding>
                     <element signature="n#style#0;n#scroll-view#0;n#!!top" expanded="true" />
@@ -75,7 +80,7 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/pages/home/home.wxml">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="144">
+                <state relative-caret-position="136">
                   <caret line="8" selection-start-line="8" selection-end-line="8" />
                 </state>
               </provider>
@@ -96,10 +101,10 @@
         </leaf>
       </split-first>
       <split-second>
-        <splitter split-orientation="horizontal" split-proportion="0.29212454">
+        <splitter split-orientation="horizontal" split-proportion="0.4135021">
           <split-first>
             <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-              <file pinned="false" current-in-tab="true">
+              <file pinned="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/pages/chatroom/chatroom.wxss">
                   <provider selected="true" editor-type-id="text-editor">
                     <state relative-caret-position="595">
@@ -108,11 +113,20 @@
                   </provider>
                 </entry>
               </file>
+              <file pinned="false" current-in-tab="true">
+                <entry file="file://$PROJECT_DIR$/pages/index/index.wxss">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state relative-caret-position="85">
+                      <caret line="8" selection-start-line="8" selection-end-line="8" />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
             </leaf>
           </split-first>
           <split-second>
             <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-              <file pinned="false" current-in-tab="true">
+              <file pinned="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/pages/chatroom/chatroom.js">
                   <provider selected="true" editor-type-id="text-editor">
                     <state relative-caret-position="490">
@@ -124,10 +138,22 @@
                   </provider>
                 </entry>
               </file>
+              <file pinned="false" current-in-tab="true">
+                <entry file="file://$PROJECT_DIR$/pages/index/index.js">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state relative-caret-position="510">
+                      <caret line="96" selection-start-line="96" selection-end-line="96" />
+                      <folding>
+                        <element signature="n#!!doc" expanded="true" />
+                      </folding>
+                    </state>
+                  </provider>
+                </entry>
+              </file>
               <file pinned="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/app.json">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="36">
+                    <state relative-caret-position="34">
                       <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
                     </state>
                   </provider>
@@ -136,7 +162,7 @@
               <file pinned="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/pages/index/indexlistshow/indexlistshow.js">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="1602">
+                    <state relative-caret-position="1513">
                       <caret line="89" selection-start-line="89" selection-end-line="89" />
                     </state>
                   </provider>
@@ -145,7 +171,7 @@
               <file pinned="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/pages/recommend/recommend.js">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="468">
+                    <state relative-caret-position="442">
                       <caret line="26" column="4" selection-start-line="26" selection-start-column="4" selection-end-line="39" selection-end-column="8" />
                     </state>
                   </provider>
@@ -154,8 +180,17 @@
               <file pinned="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/app.js">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="540">
-                      <caret line="30" column="2" selection-start-line="30" selection-start-column="2" selection-end-line="35" selection-end-column="6" />
+                    <state relative-caret-position="380">
+                      <caret line="100" column="8" lean-forward="true" selection-start-line="81" selection-start-column="16" selection-end-line="100" selection-end-column="8" />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file pinned="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/pages/index/index.json">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state relative-caret-position="68">
+                      <caret line="4" column="4" lean-forward="true" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
                     </state>
                   </provider>
                 </entry>
@@ -168,7 +203,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>box</find>
       <find>background</find>
       <find>input1</find>
       <find>#eee</find>
@@ -198,6 +232,7 @@
       <find>fields</find>
       <find>WangtoBuy</find>
       <find>onload</find>
+      <find>bindtap</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -211,16 +246,13 @@
         <option value="$PROJECT_DIR$/pages/index/indexlistshow/indexlistshow.json" />
         <option value="$PROJECT_DIR$/pages/index/indexlistshow/indexlistshow.wxss" />
         <option value="$PROJECT_DIR$/pages/home/home.json" />
-        <option value="$PROJECT_DIR$/pages/index/index.json" />
         <option value="$PROJECT_DIR$/pages/home/home.js" />
         <option value="$PROJECT_DIR$/pages/chatroom/chatroom.json" />
         <option value="$PROJECT_DIR$/pages/chatroom/chatroom.wxss" />
         <option value="$PROJECT_DIR$/pages/information/information.json" />
         <option value="$PROJECT_DIR$/pages/information/information.wxss" />
-        <option value="$PROJECT_DIR$/pages/index/index.js" />
         <option value="$PROJECT_DIR$/pages/information/information.js" />
         <option value="$PROJECT_DIR$/pages/user/user.wxss" />
-        <option value="$PROJECT_DIR$/pages/index/index.wxss" />
         <option value="$PROJECT_DIR$/pages/publish/publish.json" />
         <option value="$PROJECT_DIR$/colorui/components/cu-custom.js" />
         <option value="$PROJECT_DIR$/icon/icon.wxss" />
@@ -237,7 +269,6 @@
         <option value="$PROJECT_DIR$/pages/recommend/recommend.wxml" />
         <option value="$PROJECT_DIR$/pages/recommend/recommend.wxss" />
         <option value="$PROJECT_DIR$/pages/recommend/recommend.js" />
-        <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/pages/information/information.wxml" />
         <option value="$PROJECT_DIR$/pages/home/home.wxml" />
         <option value="$PROJECT_DIR$/pages/index/indexlistshow/indexlistshow.js" />
@@ -245,15 +276,19 @@
         <option value="$PROJECT_DIR$/app.json" />
         <option value="$PROJECT_DIR$/pages/chatroom/chatroom.wxml" />
         <option value="$PROJECT_DIR$/pages/chatroom/chatroom.js" />
+        <option value="$PROJECT_DIR$/pages/index/index.json" />
+        <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/pages/index/index.wxml" />
+        <option value="$PROJECT_DIR$/pages/index/index.js" />
+        <option value="$PROJECT_DIR$/pages/index/index.wxss" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="231" />
-    <option name="y" value="47" />
-    <option name="width" value="1570" />
-    <option name="height" value="968" />
+  <component name="ProjectFrameBounds" extendedState="1">
+    <option name="x" value="-126" />
+    <option name="y" value="192" />
+    <option name="width" value="1721" />
+    <option name="height" value="834" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -261,6 +296,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -283,7 +319,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -347,6 +382,7 @@
       <workItem from="1576150508576" duration="4145000" />
       <workItem from="1576759219803" duration="471000" />
       <workItem from="1577413612110" duration="598000" />
+      <workItem from="1578717976788" duration="15779000" />
     </task>
     <task id="LOCAL-00001" summary="fixed indexlistshow something">
       <created>1574069282917</created>
@@ -450,13 +486,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="239793000" />
+    <option name="totallyTimeSpent" value="255572000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="580" y="163" width="1721" height="834" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13531353" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13301663" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -616,13 +652,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/index/index.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="21" selection-start-line="1" selection-start-column="21" selection-end-line="1" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/chatroom/chatroom.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -727,16 +756,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/index/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="9" lean-forward="true" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/sort/sort.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
@@ -780,13 +799,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/index/index.wxss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/sort/sort.wxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -805,6 +817,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/pages/chatroom/chatroom.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="629">
+          <caret line="37" column="37" selection-start-line="37" selection-start-column="37" selection-end-line="37" selection-end-column="37" />
+          <folding>
+            <element signature="n#style#0;n#scroll-view#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pages/information/information.wxml">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -819,7 +841,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/index/indexlistshow/indexlistshow.wxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2106">
+        <state relative-caret-position="1989">
           <caret line="117" selection-start-line="117" selection-end-line="117" />
           <folding>
             <element signature="n#style#0;n#scroll-view#0;n#!!top" expanded="true" />
@@ -829,7 +851,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/home/home.wxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
+        <state relative-caret-position="136">
           <caret line="8" selection-start-line="8" selection-end-line="8" />
         </state>
       </provider>
@@ -863,50 +885,64 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
+        <state relative-caret-position="34">
           <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/index/indexlistshow/indexlistshow.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1602">
+        <state relative-caret-position="1513">
           <caret line="89" selection-start-line="89" selection-end-line="89" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/recommend/recommend.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
+        <state relative-caret-position="442">
           <caret line="26" column="4" selection-start-line="26" selection-start-column="4" selection-end-line="39" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/index/index.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="4" lean-forward="true" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="30" column="2" selection-start-line="30" selection-start-column="2" selection-end-line="35" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/chatroom/chatroom.wxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="37" column="37" selection-start-line="37" selection-start-column="37" selection-end-line="37" selection-end-column="37" />
-          <folding>
-            <element signature="n#style#0;n#scroll-view#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="380">
+          <caret line="100" column="8" lean-forward="true" selection-start-line="81" selection-start-column="16" selection-end-line="100" selection-end-column="8" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/index/index.wxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="25" selection-start-line="25" selection-end-line="25" />
+        <state relative-caret-position="-769">
+          <caret line="32" column="95" selection-start-line="32" selection-start-column="82" selection-end-line="32" selection-end-column="95" />
           <folding>
             <element signature="n#style#0;n#scroll-view#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#view#0;n#view#0;n#view#0;n#scroll-view#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/index/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="96" selection-start-line="96" selection-end-line="96" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/index/index.wxss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
         </state>
       </provider>
     </entry>
