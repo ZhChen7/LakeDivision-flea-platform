@@ -10,35 +10,36 @@
 <view id='Lake_division_flea_platform' >
 
 
-
-    <view class="cu-bar bg-white search">
-        <view class="cu-avatar round" style="background-image:url(https://image.weilanwl.com/img/square-1.jpg);"></view>
-        <view class="search-form radius">
-            <text class="cuIcon-search"></text>
-            <input type="text" placeholder="搜索图片、文章、视频" confirm-type="search"></input>
+    <view class="hone_header">
+        <view class="cu-bar bg-white search">
+            <view class="cu-avatar round"
+                  style="background-image:url(cloud://hbsell-jgvfo.6862-hbsell-jgvfo-1300713089/ershoulogo.jpg);"></view>
+            <view class="search-form radius">
+                <text class="cuIcon-search"></text>
+                <input confirm-type="search" placeholder="搜索图片、文章、视频" type="text"></input>
+            </view>
+            <view class="action">
+                <text>黄石</text>
+                <text class="cuIcon-triangledownfill"></text>
+            </view>
         </view>
-        <view class="action">
-            <text>黄石</text>
-            <text class="cuIcon-triangledownfill"></text>
-        </view>
-    </view>
 
 
-    <!-- 热搜 -->
-    <view class='HotSearch'>
-        <view class="padding-sm flex flex-wrap">
-            <view class="HotTitle">热搜</view>
-            <view class="padding-xs" wx:for="{{ColorList}}" wx:key >
-                <view class="cu-tag bg-{{item.name}}">{{item.title}}
-                    <text class="cuIcon-close lg" data-index="{{index}}" bindtap="HotcloseClick"></text>
+        <!-- 热搜 -->
+        <view class='HotSearch'>
+            <view class="padding-sm flex flex-wrap">
+                <view class="HotTitle">热搜</view>
+                <view class="padding-xs" wx:for="{{ColorList}}" wx:key>
+                    <view class="cu-tag bg-{{item.name}} shadow">{{item.title}}
+                        <text bindtap="HotcloseClick" class="cuIcon-close lg" data-index="{{index}}"></text>
+                    </view>
                 </view>
             </view>
         </view>
     </view>
 
 
-
-<!--发布按钮-->
+    <!--发布按钮-->
 <!--<van-transition show="{{ show1 }}" custom-class="block" name="fade-right" duration="{{ { enter: 1500, leave: 1000 } }}" >-->
   <!--<button id="Publish" bindtouchmove="buttonMove" open-type="getUserInfo" bindgetuserinfo="onGotUserInfo" >-->
         <!--<view class="iconfont icon-icon-test"></view>-->
@@ -81,62 +82,157 @@
   </swiper>
   </view> -->
 
-   <swiper class='swiperClass' autoplay indicator-color="#a39f99" indicator-active-color="#f49641" indicator-dots  interval="3000" duration="2500" previous-margin="30px" next-margin="30px" circular bindchange="bindchange" style='height: {{swiperHeight}}px'>
- <block wx:for="{{imgUrls}}" wx:key="{{index}}">
- <swiper-item>
- <image src="{{item}}" class="slide-image {{swiperIndex == index ? 'active' : 'quiet'}}" mode='aspectFill'>
- </image>
- </swiper-item>
- </block>
+
+    <swiper autoplay bindchange="bindchange" circular class='swiperClass' duration="2500"
+            indicator-active-color="#0081ff" indicator-color="#ccc" indicator-dots interval="3000" next-margin="30px"
+            previous-margin="30px" style='height: {{swiperHeight}}px'>
+        <block wx:for="{{imgUrls}}" wx:key="{{index}}">
+            <swiper-item>
+                <image class="slide-image {{swiperIndex == index ? 'active' : 'quiet'}}" mode='aspectFill'
+                       src="{{item}}">
+                </image>
+            </swiper-item>
+        </block>
  </swiper>
 
 
 
-<!-- 通告栏 -->
-<van-notice-bar
-  mode="closeable" backgroundColor="#fff"
-  text="湖师跳蚤平台，正式营业啦！湖师跳蚤平台，正式营业啦！湖师跳蚤平台，正式营业啦！欢迎大家，嘻嘻😀"
-/>
+
 
 <!-- nav栏 -->
  <view class="index_sort">
-    <view class='main_sort'>
+     <view class="cu-bar bg-white">
+         <view class="action sub-title">
+             <text class="text-xl text-bold text-green">WELCOME</text>
+             <text class="bg-green" style="width:3rem"></text>
+             <!-- last-child选择器-->
+         </view>
+     </view>
 
-            <view class="index_sort_item">
-        <image mode='aspectFit' src='https://gw.alicdn.com/tfs/TB15nKhtpkoBKNjSZFEXXbrEVXa-183-144.png?getAvatar=1_.webp'></image>
-        <text>奢品珠宝</text>
-      </view>
-            <view class="index_sort_item">
-        <image mode='aspectFit' src='https://gw.alicdn.com/tfs/TB1BqystrZnBKNjSZFrXXaRLFXa-183-144.png?getAvatar=1_.webp'></image>
-        <text>二手车</text>
-      </view>
-            <view class="index_sort_item">
-        <image mode='aspectFit' src='https://gw.alicdn.com/tfs/TB1CMf4tlnTBKNjSZPfXXbf1XXa-183-144.png?getAvatar=1_.webp'></image>
-        <text>超值租</text>
-      </view>
-            <view class="index_sort_item">
-        <image mode='aspectFit' src='https://gw.alicdn.com/tfs/TB18P98tyQnBKNjSZFmXXcApVXa-183-144.png?getAvatar=1_.webp'></image>
-        <text>全部分类</text>
-      </view>
-    </view>
-  </view>
+     <view class='main_sort'>
+         <view class="index_sort_item">
+             <image mode='aspectFit' src='cloud://hbsell-jgvfo.6862-hbsell-jgvfo-1300713089/icons8-翻开的书-64.png'></image>
+             <text>二手书籍</text>
+         </view>
 
- <van-divider contentPosition="left">推荐</van-divider>
+         <view class="index_sort_item">
+             <image mode='aspectFit' src='cloud://hbsell-jgvfo.6862-hbsell-jgvfo-1300713089/icons8-化妆刷-48.png'></image>
+             <text>化妆品</text>
+         </view>
 
-  <view class='index_show_list'>
-    <view class='index_show_list_item radius shadow ' bindtap='listclick' data-index="{{index}}" wx:for="{{indexshowlistdata}}" wx:key="{{item._id}}">
-        <view class='index_show_list_img'>
-            <image src='{{item.publishimgarr[0]}}' mode='aspectFill'></image>
-        </view>
-        <view class='index_show_list_footer'>
-            <view class='index_show_list_footer_intro van-multi-ellipsis--l2 ellipsis'>{{item.description}}</view>
-            <view>
-                <text class='price'>￥ {{item.Wanttosell}}</text>
-                <text class='WantPeople'>{{item.WantPeople}}1人想要</text>
+         <view class="index_sort_item">
+             <image mode='aspectFit' src='cloud://hbsell-jgvfo.6862-hbsell-jgvfo-1300713089/icons8-衣服-48.png'></image>
+             <text>衣服</text>
+         </view>
+
+         <view class="index_sort_item">
+             <image mode='aspectFit' src='cloud://hbsell-jgvfo.6862-hbsell-jgvfo-1300713089/icons8-手提箱-48.png'></image>
+             <text>箱包</text>
+         </view>
+
+
+         <view bindtap="showModal" class="index_sort_item" data-target="DrawerModalR">
+             <image mode='aspectFit'
+                    src='cloud://hbsell-jgvfo.6862-hbsell-jgvfo-1300713089/icons8-阿拉丁神灯-48.png'></image>
+             <text>导航</text>
+         </view>
+     </view>
+     <!-- 通告栏 -->
+     <van-notice-bar
+             backgroundColor="#fff" color="red"
+             mode="closeable"
+             speed="35"
+             text="湖师跳蚤平台，正式营业啦！湖师跳蚤平台，正式营业啦！湖师跳蚤平台，正式营业啦！"
+     />
+ </view>
+
+
+    <view bindtap="hideModal" class="cu-modal drawer-modal justify-end {{modalName=='DrawerModalR'?'show':''}}">
+        <view catchtap class="cu-dialog basis-lg" style="top:{{CustomBar}}px;height:calc(100vh - {{CustomBar}}px)">
+            <view class="cu-list menu text-left">
+                <view class="cu-item arrow" wx:for="{{5}}" wx:key>
+                    <view class="content">
+                        <view>Item {{index +1}}</view>
+                    </view>
+                </view>
             </view>
         </view>
     </view>
-  </view>
+
+
+    <view class="cu-bar bg-white solid-bottom margin-top">
+        <view class='action'>
+            <text class='cuIcon-titles text-orange '></text>
+            随机推送（ 即是有缘者，把我买走吧！）
+        </view>
+    </view>
+
+
+    <view class="cu-card article {{isCard?'no-card':''}}">
+        <view class="cu-item shadow">
+            <view class="title">
+                <view class="text-cut">无意者 烈火焚身;以正义的烈火拔出黑暗。我有自己的正义，见证至高的烈火吧。</view>
+            </view>
+            <view class="content">
+                <image mode="aspectFill" src="https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg"></image>
+                <view class="desc">
+                    <view class="text-content"> 折磨生出苦难，苦难又会加剧折磨，凡间这无穷的循环，将有我来终结！真正的恩典因不完整而美丽，因情感而真诚，因脆弱而自由！</view>
+                    <view>
+                        <view class="cu-tag bg-red light sm round">正义天使</view>
+                        <view class="cu-tag bg-green light sm round">史诗</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+
+
+    <view class="cu-card article {{isCard?'no-card':''}}">
+        <view class="cu-item shadow">
+            <view class="title">
+                <view class="text-cut">无意者 烈火焚身;以正义的烈火拔出黑暗。我有自己的正义，见证至高的烈火吧。</view>
+            </view>
+            <view class="content">
+                <image mode="aspectFill" src="https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg"></image>
+                <view class="desc">
+                    <view class="text-content"> 折磨生出苦难，苦难又会加剧折磨，凡间这无穷的循环，将有我来终结！真正的恩典因不完整而美丽，因情感而真诚，因脆弱而自由！</view>
+                    <view>
+                        <view class="cu-tag bg-red light sm round">正义天使</view>
+                        <view class="cu-tag bg-green light sm round">史诗</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+
+
+    <!--tab页 -->
+    <van-tabs active="{{ active }}" animated>
+        <van-tab title="推荐">
+            <view class='index_show_list'>
+                <view bindtap='listclick' class='index_show_list_item radius shadow ' data-index="{{index}}"
+                      wx:for="{{indexshowlistdata}}" wx:key="{{item._id}}">
+                    <view class='index_show_list_img'>
+                        <image mode='aspectFill' src='{{item.publishimgarr[0]}}'></image>
+                    </view>
+                    <view class='index_show_list_footer'>
+                        <view class='index_show_list_footer_intro van-multi-ellipsis--l2 ellipsis'>
+                            {{item.description}}
+                        </view>
+                        <view>
+                            <text class='price'>￥ {{item.Wanttosell}}</text>
+                            <text class='WantPeople'>{{item.WantPeople}}1人想要</text>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </van-tab>
+        <van-tab title="二手衣物">二手衣物</van-tab>
+    </van-tabs>
+
+    <!--<van-divider contentPosition="left">推荐</van-divider>-->
+
+
 </view>
 
 

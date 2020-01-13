@@ -11,7 +11,9 @@ Component({
     show: false,
     imgUrls:[
      'cloud://hbsell-jgvfo.6862-hbsell-jgvfo-1300713089/HomePagebanner3.jpg',
-        'cloud://hbsell-jgvfo.6862-hbsell-jgvfo-1300713089/lovehs.jpg'
+      'cloud://hbsell-jgvfo.6862-hbsell-jgvfo-1300713089/lovehs.jpg',
+      'cloud://hbsell-jgvfo.6862-hbsell-jgvfo-1300713089/HomePagebanner2.jpg',
+      'cloud://hbsell-jgvfo.6862-hbsell-jgvfo-1300713089/HomePagebanner1.webp'
     ],
     swiperIndex: 0,//这里不写第一次启动展示的时候会有问题
     indexshowlistdata:[],
@@ -37,22 +39,38 @@ Component({
          title: '橄榄',
          name: 'olive'
        },{
-         title: '嫣红',
-         name: 'red'
+         title: '森绿',
+         name: 'green',
+         color: '#39b54a'
        },
        {
-         title: '桔橙',
-         name: 'orange'
+         title: '天青',
+         name: 'cyan',
+         color: '#1cbbb4'
        },
        {
-         title: '明黄',
-         name: 'yellow'
+         title: '海蓝',
+         name: 'blue',
+         color: '#0081ff'
        },
        {
-         title: '橄榄',
-         name: 'olive'
+         title: '姹紫',
+         name: 'purple',
+         color: '#6739b6'
+       },
+       {
+         title: '木槿',
+         name: 'mauve',
+         color: '#9c26b0'
+       },
+       {
+         title: '桃粉',
+         name: 'pink',
+         color: '#e03997'
        }],
-    Allcolor:[]
+    Allcolor: [],
+    CustomBar: app.globalData.CustomBar,
+    active: 0
   },
 
   lifetimes: {
@@ -69,6 +87,8 @@ Component({
             });
           }
         })
+
+
     },
     detached: function () { },
   },
@@ -99,7 +119,24 @@ methods:{
       ColorList: this.data.ColorList
     })
 
+  },
+  showModal(e) {
+    this.setData({
+      modalName: e.currentTarget.dataset.target
+    })
+  },
+  hideModal(e) {
+    this.setData({
+      modalName: null
+    })
+  },
+  onChange(event) {
+    wx.showToast({
+      title: `切换到标签 ${event.detail.name}`,
+      icon: 'none'
+    });
   }
+
 },
 
 

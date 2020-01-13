@@ -1,8 +1,11 @@
 #Lake_division_flea_platform{
-  background:#fff;
+    background: #f4f4f4;
 }
 
+.hone_header {
+    background: #f4f4f4;
 
+}
 
 .HotSearch{
     margin: 15rpx 0 35rpx 0;
@@ -11,8 +14,8 @@
 
 .HotSearch .HotTitle{
     font-weight: bold;
-    color: red;
-    padding:  0 10rpx 0 0;
+    color: #e54d42;
+    padding: 0 15 rpx 0 0;
 }
 
 .HotSearch .cuIcon-close{
@@ -36,18 +39,18 @@
   border-radius: 15rpx;
 }
 
+
 .index_sort{
-   padding: 12rpx 35rpx;
-   /* border: 1px solid black; */
+    padding: 12 rpx 22 rpx;
 }
 .index_sort>.main_sort{
   padding: 0rpx 5rpx 25rpx;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  border-radius: 36rpx;
+    justify-content: space-around;
+    border-radius: 25 rpx 20 rpx 20 rpx 45 rpx;
   background: #fff;
-  /* border: 1px solid #f30; */
 }
 .index_sort>.main_sort>.index_sort_item{
   width: 106rpx;
@@ -88,7 +91,8 @@
 
 
 .index_show_list{
-    margin-top: -32rpx;
+    /*margin-top: -32rpx;*/
+    margin-top: 15 rpx;
     column-count: 2;
     column-gap: 0px;
     /*background: #f4f4f4;*/
@@ -215,3 +219,5 @@ image.quiet {
 .gif-white{
     mix-blend-mode: multiply;
 }
+
+
