@@ -160,26 +160,26 @@
     </view>
 
 
+
+    <!-- 随机推送（ 即是有缘者，把我买走吧！）-->
     <view class="cu-bar bg-white solid-bottom margin-top">
         <view class='action'>
             <text class='cuIcon-titles text-orange '></text>
             随机推送（ 即是有缘者，把我买走吧！）
         </view>
     </view>
-
-
-    <view class="cu-card article {{isCard?'no-card':''}}">
+    <view class="cu-card article {{isCard?'no-card':''}}" wx:for="{{Randomarr}}"  wx:key="{{item._id}}" bindtap='listclickcucard' data-index="{{index}}" >
         <view class="cu-item shadow">
             <view class="title">
-                <view class="text-cut">无意者 烈火焚身;以正义的烈火拔出黑暗。我有自己的正义，见证至高的烈火吧。</view>
+                <view class="text-cut">{{item.description}}</view>
             </view>
             <view class="content">
-                <image mode="aspectFill" src="https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg"></image>
+                <image mode="aspectFit" src="{{item.publishimgarr[0]}}"></image>
                 <view class="desc">
-                    <view class="text-content"> 折磨生出苦难，苦难又会加剧折磨，凡间这无穷的循环，将有我来终结！真正的恩典因不完整而美丽，因情感而真诚，因脆弱而自由！</view>
-                    <view>
-                        <view class="cu-tag bg-red light sm round">正义天使</view>
-                        <view class="cu-tag bg-green light sm round">史诗</view>
+                    <view class="text-content"> {{item.description}}</view>
+                    <view  class="cucardTag">
+                        <view class="cu-tag bg-{{Allcolor[index]}} light sm round" wx:for="{{item.CommonUse}}" wx:key="{{item}}">{{item}}</view>
+                        <!--<view class="cu-tag bg-green light sm round">史诗</view>-->
                     </view>
                 </view>
             </view>
@@ -187,33 +187,18 @@
     </view>
 
 
-    <view class="cu-card article {{isCard?'no-card':''}}">
-        <view class="cu-item shadow">
-            <view class="title">
-                <view class="text-cut">无意者 烈火焚身;以正义的烈火拔出黑暗。我有自己的正义，见证至高的烈火吧。</view>
-            </view>
-            <view class="content">
-                <image mode="aspectFill" src="https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg"></image>
-                <view class="desc">
-                    <view class="text-content"> 折磨生出苦难，苦难又会加剧折磨，凡间这无穷的循环，将有我来终结！真正的恩典因不完整而美丽，因情感而真诚，因脆弱而自由！</view>
-                    <view>
-                        <view class="cu-tag bg-red light sm round">正义天使</view>
-                        <view class="cu-tag bg-green light sm round">史诗</view>
-                    </view>
-                </view>
-            </view>
-        </view>
-    </view>
+
 
 
     <!--tab页 -->
     <van-tabs active="{{ active }}" animated>
         <van-tab title="推荐">
+
             <view class='index_show_list'>
                 <view bindtap='listclick' class='index_show_list_item radius shadow ' data-index="{{index}}"
                       wx:for="{{indexshowlistdata}}" wx:key="{{item._id}}">
                     <view class='index_show_list_img'>
-                        <image mode='aspectFill' src='{{item.publishimgarr[0]}}'></image>
+                        <image mode='aspectFill' src='{{item.publishimgarr[0]}}' lazy-load="true"></image>
                     </view>
                     <view class='index_show_list_footer'>
                         <view class='index_show_list_footer_intro van-multi-ellipsis--l2 ellipsis'>
@@ -226,6 +211,7 @@
                     </view>
                 </view>
             </view>
+
         </van-tab>
         <van-tab title="二手衣物">二手衣物</van-tab>
     </van-tabs>
