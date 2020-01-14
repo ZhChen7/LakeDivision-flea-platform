@@ -79,6 +79,7 @@ Component({
         // 生命周期函数，可以为函数，或一个在methods段中定义的方法名
         attached: function () {
             let that = this
+
             wx.getStorageInfo({
                 success(res) {
                     if (res.keys.length > 0) {

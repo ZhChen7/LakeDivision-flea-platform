@@ -12,8 +12,7 @@
 
     <view class="hone_header">
         <view class="cu-bar bg-white search">
-            <view class="cu-avatar round"
-                  style="background-image:url(cloud://hbsell-jgvfo.6862-hbsell-jgvfo-1300713089/ershoulogo.jpg);"></view>
+            <view class="cu-avatar round headeravatar"></view>
             <view class="search-form radius">
                 <text class="cuIcon-search"></text>
                 <input confirm-type="search" placeholder="搜索图片、文章、视频" type="text"></input>
@@ -187,38 +186,31 @@
     </view>
 
 
+    <!--<van-divider contentPosition="left">推荐</van-divider>-->
+    <view class="cu-bar bg-white">
+        <view class="action title-style-3">
+            <text class="text-xl text-bold">推荐栏</text>
+            <text class="text-Abc text-gray self-end margin-left-sm">good！</text>
+        </view>
+    </view>
 
-
-
-    <!--tab页 -->
-    <van-tabs active="{{ active }}" animated>
-        <van-tab title="推荐">
-
-            <view class='index_show_list'>
-                <view bindtap='listclick' class='index_show_list_item radius shadow ' data-index="{{index}}"
-                      wx:for="{{indexshowlistdata}}" wx:key="{{item._id}}">
-                    <view class='index_show_list_img'>
-                        <image mode='aspectFill' src='{{item.publishimgarr[0]}}' lazy-load="true"></image>
-                    </view>
-                    <view class='index_show_list_footer'>
-                        <view class='index_show_list_footer_intro van-multi-ellipsis--l2 ellipsis'>
-                            {{item.description}}
-                        </view>
-                        <view>
-                            <text class='price'>￥ {{item.Wanttosell}}</text>
-                            <text class='WantPeople'>{{item.WantPeople}}1人想要</text>
-                        </view>
-                    </view>
+    <view class='index_show_list'>
+        <view bindtap='listclick' class='index_show_list_item radius shadow ' data-index="{{index}}"
+              wx:for="{{indexshowlistdata}}" wx:key="{{item._id}}">
+            <view class='index_show_list_img'>
+                <image lazy-load="true" mode='aspectFill' src='{{item.publishimgarr[0]}}'></image>
+            </view>
+            <view class='index_show_list_footer'>
+                <view class='index_show_list_footer_intro van-multi-ellipsis--l2 ellipsis'>
+                    {{item.description}}
+                </view>
+                <view>
+                    <text class='price'>￥ {{item.Wanttosell}}</text>
+                    <text class='WantPeople'>{{item.WantPeople}}1人想要</text>
                 </view>
             </view>
-
-        </van-tab>
-        <van-tab title="二手衣物">二手衣物</van-tab>
-    </van-tabs>
-
-    <!--<van-divider contentPosition="left">推荐</van-divider>-->
-
-
+        </view>
+    </view>
 </view>
 
 

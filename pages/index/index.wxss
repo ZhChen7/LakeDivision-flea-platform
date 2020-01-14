@@ -2,10 +2,15 @@
     background: #f4f4f4;
 }
 
-.hone_header {
-    background: #f4f4f4;
-
+.headeravatar {
+    background: url("https://6862-hbsell-jgvfo-1300713089.tcb.qcloud.la/shouyelogo.jpg?sign=f198fd70271f8580871fc09ca5d4bb68&t=1578983164");
+    width: 85 rpx;
+    height: 85 rpx;
+    background-size: cover;
 }
+
+
+
 
 .HotSearch{
     margin: 15rpx 0 35rpx 0;
