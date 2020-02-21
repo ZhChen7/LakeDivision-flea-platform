@@ -1,6 +1,8 @@
 ## 湖师跳蚤平台
 
 > 自己的一个**科研立项** 的小项目
+>
+> 团队协作开发（组长）
 
 
 
@@ -18,16 +20,18 @@
 
 **开发工具**： 微信web开发工具
 
-
-
 **运用到的技术**:
 
-- WXML WXSS JavaScript
-- 云开发
+- 微信小程序：湖师二手跳蚤平台、大三上 科研立项项目
+- 技术栈：使用云开发（无需搭建服务器）开发小程序项目，使用基础的WXML WXSS JavaScript作为开发语言，自己完成了项目首页、登录权限、发表模块、商品页、聊天页面等相关布局及开发、采用colorui辅助美化页面
 
-
+![mark](https://imgconvert.csdnimg.cn/aHR0cDovL3N0YXRpYy56eGluYzUyMC5jb20vYmxvZy8yMDIwMDIyMS9WTUtrZ0dKd0M0QzkucG5n?x-oss-process=image/format,png)
 
 ![mark](http://static.zxinc520.com/blog/20191126/04xa5nxqoO8e.png?imageslim)
+
+
+
+![mark](http://static.zxinc520.com/blog/20200221/qIk4tba710Lq.png?imageslim)
 
 
 
@@ -43,15 +47,15 @@
 
 **（二）创新点**
 
-1、采用O2O模式。
+1. 采用O2O模式。
 
-2、以微信小程序模式，更符合年轻人的运用。 
+2. 以微信小程序模式，更符合年轻人的运用。 
 
 **（三）拟解决的关键问题**
 
-1、利用小程序的实用性引起学校学生的关注，通过小程序的便捷性以及高效性，吸引越来越多的学生使用本小程序。
+1. 利用小程序的实用性引起学校学生的关注，通过小程序的便捷性以及高效性，吸引越来越多的学生使用本小程序。
 
-2、需采纳学校学生所拥有的交易物品，拟定更全面的二手交易系统。
+2. 需采纳学校学生所拥有的交易物品，拟定更全面的二手交易系统。
 
 
 
@@ -61,9 +65,26 @@
 
 
 
-效果图：
+> ###### 效果图
 
-![mark](http://static.zxinc520.com/blog/20191126/3IBYngjpNHYh.png?imageslim)
+![mark](http://static.zxinc520.com/blog/20200221/Ssn0LjPUKipF.gif)
 
-![mark](http://static.zxinc520.com/blog/20191126/z4wcdhSEAJBz.png?imageslim)
+![mark](http://static.zxinc520.com/blog/20200221/Uho11VLJPSUR.gif)
 
+![mark](http://static.zxinc520.com/blog/20200221/6d8MoT1yODy2.gif)
+
+![mark](http://static.zxinc520.com/blog/20200221/Gt3yD5qqbDdJ.gif)
+
+
+
+
+
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20200221233218232.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mzk0OTc4OA==,size_16,color_FFFFFF,t_70)
+
+
+
+![在这里插入图片描述](https://img-blog.csdnimg.cn/2020022123325987.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mzk0OTc4OA==,size_16,color_FFFFFF,t_70)
+
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20200221233311532.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mzk0OTc4OA==,size_16,color_FFFFFF,t_70)
+
+![在这里插入图片描述](https://img-blog.csdnimg.cn/2020022123481562.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mzk0OTc4OA==,size_16,color_FFFFFF,t_70)
