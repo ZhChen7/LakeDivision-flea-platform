@@ -3,42 +3,53 @@
 @import "colorui/icon.wxss";
 /* @import "app.css"; 你的项目css */
 
+
+page{
+    background: #fff;
+}
+
 ::-webkit-scrollbar {
-  /* display: none; */
-  width: 0;
-  height: 0;
-  color: transparent
+    /* display: none; */
+    width: 0;
+    height: 0;
+    color: transparent
 }
 
 image {
-width:320px;
-height:170px;
-display:inline-block;
-overflow:hidden;
+    width: 320px;
+    height: 170px;
+    display: inline-block;
+    overflow: hidden;
 }
 
 /* css 滤镜 控制黑白底色gif的 */
-.gif-black{
-  mix-blend-mode: screen;
+.gif-black {
+    mix-blend-mode: screen;
 }
-.gif-white{
-  mix-blend-mode: multiply;
+
+.gif-white {
+    mix-blend-mode: multiply;
 }
 
 /*波浪线*/
 
 .flow-wave {
-  background: radial-gradient(circle at 10px -7px, transparent 8px, #ddd 8px, #ddd 9px, transparent 9px) repeat-x,
-  radial-gradient(circle at 10px 27px, transparent 8px, #ddd 8px, #ddd 9px, transparent 9px) repeat-x;
-  background-size: 20px 20px;
-  background-position: -10px calc(100% + 16px), 0 calc(100% - 4px);
+    background: radial-gradient(circle at 10px -7px, transparent 8px, #ddd 8px, #ddd 9px, transparent 9px) repeat-x,
+    radial-gradient(circle at 10px 27px, transparent 8px, #ddd 8px, #ddd 9px, transparent 9px) repeat-x;
+    background-size: 20px 20px;
+    background-position: -10px calc(100% + 16px), 0 calc(100% - 4px);
 }
 
 .flow-wave {
-  animation: waveFlow 1s infinite linear;
+    animation: waveFlow 1s infinite linear;
 }
+
 @keyframes waveFlow {
-  from { background-position-x: -10px, 0; }
-  to { background-position-x: -30px, -20px; }
+    from {
+        background-position-x: -10px, 0;
+    }
+    to {
+        background-position-x: -30px, -20px;
+    }
 }
 

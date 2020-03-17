@@ -1,7 +1,7 @@
 {
   "usingComponents": {
     "index": "/pages/index/index",
-    "classify": "/pages/recommend/recommend",
+    "classify": "/pages/classify/index",
     "information": "/pages/information/information",
     "user": "/pages/user/user"
   }

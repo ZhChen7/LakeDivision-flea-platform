@@ -9,7 +9,9 @@
     "pages/information/information",
     "pages/index/index",
     "pages/index/indexlistshow/indexlistshow",
+    "pages/goods-show/index",
     "pages/logs/logs",
+    "pages/classify/index",
     "pages/user/user"
   ],
   "permission": {

@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "van-divider": "vant-weapp/divider/index"
+  },
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle": "dark"
+}

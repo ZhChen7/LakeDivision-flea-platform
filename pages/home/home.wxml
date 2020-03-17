@@ -18,6 +18,7 @@
         <view class="cuIcon-similar {{PageCur=='classify'?'text-green':'text-gray'}}"></view>
         <view class="{{PageCur=='classify'?'text-green':'text-gray'}}">分类</view>
     </view>
+    
     <view class="action text-gray add-action">
         <button class="cu-btn cuIcon-add bg-green shadow" open-type="getUserInfo" bindgetuserinfo="onGotUserInfo"></button>
         发布

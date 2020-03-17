@@ -1,11 +1,12 @@
 #Lake_division_flea_platform{
     background: #f4f4f4;
+    /*background: #fff;*/
 }
 
 .headeravatar {
     background: url("https://6862-hbsell-jgvfo-1300713089.tcb.qcloud.la/shouyelogo.jpg?sign=f198fd70271f8580871fc09ca5d4bb68&t=1578983164");
-    width: 85 rpx;
-    height: 85 rpx;
+    width: 85rpx;
+    height: 85rpx;
     background-size: cover;
 }
 
