@@ -100,7 +100,6 @@ Page({
     unloadimg() {
         // console.log('hello')
         let _that = this
-
         wx.chooseImage({
             count: 3,
             sizeType: ['original', 'compressed'],

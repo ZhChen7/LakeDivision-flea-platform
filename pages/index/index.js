@@ -79,67 +79,30 @@ Component({
         // 生命周期函数，可以为函数，或一个在methods段中定义的方法名
         attached: function () {
             let that = this
+            db.collection('publish').get({
+                success: function (res) {
+                    // res.data 是一个包含集合中有权限访问的所有记录的数据，不超过 20 条
+                    console.log(res.data)
+                    new Promise((resolve, reject) => {
+                        let num1 = Math.floor(Math.random() * res.data.length)
+                        let num2 = num1 + 1
+                        if (num2 === res.data.length) {
+                            num2 = 0
+                        }
+                        let Randomnewarr = []
+                        Randomnewarr.push(res.data[num1], res.data[num2])
+                        resolve(Randomnewarr)
 
-            wx.getStorageInfo({
-                success(res) {
-                    if (res.keys.length > 0) {
-                        wx.getStorage({
-                            key: 'indexshowlistdata',
-                            success(res) {
-                                that.setData({
-                                    indexshowlistdata: res.data
-                                });
-                            }
-                        })
-                        wx.getStorage({
-                            key: 'Randomarr',
-                            success(res) {
-                                that.setData({
-                                    Randomarr: res.data
-                                });
-                            }
-                        })
-                    } else {
-                        db.collection('publish').get({
-                            success: function (res) {
-                                // res.data 是一个包含集合中有权限访问的所有记录的数据，不超过 20 条
-                                console.log(res.data)
-                                new Promise((resolve, reject) => {
-                                    let num1 = Math.floor(Math.random() * res.data.length)
-                                    let num2 = num1 + 1
-                                    if (num2 === res.data.length) {
-                                        num2 = 0
-                                    }
-                                    let Randomnewarr = []
-                                    Randomnewarr.push(res.data[num1], res.data[num2])
-                                    resolve(Randomnewarr)
+                    }).then(value => {
 
-                                }).then(value => {
-                                    console.log(value)
+                        that.setData({
+                            Randomarr: value,
+                            indexshowlistdata: res.data
+                        });
+                    })
 
-                                    wx.setStorage({
-                                        key: "indexshowlistdata",
-                                        data: res.data
-                                    })
-
-                                    wx.setStorage({
-                                        key: "Randomarr",
-                                        data: value
-                                    })
-
-                                    that.setData({
-                                        Randomarr: value,
-                                        indexshowlistdata: res.data
-                                    });
-                                })
-
-                            }
-                        })
-                    }
                 }
             })
-
-
         },
         detached: function () {
         },
@@ -229,23 +192,24 @@ Component({
     //
 
 
-    // //页面相关事件处理函数---监听用户下拉动作
-    // onPullDownRefresh: function () {
-    //   this.onLoad(); //重新加载onLoad()
-    //
-    //   wx.showToast({
-    //     title: '刷新啦！',
-    //     icon: 'none',
-    //     duration: 2000
-    //   })
-    // },
-    // //页面上拉触底事件的处理函数
-    // onReachBottom: function () {
-    //   wx.showToast({
-    //     title: '到底啦！',
-    //     icon: 'none',
-    //     duration: 2000
-    //   })
-    // }
+    //页面相关事件处理函数---监听用户下拉动作
+    onPullDownRefresh: function () {
+      // this.attached(); //重新加载onLoad()
+      // wx.showToast({
+      //   title: '刷新啦！',
+      //   icon: 'none',
+      //   duration: 2000
+      // })
+
+        console.log('111')
+    },
+    //页面上拉触底事件的处理函数
+    onReachBottom: function () {
+      wx.showToast({
+        title: '到底啦！',
+        icon: 'none',
+        duration: 2000
+      })
+    }
 
 })
